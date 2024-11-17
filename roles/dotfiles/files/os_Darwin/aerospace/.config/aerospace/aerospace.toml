@@ -70,6 +70,8 @@ outer.right = 0
 # - Arrows.         left, down, up, right
 
 # All possible modifiers: cmd, alt, ctrl, shift
+cmd-h = []     # Disable "hide application"
+cmd-alt-h = [] # Disable "hide others"
 
 # All possible commands: https://nikitabobko.github.io/AeroSpace/commands
 ctrl-alt-cmd-q = 'close'
@@ -79,6 +81,8 @@ ctrl-alt-cmd-b = 'exec-and-forget open -n /Applications/Brave\ Browser.app'
 ctrl-alt-cmd-o = 'exec-and-forget open -n /System/Applications/System\ Settings.app'
 ctrl-alt-cmd-enter = 'exec-and-forget kitty -d ~'
 ctrl-alt-cmd-p = 'exec-and-forget screencapture -cix /dev/null'
+ctrl-alt-cmd-equal = 'exec-and-forget open -a "Mission Control"'
+ctrl-alt-cmd-minus = 'exec-and-forget open -a "Launchpad"'
 ctrl-alt-cmd-shift-p = 'exec-and-forget screencapture -Pix /dev/null'
 ctrl-alt-cmd-shift-r = 'exec-and-forget screencapture -iU /dev/null'
 
@@ -99,16 +103,23 @@ ctrl-alt-cmd-shift-k = 'move up'
 ctrl-alt-cmd-shift-l = 'move right'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#resize
-ctrl-alt-cmd-shift-minus = 'resize smart -50'
-ctrl-alt-cmd-shift-equal = 'resize smart +50'
+ctrl-alt-cmd-right = 'resize width -50'
+ctrl-alt-cmd-left = 'resize width +50'
+ctrl-alt-cmd-down = 'resize height -50'
+ctrl-alt-cmd-up = 'resize height +50'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#workspace
+ctrl-alt-cmd-g = 'workspace prev'
+ctrl-alt-cmd-semicolon = 'workspace next'
+ctrl-alt-cmd-shift-g = 'move-node-to-workspace prev'
+ctrl-alt-cmd-shift-semicolon = 'move-node-to-workspace next'
+
 ctrl-alt-cmd-1 = 'workspace 1'
-ctrl-alt-cmd-2 = 'workspace 2'
-ctrl-alt-cmd-a = 'workspace A'
 ctrl-alt-cmd-shift-1 = 'move-node-to-workspace 1'
+ctrl-alt-cmd-2 = 'workspace 2'
 ctrl-alt-cmd-shift-2 = 'move-node-to-workspace 2'
-ctrl-alt-cmd-shift-a = 'move-node-to-workspace A'
+ctrl-alt-cmd-3 = 'workspace 3'
+ctrl-alt-cmd-shift-3 = 'move-node-to-workspace 3'
 
 ctrl-alt-cmd-tab = 'workspace-back-and-forth'
 ctrl-alt-cmd-shift-tab = 'move-workspace-to-monitor --wrap-around next'

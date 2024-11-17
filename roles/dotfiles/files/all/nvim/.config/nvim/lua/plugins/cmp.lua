@@ -57,7 +57,7 @@ return {
 	opts = function(_, opts)
 		local cmp = require("cmp")
 
-		-- opts.completion.autocomplete = false
+		opts.completion.autocomplete = false
 
 		opts.mapping = vim.tbl_extend("force", opts.mapping, {
 			["<C-j>"] = {

@@ -1,8 +1,6 @@
----
 - name: Create dev directories
   file:
     path: "{{ ansible_user_dir }}/{{ item }}"
     state: directory
   loop:
-    - Documents/commercial
-    - Documents/personal
+    - Work

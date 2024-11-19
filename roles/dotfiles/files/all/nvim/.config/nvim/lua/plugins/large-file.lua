@@ -1,3 +1,0 @@
-return {
-	"vim-scripts/LargeFile",
-}

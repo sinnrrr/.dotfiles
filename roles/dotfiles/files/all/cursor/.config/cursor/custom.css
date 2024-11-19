@@ -1,0 +1,22 @@
+.container > .title {
+  display: none !important;
+}
+
+/* Remove title bar */
+.titlebar {
+  display: none !important;
+}
+
+/* Make the file tabs always visible (without the title bar) */
+.monaco-workbench .part.editor > .content {
+  margin-top: 0px !important;
+}
+
+/* Optionally, you can make the tabs have no title bar and make them stand out */
+.editor-group-container {
+  margin-top: 0px !important;
+}
+
+.monaco-workbench .editor .tabs-container {
+  margin-top: 0px !important;
+}

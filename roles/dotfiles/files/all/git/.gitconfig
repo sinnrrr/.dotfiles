@@ -1,6 +1,11 @@
-[user]
-	email = dimasoltusyuk@gmail.com
-	name = Dmytro Soltysiuk
-
 [core]
 	ignorecase = false
+
+[includeIf "gitdir:/Users/sinnrrr/"]
+	path = ~/.gitconfig.personal
+
+[includeIf "gitdir:/Users/dmytro.soltysiuk.-nd/"]
+	path = ~/.gitconfig.work
+
+[includeIf "gitdir:~/.dotfiles/"]
+	path = ~/.gitconfig.personal

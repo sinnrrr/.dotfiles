@@ -1,0 +1,22 @@
+{
+    // Editor
+    "editor.formatOnSave": true,
+    // Neovim
+    "vscode-neovim.neovimClean": true,
+    "extensions.experimental.affinity": {
+        "asvetliakov.vscode-neovim": 1
+    },
+    // Window
+    "window.zoomLevel": 1,
+    "window.commandCenter": false,
+    "window.titleBarStyle": "custom",
+    "window.density.editorTabHeight": "compact",
+    "editor.titleBar.enabled": false,
+    // Workbench
+    "workbench.statusBar.visible": false,
+    "workbench.layoutControl.enabled": false,
+    // Explorer
+    "explorer.confirmDelete": false,
+    // Breadcrumbs
+    "breadcrumbs.enabled": false
+}

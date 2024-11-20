@@ -1,0 +1,99 @@
+[
+    // Leader Shortcuts
+    {
+        "key": ", w",
+        "command": "workbench.action.files.save",
+        "when": "editorTextFocus && neovim.mode == 'normal'"
+    },
+    {
+        "key": ", e",
+        "command": "runCommands",
+        "args": {
+            "commands": [
+                "workbench.action.toggleSidebarVisibility",
+                "workbench.action.focusSideBar"
+            ],
+        },
+        "when": "editorTextFocus && neovim.mode == 'normal'"
+    },
+    {
+        "key": ", e",
+        "command": "workbench.action.toggleSidebarVisibility",
+        "when": "sideBarVisible"
+    },
+    {
+        "key": ", g g",
+        "command": "lazygit-vscode.toggle",
+        "when": "editorTextFocus && neovim.mode == 'normal'"
+    },
+    {
+        "key": ", f",
+        "command": "workbench.action.quickOpen",
+        "when": "editorTextFocus && neovim.mode == 'normal'"
+    },
+    {
+        "key": ", s t",
+        "command": "workbench.action.findInFiles",
+        "when": "editorTextFocus && neovim.mode == 'normal'"
+    },
+    // Ctrl Shortcuts
+    {
+        "key": "ctrl+q",
+        "command": "workbench.action.closeActiveEditor",
+    },
+    {
+        "key": "ctrl+shift+q",
+        "command": "workbench.action.reopenClosedEditor",
+    },
+    {
+        "key": "ctrl-h",
+        "command": "workbench.action.previousEditor",
+    },
+    {
+        "key": "ctrl+l",
+        "command": "workbench.action.nextEditor",
+    },
+    // {
+    //     "key": "ctrl-h",
+    //     "command": "workbench.action.nextSideBarView",
+    //     "when": "sideBarFocus"
+    // },
+    // {
+    //     "key": "ctrl+l",
+    //     "command": "workbench.action.prevSideBarView",
+    //     "when": "sideBarFocus"
+    // },
+    {
+        "key": "ctrl+\\",
+        "command": "workbench.action.terminal.toggleTerminal",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+\\",
+        "command": "workbench.action.terminal.toggleTerminal",
+        "when": "terminal.active"
+    },
+    {
+        "command": "vscode-neovim.send",
+        "key": "ctrl+d",
+        "when": "editorTextFocus && neovim.mode != insert",
+        "args": "<C-d>zz",
+    },
+    {
+        "command": "vscode-neovim.send",
+        "key": "ctrl+u",
+        "when": "editorTextFocus && neovim.mode != insert",
+        "args": "<C-u>zz",
+    },
+    // Char Shortcuts
+    {
+        "key": "q",
+        "command": "workbench.action.toggleSidebarVisibility",
+        "when": "sideBarVisible"
+    },
+    {
+        "key": "q",
+        "command": "closeReferenceSearch",
+        "when": "inReferenceSearchEditor || referenceSearchVisible || peekViewVisible"
+    }
+]

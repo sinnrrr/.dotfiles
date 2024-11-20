@@ -1,0 +1,94 @@
+{
+	"window-size": {
+		"width": 960,
+		"height": 1054
+	},
+	"window-maximized": false,
+	"window-position": {
+		"x": 960,
+		"y": 25
+	},
+	"url": "https://music.youtube.com/watch?v=FtaGfixdATM&list=RDAMVM38CRu1rCaKg&index=0",
+	"options": {
+		"tray": false,
+		"appVisible": true,
+		"autoUpdates": true,
+		"alwaysOnTop": false,
+		"hideMenu": false,
+		"hideMenuWarned": false,
+		"startAtLogin": false,
+		"disableHardwareAcceleration": false,
+		"removeUpgradeButton": false,
+		"restartOnConfigChanges": false,
+		"trayClickPlayPause": false,
+		"autoResetAppCache": false,
+		"resumeOnStart": true,
+		"likeButtons": "",
+		"proxy": "",
+		"startingPage": "Home",
+		"overrideUserAgent": false,
+		"usePodcastParticipantAsArtist": false,
+		"themes": []
+	},
+	"plugins": {
+		"notifications": {},
+		"video-toggle": {
+			"mode": "custom"
+		},
+		"precise-volume": {
+			"globalShortcuts": {}
+		},
+		"discord": {
+			"listenAlong": true
+		},
+		"shortcuts": {
+			"enabled": false,
+			"overrideMediaKeys": true,
+			"global": {
+				"previous": "Alt+H",
+				"playPause": "Space",
+				"next": "Alt+L"
+			},
+			"local": {
+				"previous": "",
+				"playPause": "",
+				"next": ""
+			}
+		},
+		"album-actions": {
+			"enabled": false
+		},
+		"album-color-theme": {
+			"enabled": true
+		},
+		"ambient-mode": {
+			"enabled": true
+		},
+		"blur-nav-bar": {
+			"enabled": true
+		},
+		"compact-sidebar": {
+			"enabled": true
+		},
+		"in-app-menu": {
+			"enabled": false
+		},
+		"navigation": {
+			"enabled": false
+		},
+		"lyrics-genius": {
+			"enabled": false
+		},
+		"skip-disliked-songs": {
+			"enabled": true
+		},
+		"synced-lyrics": {
+			"enabled": true
+		}
+	},
+	"__internal__": {
+		"migrations": {
+			"version": "3.5.3"
+		}
+	}
+}

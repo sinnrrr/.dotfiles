@@ -1,3 +1,6 @@
 [user]
 	email = dimasoltusyuk@gmail.com
 	name = Dmytro Soltysiuk
+
+[core]
+	ignorecase = false

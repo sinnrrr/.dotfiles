@@ -5,7 +5,6 @@ stow_common_items:
   - bin
   - btop
   - git
-  - nvim
   - zsh
   - shell
   - youtube-music

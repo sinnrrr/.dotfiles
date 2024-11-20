@@ -10,6 +10,6 @@ stow_common_items:
   - youtube-music
   - lazygit
   - kitty
-  - cursor
+  - vscode
 
 dotfiles_state: present

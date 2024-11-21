@@ -19,7 +19,25 @@
     {
         "key": ", e",
         "command": "workbench.action.toggleSidebarVisibility",
-        "when": "sideBarVisible"
+        "when": "sideBarVisible && !inputFocus"
+    },
+    {
+        "command": "vscode-neovim.send",
+        "key": ", y",
+        "when": "editorTextFocus && (neovim.mode == 'normal' || neovim.mode == 'visual')",
+        "args": "\"+yy",
+    },
+    {
+        "command": "vscode-neovim.send",
+        "key": ", /",
+        "when": "editorTextFocus && neovim.mode == 'normal'",
+        "args": "gcc",
+    },
+    {
+        "command": "vscode-neovim.send",
+        "key": ", /",
+        "when": "editorTextFocus && neovim.mode == 'visual'",
+        "args": "gc",
     },
     {
         "key": ", g g",
@@ -89,7 +107,7 @@
     {
         "key": "q",
         "command": "workbench.action.toggleSidebarVisibility",
-        "when": "sideBarVisible"
+        "when": "sideBarVisible && !inputFocus"
     },
     {
         "key": "q",

@@ -18,5 +18,9 @@
     // Explorer
     "explorer.confirmDelete": false,
     // Breadcrumbs
-    "breadcrumbs.enabled": false
+    "breadcrumbs.enabled": false,
+    // Git
+    "git.enableSmartCommit": true,
+    "git.autofetch": true,
+    "git.openRepositoryInParentFolders": "never"
 }

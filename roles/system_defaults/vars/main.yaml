@@ -1,2 +1,0 @@
----
-wallpaper_path: '{{ dotfiles.target }}/roles/system_defaults/files/wall.jpeg'

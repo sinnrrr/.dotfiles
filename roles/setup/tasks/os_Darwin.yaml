@@ -1,6 +1,0 @@
----
-- ansible.builtin.include_role:
-    name: elliotweiser.osx-command-line-tools
-- ansible.builtin.include_role:
-    name: geerlingguy.mac.homebrew
-    public: true

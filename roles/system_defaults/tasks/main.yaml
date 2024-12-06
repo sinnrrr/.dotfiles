@@ -1,6 +1,0 @@
----
-
-- import_tasks: all.yaml
-
-- name: Configure os specific system settings
-  ansible.builtin.include_tasks: "os_{{ ansible_system }}.yaml"

@@ -11,16 +11,19 @@
     "window.commandCenter": false,
     "window.titleBarStyle": "custom",
     "window.density.editorTabHeight": "compact",
-    "editor.titleBar.enabled": false,
     // Workbench
     "workbench.statusBar.visible": false,
     "workbench.layoutControl.enabled": false,
     // Explorer
     "explorer.confirmDelete": false,
+    "explorer.confirmDragAndDrop": false,
     // Breadcrumbs
     "breadcrumbs.enabled": false,
+    // Files
+    "files.insertFinalNewline": true,
     // Git
     "git.enableSmartCommit": true,
     "git.autofetch": true,
-    "git.openRepositoryInParentFolders": "never"
+    "git.openRepositoryInParentFolders": "never",
+    "git.confirmSync": false
 }

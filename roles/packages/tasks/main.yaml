@@ -1,3 +1,0 @@
----
-- name: Include os-specific package tasks
-  ansible.builtin.include_tasks: "os_{{ ansible_system }}.yaml"

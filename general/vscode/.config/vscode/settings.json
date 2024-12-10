@@ -21,6 +21,9 @@
     "breadcrumbs.enabled": false,
     // Files
     "files.insertFinalNewline": true,
+    "files.associations": {
+        "*.pp": "json"
+    },
     // Git
     "git.enableSmartCommit": true,
     "git.autofetch": true,

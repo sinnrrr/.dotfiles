@@ -1,5 +1,7 @@
 [core]
 	ignorecase = false
+[push]
+	autoSetupRemote = true
 
 [includeIf "gitdir:/Users/sinnrrr/"]
 	path = ~/.gitconfig.personal

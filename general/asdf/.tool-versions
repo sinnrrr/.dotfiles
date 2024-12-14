@@ -1,7 +1,7 @@
 nodejs 20.17.0
 python 3.12.4
 rust 1.82.0
-golang 1.20.2
+golang 1.23.4
 yarn 1.22.19
 direnv 2.34.0
 java openjdk-18

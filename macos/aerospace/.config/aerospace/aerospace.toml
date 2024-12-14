@@ -77,10 +77,13 @@ cmd-alt-h = [] # Disable "hide others"
 ctrl-alt-cmd-q = 'close'
 ctrl-alt-cmd-f = 'fullscreen'
 ctrl-alt-cmd-r = 'reload-config'
+ctrl-alt-cmd-t = 'layout tiles accordion'
 ctrl-alt-cmd-b = 'exec-and-forget open -n /Applications/Brave\ Browser.app'
 ctrl-alt-cmd-o = 'exec-and-forget open -n /System/Applications/System\ Settings.app'
-ctrl-alt-cmd-enter = 'exec-and-forget kitty -d ~'
+ctrl-alt-cmd-e = 'exec-and-forget open -n ~/Downloads'
+ctrl-alt-cmd-d = 'exec-and-forget killall dmenu-mac;open /Applications/dmenu-mac.app;open /Applications/dmenu-mac.app'
 ctrl-alt-cmd-p = 'exec-and-forget screencapture -cix /dev/null'
+ctrl-alt-cmd-enter = 'exec-and-forget kitty -d ~'
 ctrl-alt-cmd-equal = 'exec-and-forget open -a "Mission Control"'
 ctrl-alt-cmd-minus = 'exec-and-forget open -a "Launchpad"'
 ctrl-alt-cmd-shift-p = 'exec-and-forget screencapture -Pix /dev/null'
@@ -114,12 +117,17 @@ ctrl-alt-cmd-semicolon = 'workspace next'
 ctrl-alt-cmd-shift-g = 'move-node-to-workspace prev'
 ctrl-alt-cmd-shift-semicolon = 'move-node-to-workspace next'
 
+ctrl-alt-cmd-0 = 'workspace-back-and-forth'
 ctrl-alt-cmd-1 = 'workspace 1'
 ctrl-alt-cmd-shift-1 = 'move-node-to-workspace 1'
 ctrl-alt-cmd-2 = 'workspace 2'
 ctrl-alt-cmd-shift-2 = 'move-node-to-workspace 2'
 ctrl-alt-cmd-3 = 'workspace 3'
 ctrl-alt-cmd-shift-3 = 'move-node-to-workspace 3'
+ctrl-alt-cmd-6 = 'workspace 6'
+ctrl-alt-cmd-7 = 'workspace 7'
+ctrl-alt-cmd-8 = 'workspace 8'
+ctrl-alt-cmd-9 = 'workspace 9'
 
 ctrl-alt-cmd-tab = 'workspace-back-and-forth'
 ctrl-alt-cmd-shift-tab = 'move-workspace-to-monitor --wrap-around next'
@@ -146,11 +154,15 @@ ctrl-alt-cmd-shift-tab = 'move-workspace-to-monitor --wrap-around next'
 # alt-shift-k = ['join-with up', 'mode main']
 # alt-shift-l = ['join-with right', 'mode main']
 
+
 [[on-window-detected]]
-if.app-id = 'com.apple.iphonesimulator'
-if.app-name-regex-substring = 'settings'
-if.window-title-regex-substring = 'substring'
-if.workspace = 'workspace-name'
-if.during-aerospace-startup = true
-check-further-callbacks = true
-run = ['layout floating', 'move-node-to-workspace S'] # The callback itself
+if.app-id = 'com.insta360.studio'
+run = ['move-node-to-workspace 7']
+
+[[on-window-detected]]
+if.app-id = 'com.blackmagic-design.DaVinciResolve'
+run = ['move-node-to-workspace 8']
+
+[[on-window-detected]]
+if.app-id = 'com.readdle.SparkDesktop'
+run = ['move-node-to-workspace 9']

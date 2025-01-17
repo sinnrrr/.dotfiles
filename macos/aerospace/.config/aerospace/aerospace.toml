@@ -32,6 +32,9 @@ on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
 # Also see: https://nikitabobko.github.io/AeroSpace/goodness#disable-hide-app
 automatically-unhide-macos-hidden-apps = true
 
+[exec.env-vars]
+PATH = '${HOME}/.local/bin:${PATH}'
+
 # Possible values: (qwerty|dvorak)
 # See https://nikitabobko.github.io/AeroSpace/guide#key-mapping
 [key-mapping]
@@ -78,12 +81,12 @@ ctrl-alt-cmd-q = 'close'
 ctrl-alt-cmd-f = 'fullscreen'
 ctrl-alt-cmd-r = 'reload-config'
 ctrl-alt-cmd-t = 'layout tiles accordion'
-ctrl-alt-cmd-b = 'exec-and-forget open -n /Applications/Brave\ Browser.app'
+ctrl-alt-cmd-b = 'exec-and-forget open -na Brave\ Browser'
 ctrl-alt-cmd-o = 'exec-and-forget open -n /System/Applications/System\ Settings.app'
 ctrl-alt-cmd-e = 'exec-and-forget open -n ~/Downloads'
 ctrl-alt-cmd-d = 'exec-and-forget killall dmenu-mac;open /Applications/dmenu-mac.app;open /Applications/dmenu-mac.app'
 ctrl-alt-cmd-p = 'exec-and-forget screencapture -cix /dev/null'
-ctrl-alt-cmd-enter = 'exec-and-forget kitty -d ~'
+ctrl-alt-cmd-enter = 'exec-and-forget terminal'
 ctrl-alt-cmd-equal = 'exec-and-forget open -a "Mission Control"'
 ctrl-alt-cmd-minus = 'exec-and-forget open -a "Launchpad"'
 ctrl-alt-cmd-shift-p = 'exec-and-forget screencapture -Pix /dev/null'
@@ -106,8 +109,8 @@ ctrl-alt-cmd-shift-k = 'move up'
 ctrl-alt-cmd-shift-l = 'move right'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#resize
-ctrl-alt-cmd-right = 'resize width -50'
-ctrl-alt-cmd-left = 'resize width +50'
+ctrl-alt-cmd-left = 'resize width -50'
+ctrl-alt-cmd-right = 'resize width +50'
 ctrl-alt-cmd-down = 'resize height -50'
 ctrl-alt-cmd-up = 'resize height +50'
 

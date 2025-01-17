@@ -46,6 +46,11 @@
         "args": "gc"
     },
     {
+        "key": ", l r",
+        "command": "editor.action.rename",
+        "when": "editorHasRenameProvider && editorTextFocus && !editorReadonly && (neovim.mode == 'normal' || neovim.mode == 'visual')"
+    },
+    {
         "key": ", g g",
         "command": "lazygit-vscode.toggle",
         "when": "editorTextFocus && neovim.mode == 'normal'"

@@ -11,6 +11,10 @@ case "$(uname -s)" in
         exit 1 ;;
 esac
 
+SCRIPT_PATH=$(dirname "$(realpath "$0")")
+
 # Process general and OS-specific directories
-cd general && stow --no-folding -t "$HOME" *
-cd "../$OS_DIR" && stow --no-folding -t "$HOME" *
+cd "$SCRIPT_PATH/general" && stow --no-folding -t "$HOME" *
+cd "$SCRIPT_PATH/$OS_DIR" && stow --no-folding -t "$HOME" *
+
+echo "Config sourced."

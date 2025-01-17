@@ -12,7 +12,7 @@
     "window.titleBarStyle": "custom",
     "window.density.editorTabHeight": "compact",
     // Workbench
-    "workbench.statusBar.visible": false,
+    // "workbench.statusBar.visible": false,
     "workbench.layoutControl.enabled": false,
     // Explorer
     "explorer.confirmDelete": false,
@@ -24,6 +24,10 @@
     "files.associations": {
         "*.pp": "json"
     },
+    // Python
+    "python.defaultInterpreterPath": "${env:HOME}/.asdf/shims/python",
+    "python.analysis.autoImportCompletions": true,
+    "python.analysis.typeCheckingMode": "basic",
     // Git
     "git.enableSmartCommit": true,
     "git.autofetch": true,

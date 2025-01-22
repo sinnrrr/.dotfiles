@@ -82,16 +82,6 @@
         "key": "ctrl+l",
         "command": "workbench.action.nextEditor"
     },
-    // {
-    //     "key": "ctrl-h",
-    //     "command": "workbench.action.nextSideBarView",
-    //     "when": "sideBarFocus"
-    // },
-    // {
-    //     "key": "ctrl+l",
-    //     "command": "workbench.action.prevSideBarView",
-    //     "when": "sideBarFocus"
-    // },
     {
         "key": "ctrl+\\",
         "command": "workbench.action.terminal.toggleTerminal",

@@ -247,7 +247,9 @@
                                             "^co\\.zeit\\.hyper$",
                                             "alacritty$",
                                             "^net\\.kovidgoyal\\.kitty$",
-                                            "^com\\.utmapp\\.UTM"
+                                            "^com\\.utmapp\\.UTM$",
+                                            "^com\\.microsoft\\.VSCode$",
+                                            "^com\\.todesktop\\.230313mzl4w4u92$"
                                         ],
                                         "type": "frontmost_application_unless"
                                     }
@@ -294,13 +296,11 @@
                                             "^com\\.citrix\\.XenAppViewer$",
                                             "^com\\.vmware\\.proxyApp\\.",
                                             "^com\\.parallels\\.winapp\\.",
-                                            "^com\\.apple\\.Terminal$",
-                                            "^com\\.googlecode\\.iterm2$",
                                             "^co\\.zeit\\.hyperterm$",
                                             "^co\\.zeit\\.hyper$",
                                             "alacritty$",
                                             "^net\\.kovidgoyal\\.kitty$",
-                                            "^com\\.utmapp\\.UTM"
+                                            "^com\\.utmapp\\.UTM$"
                                         ],
                                         "type": "frontmost_application_unless"
                                     }
@@ -353,7 +353,7 @@
                                             "^co\\.zeit\\.hyper$",
                                             "alacritty$",
                                             "^net\\.kovidgoyal\\.kitty$",
-                                            "^com\\.utmapp\\.UTM"
+                                            "^com\\.utmapp\\.UTM$"
                                         ],
                                         "type": "frontmost_application_unless"
                                     }

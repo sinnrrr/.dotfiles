@@ -24,6 +24,12 @@
     "files.associations": {
         "*.pp": "json"
     },
+    // YAML
+    // "yaml.schemas": {
+    //     "https://raw.githubusercontent.com/quintush/helm-unittest/master/schema/helm-testsuite.json": [
+    //         "charts/*/tests/*_test.yaml"
+    //     ]
+    // },
     // Python
     "python.defaultInterpreterPath": "${env:HOME}/.asdf/shims/python",
     "python.analysis.autoImportCompletions": true,

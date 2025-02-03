@@ -65,6 +65,28 @@
         "command": "workbench.action.findInFiles",
         "when": "editorTextFocus && neovim.mode == 'normal'"
     },
+    // CMD Shortcuts
+    {
+        "key": "cmd+c",
+        "command": "workbench.action.terminal.copySelection",
+        "when": "terminalFocus && terminalTextSelected"
+    },
+    {
+        "key": "cmd+c",
+        "command": "workbench.action.terminal.sendSequence",
+        "args": {
+            "text": "\u0003" // SIGINT
+        },
+        "when": "terminalFocus && !terminalTextSelected"
+    },
+    {
+        "key": "cmd+z",
+        "command": "workbench.action.terminal.sendSequence",
+        "args": {
+            "text": "\u001A" // SIGTSTP
+        },
+        "when": "terminalFocus && !terminalTextSelected"
+    },
     // Ctrl Shortcuts
     {
         "key": "ctrl+q",
@@ -104,7 +126,17 @@
         "when": "editorTextFocus && neovim.mode != insert",
         "args": "<C-u>zz"
     },
+    {
+        "key": "ctrl+r",
+        "command": "redo",
+        "when": "editorTextFocus && neovim.mode == 'normal'"
+    },
     // Char Shortcuts
+    {
+        "key": "u",
+        "command": "undo",
+        "when": "editorTextFocus && neovim.mode == 'normal'"
+    },
     {
         "key": "q",
         "command": "workbench.action.toggleSidebarVisibility",

@@ -1,6 +1,9 @@
 {
     // Editor
     "editor.formatOnSave": true,
+    "editor.fontFamily": "JetBrainsMono Nerd Font",
+    "editor.fontSize": 13,
+    "editor.largeFileOptimizations": false,
     // Neovim
     "vscode-neovim.neovimClean": true,
     "extensions.experimental.affinity": {
@@ -24,19 +27,18 @@
     "files.associations": {
         "*.pp": "json"
     },
-    // YAML
-    // "yaml.schemas": {
-    //     "https://raw.githubusercontent.com/quintush/helm-unittest/master/schema/helm-testsuite.json": [
-    //         "charts/*/tests/*_test.yaml"
-    //     ]
-    // },
+    // Terminal
+    "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font Propo",
     // Python
-    "python.defaultInterpreterPath": "${env:HOME}/.asdf/shims/python",
+    "python.defaultInterpreterPath": "${env:HOME}/.asdf/installs/python/3.13.1",
     "python.analysis.autoImportCompletions": true,
     "python.analysis.typeCheckingMode": "basic",
+    "python.terminal.activateEnvInCurrentTerminal": true,
     // Git
     "git.enableSmartCommit": true,
     "git.autofetch": true,
     "git.openRepositoryInParentFolders": "never",
-    "git.confirmSync": false
+    "git.confirmSync": false,
+    // Java
+    "java.import.gradle.java.home": "/Users/dmytro.soltysiuk.-nd/.asdf/installs/java/corretto-11.0.23.9.1",
 }

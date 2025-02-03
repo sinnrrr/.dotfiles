@@ -68,3 +68,6 @@ ulimit -n 10000
 # if [[ ( "$SHLVL" -eq 1 && ! -o LOGIN ) && -s "${ZDOTDIR:-$HOME}/.zprofile" ]]; then
 #   source "${ZDOTDIR:-$HOME}/.zprofile"
 # fi
+
+export ASDF_DATA_DIR="$HOME/.asdf"
+export PATH="$ASDF_DATA_DIR/shims:$PATH"

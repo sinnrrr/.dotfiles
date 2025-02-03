@@ -28,15 +28,6 @@ setopt share_history          # share command history data
 
 ZSH_AUTOSUGGEST_MANUAL_REBIND=1
 
-# silence asdf-direnv
-export DIRENV_LOG_FORMAT=""
-zinit ice lucid as"program" wait \
-    pick'bin/asdf' atinit'export ASDF_DIR="$PWD"' \
-    atclone'_zinit_asdf_install' \
-    atpull'%atclone' depth=1  \
-    atload'source asdf_direnv_hook.zsh && _direnv_hook'  # from 'asdf_direnv_hook.zsh asdf.sh'; not sourcing asdf.sh for perfomance https://github.com/asdf-community/asdf-direnv#pro-tips
-zinit light asdf-vm/asdf
-
 zinit ice depth=1
 zinit light romkatv/powerlevel10k
 

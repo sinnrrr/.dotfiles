@@ -7,7 +7,7 @@
 	path = ~/.gitconfig.personal
 
 [includeIf "gitdir:/Users/dmytro.soltysiuk.-nd/"]
-	path = ~/.gitconfig.work
+	path = ~/Work/.gitconfig.work
 
 [includeIf "gitdir:~/.dotfiles/"]
 	path = ~/.gitconfig.personal

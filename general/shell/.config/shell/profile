@@ -3,8 +3,8 @@
 # Default programs
 export EDITOR="nvim"
 export VISUAL="$EDITOR"
-export TERMINAL="alacritty"
-export BROWSER="open-in-brave"
+export TERMINAL="terminal"
+export BROWSER="browser"
 export OPENER="open" # for mac
 
 export XDG_CONFIG_HOME="$HOME/.config"
@@ -69,5 +69,6 @@ ulimit -n 10000
 #   source "${ZDOTDIR:-$HOME}/.zprofile"
 # fi
 
+export ASDF_NODEJS_LEGACY_FILE_DYNAMIC_STRATEGY="latest_available"
 export ASDF_DATA_DIR="$HOME/.asdf"
 export PATH="$ASDF_DATA_DIR/shims:$PATH"

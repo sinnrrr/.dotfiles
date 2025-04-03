@@ -1,1 +1,1 @@
-kitty --single-instance --instance-group quickterm --title QuickTerminal --directory "${HOME}"
+kitty --single-instance --instance-group quickterm --title QuickTerminal --directory "${HOME}" zsh -l

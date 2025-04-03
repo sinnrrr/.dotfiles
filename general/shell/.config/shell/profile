@@ -1,6 +1,7 @@
 # vim:ft=sh
 
 # Default programs
+export SHELL="zsh"
 export EDITOR="nvim"
 export VISUAL="$EDITOR"
 export TERMINAL="terminal"
@@ -12,63 +13,27 @@ export XDG_DATA_HOME="$HOME/.local/share"
 export XDG_BACKUP_DIR="$XDG_DATA_HOME/backup"
 export XDG_CACHE_HOME="$HOME/.cache"
 
-HISTFILE="${XDG_DATA_HOME:-$HOME/.local/share}/history"
-HISTSIZE=100000
-SAVEHIST=1000000
-LESSHISTFILE="-"
-# ZDOTDIR="${XDG_CONFIG_HOME:-$HOME/.config}/zsh"
-TMUX_TMPDIR="$XDG_RUNTIME_DIR"
-export PYTHONPATH=$PYTHONPATH:.
-export YABAI="${XDG_CONFIG_HOME:-$HOME/.config}/yabai/scripts"
+export YABAI="$XDG_CONFIG_HOME/yabai/scripts"
+export GIT_CONFIG_GLOBAL="$XDG_CONFIG_HOME/git/.gitconfig"
+export GOPATH="$HOME/.local/"
 
-FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
-FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
-FZF_ALT_C_COMMAND="$FZF_DEFAULT_COMMAND"
+export LESSHISTFILE=-
 
-FZF_DEFAULT_OPTS="--layout=reverse --inline-info --height=50%"
-FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
---color=dark
---color=fg:-1,bg:-1,hl:#c678dd,fg+:#ffffff,bg+:#4b5263,hl+:#d858fe
---color=info:#98c379,prompt:#61afef,pointer:#be5046,marker:#e5c07b,spinner:#61afef,header:#61afef
-'
-export LESS=-R
-export LESS_TERMCAP_mb="$(printf '%b' '[1;31m')"
-export LESS_TERMCAP_md="$(printf '%b' '[1;36m')"
-export LESS_TERMCAP_me="$(printf '%b' '[0m')"
-export LESS_TERMCAP_so="$(printf '%b' '[01;44;33m')"
-export LESS_TERMCAP_se="$(printf '%b' '[0m')"
-export LESS_TERMCAP_us="$(printf '%b' '[1;32m')"
-export LESS_TERMCAP_ue="$(printf '%b' '[0m')"
-
-export POETRY_CONFIG_DIR="$XDG_CONFIG_HOME/pypoetry"
-# homebrew (macos intel or silicon or linux)
-test -f /home/linuxbrew/.linuxbrew/bin/brew && eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
-test -f /usr/local/bin/brew && eval $(/usr/local/bin/brew shellenv)
-test -f /opt/homebrew/bin/brew && eval $(/opt/homebrew/bin/brew shellenv)
+test -f /home/linuxbrew/.linuxbrew/bin/brew && eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+test -f /usr/local/bin/brew && eval "$(/usr/local/bin/brew shellenv)"
+test -f /opt/homebrew/bin/brew && eval "$(/opt/homebrew/bin/brew shellenv)"
 
 if [[ -n "$HOMEBREW_PREFIX" ]]; then
-	export HOMEBREW_NO_ANALYTICS=1
-	export HOMEBREW_BUNDLE_FILE="$HOME/.dotfiles/roles/packages/files/macos/Brewfile"
-	# linux utils for macos
-	PATH="${HOMEBREW_PREFIX}/opt/coreutils/libexec/gnubin:$PATH"
-	PATH="${HOMEBREW_PREFIX}/opt/gnu-sed/libexec/gnubin:$PATH"
-	PATH="${HOMEBREW_PREFIX}/opt/gnu-tar/libexec/gnubin:$PATH"
-	PATH="${HOMEBREW_PREFIX}/opt/util-linux/bin:$PATH"
-	PATH="${HOMEBREW_PREFIX}/opt/util-linux/sbin:$PATH"
+  export HOMEBREW_NO_ANALYTICS=1
+  export HOMEBREW_BUNDLE_FILE="$HOME/.dotfiles/roles/packages/files/macos/Brewfile"
+  PATH="${HOMEBREW_PREFIX}/opt/coreutils/libexec/gnubin:$PATH"
+  PATH="${HOMEBREW_PREFIX}/opt/gnu-sed/libexec/gnubin:$PATH"
+  PATH="${HOMEBREW_PREFIX}/opt/gnu-tar/libexec/gnubin:$PATH"
+  PATH="${HOMEBREW_PREFIX}/opt/util-linux/bin:$PATH"
+  PATH="${HOMEBREW_PREFIX}/opt/util-linux/sbin:$PATH"
 fi
 
 PATH="$HOME/.local/bin:$PATH"
 PATH="/usr/local/bin:$PATH"
 
 export PATH
-
-ulimit -n 10000
-# put it into .zshenv
-# Ensure that a non-login, non-interactive shell has a defined environment.
-# if [[ ( "$SHLVL" -eq 1 && ! -o LOGIN ) && -s "${ZDOTDIR:-$HOME}/.zprofile" ]]; then
-#   source "${ZDOTDIR:-$HOME}/.zprofile"
-# fi
-
-export ASDF_NODEJS_LEGACY_FILE_DYNAMIC_STRATEGY="latest_available"
-export ASDF_DATA_DIR="$HOME/.asdf"
-export PATH="$ASDF_DATA_DIR/shims:$PATH"

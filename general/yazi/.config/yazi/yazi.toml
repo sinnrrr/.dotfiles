@@ -18,7 +18,7 @@ for = "unix"
 
 [[open.prepend_rules]]
 mime = "application/pdf"
-use = ["open_in_browser"]
+use = ["browser"]
 
 [[plugin.prepend_fetchers]]
 id = "git"

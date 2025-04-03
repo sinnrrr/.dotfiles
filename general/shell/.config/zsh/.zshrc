@@ -3,13 +3,26 @@ if [[ -r $p10k_cache ]]; then
     source $p10k_cache
 fi
 
-SHELL="/bin/zsh" # skhd related fix, override back to zsh
 ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
 [ ! -d $ZINIT_HOME ] && mkdir -p "$(dirname $ZINIT_HOME)"
 [ ! -d $ZINIT_HOME/.git ] && git clone https://github.com/zdharma-continuum/zinit.git "$ZINIT_HOME"
 source "${ZINIT_HOME}/zinit.zsh"
 
-[[ -n $(ls ~/.zshrc.d/) ]] && for file in ~/.zshrc.d/*; do source "${file}"; done
+auto_activate_venv() {
+    if [[ -n "$VIRTUAL_ENV" && "$PWD" != "$VIRTUAL_ENV" ]]; then
+        deactivate
+    fi
+
+    if [[ -d "venv" ]]; then
+        source venv/bin/activate
+    elif [[ -d ".venv" ]]; then
+        source .venv/bin/activate
+    fi
+}
+autoload -Uz add-zsh-hook
+add-zsh-hook chpwd auto_activate_venv
+
+[[ -n $(ls "$ZDOTDIR/.zshrc.d/") ]] && for file in $ZDOTDIR/.zshrc.d/*; do source "${file}"; done
 
 ZVM_VI_HIGHLIGHT_FOREGROUND=white
 ZVM_VI_HIGHLIGHT_BACKGROUND=black
@@ -74,4 +87,4 @@ zinit wait lucid light-mode for \
 
 autoload -U colors && colors
 
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+[[ ! -f $ZDOTDIR/.p10k.zsh ]] || source $ZDOTDIR/.p10k.zsh

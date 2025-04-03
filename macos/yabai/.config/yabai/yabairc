@@ -3,22 +3,15 @@
 # to load $YABAI env
 source $HOME/.profile
 
-# unload stage manager
 launchctl unload -F /System/Library/LaunchAgents/com.apple.WindowManager.plist >/dev/null 2>&1 &
-
 sudo yabai --load-sa
 yabai -m signal --add event=dock_did_restart action="sudo yabai --load-sa"
-
-yabai -m signal --add event=display_added action="sleep 1 && $YABAI/create_spaces.sh"
-yabai -m signal --add event=display_removed action="sleep 1 && $YABAI/create_spaces.sh"
-
-# If no window on the current space is focused after a window is destroyed or
-# minimized, or an application is hidden, focus the window under the cursor.
 yabai -m signal --add event=window_destroyed action=$YABAI/focus_space.sh
 yabai -m signal --add event=window_minimized action=$YABAI/focus_space.sh
 yabai -m signal --add event=application_hidden action=$YABAI/focus_space.sh
+# yabai -m signal --add event=display_added action="sleep 1 && $YABAI/create_spaces.sh 6"
+# yabai -m signal --add event=display_removed action="sleep 1 && $YABAI/create_spaces.sh 6"
 
-# global settings
 yabai -m config \
   mouse_follows_focus off \
   focus_follows_mouse off \
@@ -41,6 +34,7 @@ yabai -m config \
   mouse_drop_action swap \
   debug_output off
 
+# App-specific rules
 yabai -m rule --add title='Preferences$' manage=off
 yabai -m rule --add title='^General' manage=off
 yabai -m rule --add title='Settings$' manage=off
@@ -58,18 +52,12 @@ yabai -m rule --add label="About This Mac" app="System Information" title="About
 yabai -m rule --add app="^Karabiner-EventViewer$" manage=off
 yabai -m rule --add title="QuickTerminal" grid=40:20:4:7:12:26 opacity=0.9 scratchpad="QuickTerminal" sticky=on
 
+# Space-specific rules
+yabai -m rule --add app="Spotify" space=5
+yabai -m rule --add app="YouTube Music" space=5
+yabai -m rule --add app="Spark Desktop" title="Spark Desktop" space=6
+
 $YABAI/create_spaces.sh 6
 $YABAI/smart_indicator.sh
-SHELL="/bin/sh" skhd &
+skhd &
 echo "yabai configuration loaded.."
-
-# can be usefull for focus problems https://github.com/koekeishiya/yabai/issues/2030#issuecomment-1873351137
-# yabai -m signal --add event=space_changed action="yabai -m window --focus \$(yabai -m query --windows --space | jq .[0].id)"
-
-# notch handling (macbook pro 16) for custom title bar
-# NOTCH_UUID="37D8832A-2D66-02CA-B9F7-8F30A301B230"
-# NORMAL_BAR=32
-# NOTCH_BAR=0
-# yabai -m signal --add event=display_added action="if [[ \"\$(yabai -m query --displays | jq \".[\$YABAI_DISPLAY_ID].uuid\")\" =~ \"$NOTCH_UUID\" ]]; then yabai -m config external_bar main:$NORMAL_BAR:0; elif [[ \"\$(yabai -m query --displays | jq '.[].uuid')\" =~ \"$NOTCH_UUID\" ]]; then yabai -m config external_bar main:$NORMAL_BAR:0; else yabai -m config external_bar all:$NORMAL_BAR:0; fi"
-# yabai -m signal --add event=display_removed action="if [[ \"\$(yabai -m query --displays | jq \".[\$YABAI_DISPLAY_ID].uuid\")\" =~ \"$NOTCH_UUID\" ]]; then yabai -m config external_bar all:$NORMAL_BAR:0; elif [[ \"\$(yabai -m query --displays | jq '.[].uuid')\" =~ \"$NOTCH_UUID\" ]]; then yabai -m config external_bar all:$NOTCH_BAR:0; fi"
-# if [[ "$(yabai -m query --displays | jq '.[].uuid')" =~ "$NOTCH_UUID" ]]; then if [ "$(yabai -m query --displays | jq length)" -gt "1" ]; then yabai -m config external_bar main:$NORMAL_BAR:0; else yabai -m config external_bar all:$NOTCH_BAR:0; fi else yabai -m config external_bar all:$NORMAL_BAR:0; fi

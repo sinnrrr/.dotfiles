@@ -1,0 +1,112 @@
+[[manager.prepend_keymap]]
+on = "!"
+run = 'shell "$SHELL" --block'
+desc = "Open shell here"
+
+[[manager.prepend_keymap]]
+on = "<C-o>"
+run = '''
+	shell --block 'nvim +"lua require(\"persistence\").load()"' --confirm
+'''
+
+[[manager.prepend_keymap]]
+on = "U"
+run = '''
+	shell --block "ids=$(echo -ne '\n' | trash-restore | awk '$1 ~ /^[0-9]+/ {print $0}' | fzf --multi | awk '{print $1}' | sed -z 's/\n/,/g;s/,$/\n/'); echo $ids | trash-restore; clear" --confirm
+'''
+desc = "Restory deleted files"
+
+[[manager.prepend_keymap]]
+on = ["c", "D"]
+run = '''
+	shell 'ripdrag -x --all -b "$@"' --confirm
+'''
+desc = "Drag and drop"
+
+[[manager.prepend_keymap]]
+on = ["c", "s"]
+run = '''
+  shell 'curl -F"file=@$1" https://0x0.st | pbcopy' --confirm
+'''
+desc = "Share file"
+
+[[manager.prepend_keymap]]
+on = "e"
+run = "plugin run-file 1"
+desc = "Execute file (sync)"
+
+[[manager.prepend_keymap]]
+on = "E"
+run = "plugin run-file 2"
+desc = "Execute file with args (sync)"
+
+[[manager.prepend_keymap]]
+on = "<C-e>"
+run = "plugin run-file 3"
+desc = "Execute file with args (async)"
+
+[[manager.prepend_keymap]]
+on = ["c", "a"]
+run = "plugin compress"
+desc = "Archive selected files"
+
+[[manager.prepend_keymap]]
+on = ["c", "m"]
+run = "plugin chmod"
+desc = "chmod"
+
+# keymap.toml
+[[manager.prepend_keymap]]
+on = "T"
+run = "plugin toggle-pane max-preview"
+desc = "Maximize or restore the preview pane"
+
+[[manager.prepend_keymap]]
+on = "l"
+run = "plugin smart-enter"
+desc = "Enter the child directory, or open the file"
+
+[[manager.prepend_keymap]]
+on = ["g", "r"]
+run = '''
+	shell 'ya emit cd "$(git rev-parse --show-toplevel)"' 
+'''
+desc = "Go to git root"
+
+[[manager.prepend_keymap]]
+on = ["g", "g"]
+run = "plugin lazygit"
+desc = "run lazygit"
+
+[[manager.prepend_keymap]]
+on = ["g", "l"]
+run = "plugin follow-link"
+desc = "Go to the symlink original directory"
+
+[[manager.prepend_keymap]]
+on = ["C", "d"]
+run = "cd ~/Documents"
+
+[[manager.prepend_keymap]]
+on = ["C", "h"]
+run = "cd ~"
+
+[[manager.prepend_keymap]]
+on = ["C", "D"]
+run = "cd ~/Downloads"
+
+[[manager.prepend_keymap]]
+on = ["C", "c"]
+run = "cd ~/.config"
+
+[[manager.prepend_keymap]]
+on = ["C", "C"]
+run = "cd ~/.dotfiles"
+
+[[manager.prepend_keymap]]
+on = ["C", "P"]
+run = "cd ~/Personal"
+
+[[manager.prepend_keymap]]
+on = ["C", "W"]
+run = "cd ~/Work"

@@ -1,5 +1,0 @@
-# vim:ft=sh
-
-cmd drag_drop &{{
-       ripdrag -x --all -b $fx 2>/dev/null
-}}

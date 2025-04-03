@@ -48,8 +48,8 @@ zinit wait lucid light-mode for \
     atload'bindkey "^[[A" history-substring-search-up; bindkey "^[[B" history-substring-search-down' \
     zsh-users/zsh-history-substring-search \
     \
-    atload='_zinit_lf' \
-    id-as'lf' nocompile \
+    atload='_zinit_yazi' \
+    id-as'yazi' nocompile \
     zdharma-continuum/null \
     \
     atload='_zinit_nvim' \

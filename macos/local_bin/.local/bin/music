@@ -1,0 +1,2 @@
+#!/bin/sh
+open -a "$HOME/Applications/Brave Browser Apps.localized/YouTube Music.app"

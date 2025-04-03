@@ -4,10 +4,10 @@
 	autoSetupRemote = true
 
 [includeIf "gitdir:/Users/sinnrrr/"]
-	path = ~/.gitconfig.personal
+	path = ~/Personal/.gitconfig.personal
 
 [includeIf "gitdir:/Users/dmytro.soltysiuk.-nd/"]
 	path = ~/Work/.gitconfig.work
 
 [includeIf "gitdir:~/.dotfiles/"]
-	path = ~/.gitconfig.personal
+	path = ~/Personal/.gitconfig.personal

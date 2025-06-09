@@ -1,0 +1,30 @@
+[
+  {
+    "context": "Editor",
+    "bindings": {
+      "ctrl-h": "pane::ActivatePreviousItem",
+      "ctrl-l": "pane::ActivateNextItem",
+      "ctrl-q": "pane::CloseActiveItem",
+      "ctrl-shift-q": "pane::ReopenClosedItem"
+    }
+  },
+  {
+    "context": "Workspace",
+    "bindings": {
+      "ctrl-\\": "workspace::ToggleBottomDock"
+    }
+  },
+  {
+    "context": "vim_mode == normal && !menu",
+    "bindings": {
+      "space e": [
+        "task::Spawn",
+        { "task_name": "Yazi", "reveal_target": "center" }
+      ],
+      "space g g": [
+        "task::Spawn",
+        { "task_name": "LazyGit", "reveal_target": "center" }
+      ]
+    }
+  }
+]

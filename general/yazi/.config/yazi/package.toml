@@ -33,6 +33,11 @@ use = "KKV9/compress"
 rev = "60b24af"
 hash = "ee025be766240cc98e671754ac836da3"
 
+[[plugin.deps]]
+use = "atareao/convert"
+rev = "7c18342"
+hash = "cc6f6db11762ed3ee8c14c276e7cfb4b"
+
 [[flavor.deps]]
 use = "BennyOe/tokyo-night"
 rev = "695dac6"

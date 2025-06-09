@@ -3,44 +3,43 @@
 # Use neovim for vim if present.
 [ -x "$(command -v nvim)" ] && alias vim="nvim" vimdiff="nvim -d"
 
-# Use $XINITRC variable if file exists.
-[ -f "$XINITRC" ] && alias startx="startx $XINITRC"
-
-# sudo not required for some system commands
-for x in mount umount sv pacman updatedb su; do
-    alias $x="sudo $x"
-done
+alias ..='cd ..'
+alias ...='cd ../../../'
+alias ....='cd ../../../../'
+alias .....='cd ../../../../../'
+alias .4='cd ../../../../'
+alias .5='cd ../../../../../'
 
 # Verbosity and settings that you pretty much just always are going to want.
 alias \
-    cp="cp -iv" \
-    mv="mv -iv" \
-    bc="bc -ql" \
-    yt="youtube-dl --add-metadata -i" \
-    yta="yt -x -f bestaudio/best" \
-    ffmpeg="ffmpeg -hide_banner"
+  cp="cp -iv" \
+  mv="mv -iv" \
+  bc="bc -ql" \
+  yt="youtube-dl --add-metadata -i" \
+  yta="yt -x -f bestaudio/best" \
+  ffmpeg="ffmpeg -hide_banner"
 
 # Colorize commands when possible.
 alias \
-    ls="ls -h --color=auto" \
-    grep="grep --color=auto" \
-    ccat="highlight --out-format=ansi"
+  ls="ls -h --color=auto" \
+  grep="grep --color=auto" \
+  ccat="highlight --out-format=ansi"
 
 # These common commands are just too long! Abbreviate them.
 alias \
-    g="git" \
-    lg="lazygit" \
-    c="clear" \
-    s="spotify_player" \
-    t="btop" \
-    top="btop" \
-    htop="btop" \
-    k="kubectl" \
-    mux="tmuxinator" \
-    trem="transmission-remote" \
-    YT="youtube-viewer" \
-    sdn="sudo shutdown -h now" \
-    v="$EDITOR" \
-    bu="brew upgrade | tee /dev/tty | grep -q 'yabai' && yabaiheadupdate" \
-    reload-shortcuts="apply-shortcuts >/dev/null; source ${XDG_CONFIG_HOME:-$HOME/.config}/shell/shortcutrc ; source ${XDG_CONFIG_HOME:-$HOME/.config}/shell/zshnameddirrc" \
-    ubuntu="docker run --rm -ti ubuntu /bin/bash"
+  g="git" \
+  lg="lazygit" \
+  c="clear" \
+  s="spotify_player" \
+  t="btop" \
+  top="btop" \
+  htop="btop" \
+  k="kubectl" \
+  mux="tmuxinator" \
+  trem="transmission-remote" \
+  YT="youtube-viewer" \
+  sdn="sudo shutdown -h now" \
+  v="$EDITOR" \
+  bu="brew upgrade | tee /dev/tty | grep -q 'yabai' && yabaiheadupdate" \
+  reload-shortcuts="apply-shortcuts >/dev/null; source ${XDG_CONFIG_HOME:-$HOME/.config}/shell/shortcutrc ; source ${XDG_CONFIG_HOME:-$HOME/.config}/shell/zshnameddirrc" \
+  ubuntu="docker run --rm -ti ubuntu /bin/bash"

@@ -2,13 +2,13 @@
 # If you encounter any issues, please make an issue at https://github.com/yazi-rs/schemas.
 "$schema" = "https://yazi-rs.github.io/schemas/yazi.json"
 
-[manager]
+[mgr]
 show_hidden = true
 ratio = [1, 2, 3]
 
-[preview]
-max_width = 9999
-max_height = 9999
+# [preview]
+# max_width = 9999
+# max_height = 9999
 
 [[opener.open_in_browser]]
 run = '$BROWSER "$@"'
@@ -20,12 +20,12 @@ for = "unix"
 mime = "application/pdf"
 use = ["browser"]
 
-[[plugin.prepend_fetchers]]
-id = "git"
-name = "*"
-run = "git"
-
-[[plugin.prepend_fetchers]]
-id = "git"
-name = "*/"
-run = "git"
+# [[plugin.prepend_fetchers]]
+# id = "git"
+# name = "*"
+# run = "git"
+#
+# [[plugin.prepend_fetchers]]
+# id = "git"
+# name = "*/"
+# run = "git"

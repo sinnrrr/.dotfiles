@@ -13,11 +13,11 @@ export XDG_DATA_HOME="$HOME/.local/share"
 export XDG_BACKUP_DIR="$XDG_DATA_HOME/backup"
 export XDG_CACHE_HOME="$HOME/.cache"
 
+export LESSHISTFILE=-
+
 export YABAI="$XDG_CONFIG_HOME/yabai/scripts"
 export GIT_CONFIG_GLOBAL="$XDG_CONFIG_HOME/git/.gitconfig"
 export GOPATH="$HOME/.local/"
-
-export LESSHISTFILE=-
 
 test -f /home/linuxbrew/.linuxbrew/bin/brew && eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 test -f /usr/local/bin/brew && eval "$(/usr/local/bin/brew shellenv)"

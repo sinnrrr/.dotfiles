@@ -58,6 +58,5 @@ yabai -m rule --add app="YouTube Music" space=5
 yabai -m rule --add app="Spark Desktop" title="Spark Desktop" space=6
 
 $YABAI/create_spaces.sh 6
-$YABAI/smart_indicator.sh
 skhd &
 echo "yabai configuration loaded.."

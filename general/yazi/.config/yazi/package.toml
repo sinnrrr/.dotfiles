@@ -1,37 +1,37 @@
 [[plugin.deps]]
 use = "Lil-Dank/lazygit"
-rev = "9f924e3"
-hash = "2b0c33928986f126d5c5a4cac31a6b46"
+rev = "7a08a09"
+hash = "a1fa2b3e1826c3a34804ea8c548e9f80"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:full-border"
-rev = "2730199"
-hash = "1f3dad061209081a6b04dd6ff2cb06c7"
+rev = "63f9650"
+hash = "3996fc74044bc44144b323686f887e1"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:smart-enter"
-rev = "2730199"
-hash = "7918aab6a71caf31b58411f789195677"
+rev = "63f9650"
+hash = "a7ab702e1ef0c097defbc976ed34c186"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:toggle-pane"
-rev = "2730199"
-hash = "5c9dda1a587b8f5b6f63e3d5375bda88"
+rev = "63f9650"
+hash = "d5d4f3527592da5fbe77fd6f51815f80"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:git"
-rev = "2730199"
-hash = "e0d2c8d7e7afe5b82270367098d1a821"
+rev = "63f9650"
+hash = "bf6f074cd41ee33c3360341d168f9733"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:chmod"
-rev = "2730199"
-hash = "2f1053f89d1a301a648ab181d0948e38"
+rev = "63f9650"
+hash = "d0ad0c1946b46a30c8489735fe8de41c"
 
 [[plugin.deps]]
 use = "KKV9/compress"
-rev = "60b24af"
-hash = "ee025be766240cc98e671754ac836da3"
+rev = "9fc8fe0"
+hash = "2ad086899bf368fba211a33d8f68c39d"
 
 [[plugin.deps]]
 use = "atareao/convert"
@@ -40,5 +40,5 @@ hash = "cc6f6db11762ed3ee8c14c276e7cfb4b"
 
 [[flavor.deps]]
 use = "BennyOe/tokyo-night"
-rev = "695dac6"
-hash = "a8f426ea0d9cb843b081d62ab01364c8"
+rev = "b3950bf"
+hash = "319ce574cdb2865baf4323db90456504"

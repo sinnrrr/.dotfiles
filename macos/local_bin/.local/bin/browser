@@ -1,2 +1,2 @@
 #!/bin/sh
-open -n "/Applications/Brave Browser.app"
+open -na Firefox

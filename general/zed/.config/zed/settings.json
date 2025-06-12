@@ -16,7 +16,7 @@
     "dark": "One Dark"
   },
   "agent": {
-    "dock": "left",
+    "dock": "right",
     "model_parameters": [],
     "default_model": {
       "provider": "copilot_chat",

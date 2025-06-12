@@ -88,3 +88,5 @@ zinit wait lucid light-mode for \
 autoload -U colors && colors
 
 [[ ! -f $ZDOTDIR/.p10k.zsh ]] || source $ZDOTDIR/.p10k.zsh
+
+eval "$(fnm env --use-on-cd --shell zsh)"

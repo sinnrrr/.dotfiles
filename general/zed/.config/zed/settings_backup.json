@@ -1,5 +1,4 @@
 {
-  "icon_theme": "Catppuccin Latte",
   "vim_mode": true,
   "ui_font_size": 15,
   "buffer_font_size": 15,
@@ -14,13 +13,12 @@
   "theme": {
     "mode": "system",
     "light": "One Light",
-    "dark": "Catppuccin Latte"
+    "dark": "One Light"
   },
   "file_types": {
     "JSONC": ["**/pipelines/*.pp"]
   },
   "agent": {
-    "always_allow_tool_actions": true,
     "default_profile": "write",
     "dock": "right",
     "model_parameters": [],
@@ -28,6 +26,7 @@
       "provider": "copilot_chat",
       "model": "gpt-4.1"
     },
+    "version": "2"
   },
   "notification_panel": {
     "dock": "left"

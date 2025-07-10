@@ -1,9 +1,19 @@
 [
   {
-    "context": "Editor",
+    "context": "Editor || Terminal",
+    "bindings": {
+      "ctrl-v": "editor::Paste"
+    }
+  },
+  {
+    "context": "Pane || Editor || Terminal",
     "bindings": {
       "ctrl-h": "pane::ActivatePreviousItem",
       "ctrl-l": "pane::ActivateNextItem",
+      "ctrl-shift-h": "workspace::ActivatePaneLeft",
+      "ctrl-shift-l": "workspace::ActivatePaneRight",
+      "ctrl-shift-j": "workspace::ActivatePaneDown",
+      "ctrl-shift-k": "workspace::ActivatePaneUp",
       "ctrl-q": "pane::CloseActiveItem",
       "ctrl-shift-q": "pane::ReopenClosedItem"
     }
@@ -11,7 +21,15 @@
   {
     "context": "Workspace",
     "bindings": {
-      "ctrl-\\": "workspace::ToggleBottomDock"
+      "ctrl-\\": "workspace::ToggleBottomDock",
+      "ctrl-/": "workspace::ToggleRightDock",
+      "ctrl-shift-o": "projects::OpenRecent"
+    }
+  },
+  {
+    "context": "(vim_mode == normal || vim_mode == visual) && !menu",
+    "bindings": {
+      "space g y": "editor::CopyPermalinkToLine"
     }
   },
   {
@@ -24,6 +42,23 @@
       "space g g": [
         "task::Spawn",
         { "task_name": "LazyGit", "reveal_target": "center" }
+      ]
+    }
+  },
+  {
+    "context": "Workspace || Editor",
+    "bindings": {
+      "ctrl-e": [
+        "task::Spawn",
+        { "task_name": "Yazi", "reveal_target": "center" }
+      ],
+      "ctrl-g": [
+        "task::Spawn",
+        { "task_name": "LazyGit", "reveal_target": "center" }
+      ],
+      "ctrl-shift-d": [
+        "task::Spawn",
+        { "task_name": "Dotfiles", "reveal_target": "center" }
       ]
     }
   }

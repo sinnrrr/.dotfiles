@@ -1,6 +1,6 @@
 [
   {
-    "context": "Editor || Terminal",
+    "context": "Editor || Terminal || Pane",
     "bindings": {
       "ctrl-v": "editor::Paste"
     }
@@ -59,6 +59,10 @@
       "ctrl-shift-d": [
         "task::Spawn",
         { "task_name": "Dotfiles", "reveal_target": "center" }
+      ],
+      "ctrl-shift-k": [
+        "task::Spawn",
+        { "task_name": "K9s", "reveal_target": "center" }
       ]
     }
   }

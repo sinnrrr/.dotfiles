@@ -19,5 +19,10 @@
     "hide": "always",
     "use_new_terminal": true,
     "allow_concurrent_runs": false
+  },
+  {
+    "label": "K9s",
+    "command": "k10s",
+    "hide": "always"
   }
 ]

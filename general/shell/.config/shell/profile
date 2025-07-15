@@ -2,7 +2,7 @@
 
 # Default programs
 export SHELL="zsh"
-export EDITOR="nvim"
+export EDITOR="zed"
 export VISUAL="$EDITOR"
 export TERMINAL="terminal"
 export BROWSER="browser"

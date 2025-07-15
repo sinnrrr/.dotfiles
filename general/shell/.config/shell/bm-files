@@ -13,4 +13,4 @@ cfl	${XDG_CONFIG_HOME:-$HOME/.config}/yazi/yazi.toml		# lf (file browser) config
 cfv	${XDG_CONFIG_HOME:-$HOME/.config}/nvim/init.lua		# lunarvim (nvim) config
 cfy	${XDG_CONFIG_HOME:-$HOME/.config}/yabai/yabairc		# yabai (tilling window manager)
 cfs	${XDG_CONFIG_HOME:-$HOME/.config}/skhd/skhdrc		# skdh (yabai keyshortcuts)
-cft	${XDG_CONFIG_HOME:-$HOME/.config}/kitty/kitty.conf	# kitty (terminal) config
+cft	${XDG_CONFIG_HOME:-$HOME/.config}/wezterm/wezterm.lua	# kitty (terminal) config

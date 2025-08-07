@@ -2,7 +2,7 @@
 
 # Default programs
 export SHELL="zsh"
-export EDITOR="zed"
+export EDITOR="hx"
 export VISUAL="$EDITOR"
 export TERMINAL="terminal"
 export BROWSER="browser"

@@ -38,6 +38,11 @@ use = "atareao/convert"
 rev = "7c18342"
 hash = "cc6f6db11762ed3ee8c14c276e7cfb4b"
 
+[[plugin.deps]]
+use = "boydaihungst/restore"
+rev = "84f1921"
+hash = "355f163cb374b5c9514aee2b64121678"
+
 [[flavor.deps]]
 use = "BennyOe/tokyo-night"
 rev = "b3950bf"

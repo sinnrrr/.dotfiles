@@ -1,5 +1,26 @@
 # yaml-language-server: $schema=https://raw.githubusercontent.com/jesseduffield/lazygit/master/schema/config.json
 ---
-os:
-  edit: "zed {{filename}}"
-  editAtLine: "zed {{filename}}:{{line}}"
+services:
+  'github.prod.hulu.com': 'github:github.prod.hulu.com'
+  'github.twdcgrid.net': 'github:github.twdcgrid.net'
+gui:
+ theme:
+   activeBorderColor:
+     - '#89b4fa'
+     - bold
+   inactiveBorderColor:
+     - '#a6adc8'
+   optionsTextColor:
+     - '#89b4fa'
+   selectedLineBgColor:
+     - '#313244'
+   cherryPickedCommitBgColor:
+     - '#45475a'
+   cherryPickedCommitFgColor:
+     - '#89b4fa'
+   unstagedChangesColor:
+     - '#f38ba8'
+   defaultFgColor:
+     - '#cdd6f4'
+   searchingActiveBorderColor:
+     - '#f9e2af'

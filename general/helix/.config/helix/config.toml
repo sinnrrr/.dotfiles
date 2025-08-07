@@ -3,8 +3,8 @@ theme = "catppuccin_mocha"
 [editor]
 bufferline = "always"
 
-[keys.normal]
-C-g = [
+[keys.normal.space]
+g = [
     ":write-all", 
     ":new", 
     ":insert-output lazygit", 

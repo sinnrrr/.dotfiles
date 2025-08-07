@@ -16,18 +16,19 @@
     "light": "One Light",
     "dark": "Catppuccin Latte"
   },
-  "file_types": {
-    "JSONC": ["**/pipelines/*.pp"]
-  },
   "agent": {
-    "always_allow_tool_actions": true,
-    "default_profile": "write",
-    "dock": "right",
-    "model_parameters": [],
-    "default_model": {
+    "inline_assistant_model": {
       "provider": "copilot_chat",
       "model": "gpt-4.1"
     },
+    "always_allow_tool_actions": true,
+    "default_profile": "ask",
+    "dock": "right",
+    "model_parameters": [],
+    "default_model": {
+      "provider": "amazon-bedrock",
+      "model": "claude-4-sonnet-thinking"
+    }
   },
   "notification_panel": {
     "dock": "left"
@@ -35,7 +36,15 @@
   "features": {
     "edit_prediction_provider": "copilot"
   },
+  "file_types": {
+    "JSONC": ["**/pipelines/*.pp"]
+  },
   "languages": {
+    "TypeScript": {
+      "code_actions_on_format": {
+        "source.organizeImports": true
+      }
+    },
     "Python": {
       "language_servers": ["pyright", "ruff"],
       "format_on_save": "on",
@@ -59,8 +68,8 @@
     "show_nav_history_buttons": false
   },
   "toolbar": {
-    "breadcrumbs": false,
-    "quick_actions": false
+    // "breadcrumbs": false,
+    // "quick_actions": false
   },
   "git_panel": {
     "button": false

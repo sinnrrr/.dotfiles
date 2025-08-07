@@ -3,13 +3,6 @@
 # Use neovim for vim if present.
 [ -x "$(command -v nvim)" ] && alias vim="nvim" vimdiff="nvim -d"
 
-alias ..='cd ..'
-alias ...='cd ../../../'
-alias ....='cd ../../../../'
-alias .....='cd ../../../../../'
-alias .4='cd ../../../../'
-alias .5='cd ../../../../../'
-
 # Verbosity and settings that you pretty much just always are going to want.
 alias \
   cp="cp -iv" \
@@ -40,6 +33,7 @@ alias \
   YT="youtube-viewer" \
   sdn="sudo shutdown -h now" \
   v="$EDITOR" \
+  ji="jira issue list -w -s~Done --order-by status" \
   bu="brew upgrade | tee /dev/tty | grep -q 'yabai' && yabaiheadupdate" \
   reload-shortcuts="apply-shortcuts >/dev/null; source ${XDG_CONFIG_HOME:-$HOME/.config}/shell/shortcutrc ; source ${XDG_CONFIG_HOME:-$HOME/.config}/shell/zshnameddirrc" \
   ubuntu="docker run --rm -ti ubuntu /bin/bash"

@@ -1,0 +1,16 @@
+theme = "catppuccin_mocha"
+
+[editor]
+bufferline = "always"
+
+[keys.normal]
+C-g = [
+    ":write-all", 
+    ":new", 
+    ":insert-output lazygit", 
+    ":set mouse false", # First disable mouse to hint helix into activating it
+    ":set mouse true",
+    ":buffer-close!", 
+    ":redraw", 
+    ":reload-all"
+]

@@ -22,7 +22,7 @@ alias \
 alias \
   g="git" \
   lg="lazygit" \
-  c="clear" \
+  c="claude" \
   s="spotify_player" \
   t="btop" \
   top="btop" \
@@ -33,6 +33,8 @@ alias \
   YT="youtube-viewer" \
   sdn="sudo shutdown -h now" \
   v="$EDITOR" \
+  k10s="devx login && devx mariner kubeconfig && k9s --context cp3-nonprod-main-us-east-1 --namespace winnie" \
+  awsd="devx cloud aws-login -r 'arn:aws:iam::212883212683:role/bamazon-TeamInsights'" \
   ji="jira issue list -w -s~Done --order-by status" \
   bu="brew upgrade | tee /dev/tty | grep -q 'yabai' && yabaiheadupdate" \
   reload-shortcuts="apply-shortcuts >/dev/null; source ${XDG_CONFIG_HOME:-$HOME/.config}/shell/shortcutrc ; source ${XDG_CONFIG_HOME:-$HOME/.config}/shell/zshnameddirrc" \

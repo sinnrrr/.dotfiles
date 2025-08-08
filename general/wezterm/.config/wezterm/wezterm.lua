@@ -19,11 +19,6 @@ config.keys = {
     action = wezterm.action.PasteFrom 'Clipboard',
   },
   {
-    key = 'q',
-    mods = 'CTRL',
-    action = wezterm.action.CloseCurrentPane { confirm = false },
-  },
-  {
     key = '/',
     mods = 'CTRL',
     action = wezterm.action.SplitPane {

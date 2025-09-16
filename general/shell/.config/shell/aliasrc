@@ -22,7 +22,6 @@ alias \
 alias \
   g="git" \
   lg="lazygit" \
-  c="claude" \
   s="spotify_player" \
   t="btop" \
   top="btop" \

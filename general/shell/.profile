@@ -1,1 +1,40 @@
-./.config/shell/profile
+# vim:ft=sh
+
+# Default programs
+export SHELL="fish"
+export EDITOR="hx"
+export VISUAL="$EDITOR"
+export TERMINAL="terminal"
+export BROWSER="browser"
+export OPENER="open" # for mac
+
+export XDG_CONFIG_HOME="$HOME/.config"
+export XDG_DATA_HOME="$HOME/.local/share"
+export XDG_BACKUP_DIR="$XDG_DATA_HOME/backup"
+export XDG_CACHE_HOME="$HOME/.cache"
+
+export LESSHISTFILE=-
+
+export YABAI="$XDG_CONFIG_HOME/yabai/scripts"
+export GIT_CONFIG_GLOBAL="$XDG_CONFIG_HOME/git/.gitconfig"
+export GOPATH="$HOME/.local/"
+export PYTHONSTARTUP=~/.config/python/pythonrc
+
+test -f /home/linuxbrew/.linuxbrew/bin/brew && eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+test -f /usr/local/bin/brew && eval "$(/usr/local/bin/brew shellenv)"
+test -f /opt/homebrew/bin/brew && eval "$(/opt/homebrew/bin/brew shellenv)"
+
+if [[ -n "$HOMEBREW_PREFIX" ]]; then
+  export HOMEBREW_NO_ANALYTICS=1
+  export HOMEBREW_BUNDLE_FILE="$HOME/.dotfiles/roles/packages/files/macos/Brewfile"
+  PATH="${HOMEBREW_PREFIX}/opt/coreutils/libexec/gnubin:$PATH"
+  PATH="${HOMEBREW_PREFIX}/opt/gnu-sed/libexec/gnubin:$PATH"
+  PATH="${HOMEBREW_PREFIX}/opt/gnu-tar/libexec/gnubin:$PATH"
+  PATH="${HOMEBREW_PREFIX}/opt/util-linux/bin:$PATH"
+  PATH="${HOMEBREW_PREFIX}/opt/util-linux/sbin:$PATH"
+fi
+
+PATH="$HOME/.local/bin:$PATH"
+PATH="/usr/local/bin:$PATH"
+
+export PATH

@@ -1,6 +1,7 @@
 local wezterm = require 'wezterm'
 local config = wezterm.config_builder()
 
+config.default_prog = { '/opt/homebrew/bin/fish', '-l' }
 config.font = wezterm.font('JetBrainsMono Nerd Font', { weight = "Medium" })
 config.color_scheme = 'Catppuccin Mocha'
 config.font_size = 16

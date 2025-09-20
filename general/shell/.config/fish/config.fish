@@ -15,6 +15,10 @@ function fish_user_key_bindings
     bind \ee edit_command_buffer
 end
 
+if test -f (brew --prefix)/etc/brew-wrap.fish
+    source (brew --prefix)/etc/brew-wrap.fish
+end
+
 if test -f ~/.local/.env.fish
     source ~/.local/.env.fish
 end

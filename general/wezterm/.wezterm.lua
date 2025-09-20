@@ -1,0 +1,1 @@
+./.config/wezterm/wezterm.lua

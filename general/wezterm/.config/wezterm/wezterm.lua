@@ -20,20 +20,20 @@ config.keys = {
     action = wezterm.action.PasteFrom 'Clipboard',
   },
   {
-    key = '/',
+    key = '\\',
     mods = 'CTRL',
     action = wezterm.action.SplitPane {
       direction = 'Right',
-      command = { args = { 'zsh', '-li', '-c', 'claude', '-c' } },
+      command = { args = { '/opt/homebrew/bin/fish', '-lc', 'claude' } },
       size = { Percent = 50 },
     },
   },
   {
-    key = '\\',
+    key = '/',
     mods = 'CTRL',
     action = wezterm.action.SplitPane {
       direction = 'Down',
-      command = { args = { 'zsh', '-l' } },
+      command = { args = { '/opt/homebrew/bin/fish', '-l' } },
       size = { Percent = 50 },
     },
   },

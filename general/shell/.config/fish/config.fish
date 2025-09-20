@@ -1,4 +1,5 @@
 set fish_greeting
+set -x EDITOR hx
 
 function yazi
     set tmp (mktemp -t "yazi-cwd.XXXXXX")
@@ -11,4 +12,14 @@ end
 
 function fish_user_key_bindings
     bind \ce 'yazi; commandline -f repaint'
+    bind \ee edit_command_buffer
 end
+
+if test -f ~/.local/.env.fish
+    source ~/.local/.env.fish
+end
+
+alias lg lazygit
+alias ji "jira issue list -w -s~Done --order-by status"
+alias k10s "devx login && devx mariner kubeconfig && k9s --context cp3-nonprod-main-us-east-1 --namespace winnie"
+alias awsd "devx cloud aws-login -r 'arn:aws:iam::212883212683:role/bamazon-TeamInsights'"

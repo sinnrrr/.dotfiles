@@ -24,9 +24,10 @@ config.keys = {
     mods = 'CTRL',
     action = wezterm.action.SplitPane {
       direction = 'Right',
-      command = { args = { '/opt/homebrew/bin/fish', '-lc', 'claude' } },
+      command = { args = { '/opt/homebrew/bin/fish', '-lc', 'ai' } },
       size = { Percent = 50 },
-    },
+      cwd = wezterm.GLOBAL.current_working_dir,
+    }
   },
   {
     key = '/',
@@ -35,8 +36,9 @@ config.keys = {
       direction = 'Down',
       command = { args = { '/opt/homebrew/bin/fish', '-l' } },
       size = { Percent = 50 },
+      cwd = wezterm.GLOBAL.current_working_dir,
     },
-  },
+  }
 }
 
 return config

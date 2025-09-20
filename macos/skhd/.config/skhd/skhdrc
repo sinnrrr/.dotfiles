@@ -1,9 +1,8 @@
 # apps shortcuts
 ctrl + alt + cmd - o : open -n /System/Applications/System\ Settings.app
-ctrl + alt + cmd - m : music
-ctrl + alt + cmd - b : browser
+ctrl + alt + cmd - b : $HOME/.local/bin/browser
 ctrl + alt + cmd - p : screencapture -cix /dev/null
-ctrl + alt + cmd - e : explorer
+ctrl + alt + cmd - e : $HOME/.local/bin/explorer
 ctrl + alt + cmd + shift - p : screencapture -Pix /dev/null
 ctrl + alt + cmd + shift - r : screencapture -iU /dev/null
 ctrl + alt + cmd - d : killall dmenu-mac; exec dmenu-mac

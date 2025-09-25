@@ -37,4 +37,6 @@ defaults write com.apple.powerAdapter.modern OptimizedBatteryCharging -int 0
 log "Installing Xcode Command Line Tools"
 xcode-select --install
 
+brew file install
+
 log "Changes applied. Some changes may require a restart to take effect."

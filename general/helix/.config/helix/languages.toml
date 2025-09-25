@@ -2,3 +2,10 @@
 name = "typescript"
 auto-format = true
 formatter = { command = "prettier", args = ["--parser", "typescript"] }
+
+[[language]]
+name = "markdown"
+language-servers = [ "mdpls" ]
+[language-server.mdpls]
+command = "mdpls"
+config = { markdown.preview.auto = true }

@@ -112,6 +112,7 @@ brew libxdmcp
 brew libxext
 brew libxrender
 brew little-cms2
+brew llvm
 brew lua
 brew luajit
 brew lz4
@@ -145,6 +146,7 @@ brew pango
 brew pcre2
 brew pinentry
 brew pixman
+brew pkgconf
 brew poppler
 brew python
 brew rav1e
@@ -152,7 +154,9 @@ brew readline
 brew resvg
 brew ripgrep
 brew rubberband
+brew rust
 brew rustup
+brew scc
 brew screenresolution
 brew sdl2
 brew sevenzip
@@ -190,6 +194,7 @@ brew xvid
 brew xz
 brew yazi
 brew yt-dlp
+brew z3
 brew zeromq
 brew zimg
 brew zoxide

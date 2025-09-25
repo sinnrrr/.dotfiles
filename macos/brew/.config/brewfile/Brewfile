@@ -6,6 +6,7 @@ brew aom
 brew aribb24
 brew autoconf
 brew automake
+brew argocd
 brew bash
 brew bat
 brew bitwarden-cli
@@ -53,7 +54,9 @@ brew jpeg-turbo
 brew jpeg-xl
 brew jq
 brew k9s
+brew kind
 brew kubernetes-cli
+brew kubie
 brew lame
 brew lazydocker
 brew lazygit
@@ -244,3 +247,5 @@ cask aerospace
 
 tap rcmdnk/file
 brew brew-file
+appstore 409203825 Numbers (14.4)
+appstore 409201541 Pages (14.4)

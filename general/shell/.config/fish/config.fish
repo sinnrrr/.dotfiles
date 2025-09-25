@@ -1,5 +1,8 @@
 set fish_greeting
 set -x EDITOR hx
+set -gx PATH $PATH ~/.cargo/bin
+set -gx PATH $PATH ~/.local/bin
+set -gx PATH $PATH /opt/homebrew/bin
 
 function yazi
     set tmp (mktemp -t "yazi-cwd.XXXXXX")
@@ -23,6 +26,7 @@ if test -f ~/.local/.env.fish
     source ~/.local/.env.fish
 end
 
+alias k kubectl
 alias lg lazygit
 alias ji "jira issue list -w -s~Done --order-by status"
 alias k10s "devx login && devx mariner kubeconfig && k9s --context cp3-nonprod-main-us-east-1 --namespace winnie"

@@ -4,6 +4,10 @@ auto-format = true
 formatter = { command = "prettier", args = ["--parser", "typescript"] }
 
 [[language]]
+name = "json"
+file-types = ["json", "pp"]
+
+[[language]]
 name = "markdown"
 language-servers = [ "mdpls" ]
 [language-server.mdpls]

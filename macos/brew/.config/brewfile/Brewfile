@@ -1,4 +1,3 @@
-
 # tap repositories and their packages
 
 tap homebrew/core
@@ -7,7 +6,6 @@ brew aom
 brew aribb24
 brew autoconf
 brew automake
-brew argocd
 brew bash
 brew bat
 brew brotli
@@ -55,7 +53,6 @@ brew jpeg-turbo
 brew jpeg-xl
 brew jq
 brew k9s
-brew kind
 brew kubernetes-cli
 brew lame
 brew lazydocker
@@ -212,7 +209,6 @@ brew yaml-language-server
 brew yazi
 brew yt-dlp
 brew z3
-brew yq
 brew zeromq
 brew zimg
 brew zoxide

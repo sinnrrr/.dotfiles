@@ -13,12 +13,12 @@ config.window_padding = {
   top = 0,
   bottom = 0,
 }
-config.keys = {
-  {
+config.keys = {{
     key = 'v',
     mods = 'CTRL',
     action = wezterm.action.PasteFrom 'Clipboard',
-  },
+},
+  {key="Enter", mods="SHIFT", action=wezterm.action{SendString="\x1b\r"}},
   {
     key = '\\',
     mods = 'CTRL',

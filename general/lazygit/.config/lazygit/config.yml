@@ -3,6 +3,7 @@
 services:
   'github.prod.hulu.com': 'github:github.prod.hulu.com'
   'github.twdcgrid.net': 'github:github.twdcgrid.net'
+  'github.bamtech.co': 'github:github.bamtech.co'
 gui:
  theme:
    activeBorderColor:

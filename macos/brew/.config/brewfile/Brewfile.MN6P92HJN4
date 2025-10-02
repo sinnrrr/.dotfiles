@@ -1,0 +1,21 @@
+#!/usr/bin/env ruby
+
+tap homebrew/core
+brew helm
+brew istioctl
+brew jira-cli
+brew krb5
+brew krew
+brew kubie
+
+tap ankitpokhrel/jira-cli
+
+tap devproductivity/devx-cli
+brew devx-cli
+
+tap kreuzwerker/taps
+brew m1-terraform-provider-helper
+
+tap nikitabobko/tap
+cask aerospace
+

@@ -2,6 +2,7 @@
 # tap repositories and their packages
 
 tap homebrew/core
+brew ansible-language-server
 brew aom
 brew aribb24
 brew autoconf
@@ -9,7 +10,6 @@ brew automake
 brew argocd
 brew bash
 brew bat
-brew bitwarden-cli
 brew brotli
 brew btop
 brew c-ares
@@ -36,6 +36,7 @@ brew glib
 brew gmp
 brew gnupg
 brew gnutls
+brew go
 brew gpgme
 brew gpgmepp
 brew graphite2
@@ -56,7 +57,6 @@ brew jq
 brew k9s
 brew kind
 brew kubernetes-cli
-brew kubie
 brew lame
 brew lazydocker
 brew lazygit
@@ -117,11 +117,15 @@ brew libxrender
 brew little-cms2
 brew llvm
 brew lua
+brew lua-language-server
 brew luajit
 brew lz4
 brew lzo
 brew m4
 brew make
+brew markdown-oxide
+brew marksman
+brew mas
 brew mbedtls
 brew minikube
 brew molten-vk
@@ -151,6 +155,8 @@ brew pinentry
 brew pixman
 brew pkgconf
 brew poppler
+brew prettier
+brew pug
 brew python
 brew rav1e
 brew readline
@@ -159,6 +165,7 @@ brew ripgrep
 brew rubberband
 brew rust
 brew rustup
+brew ruff
 brew scc
 brew screenresolution
 brew sdl2
@@ -172,13 +179,18 @@ brew speex
 brew sqlite
 brew srt
 brew stow
+brew stylua
 brew svt-av1
+brew taplo
+brew terraform
+brew terraform-ls
 brew tesseract
 brew theora
-brew tmux
+brew tombi
 brew trash
 brew trash-cli
 brew tree
+brew tree-sitter
 brew typescript
 brew typescript-language-server
 brew uchardet
@@ -189,15 +201,18 @@ brew uvwasi
 brew vapoursynth
 brew vulkan-headers
 brew vulkan-loader
+brew vscode-langservers-extracted
 brew webp
 brew x264
 brew x265
 brew xorgproto
 brew xvid
 brew xz
+brew yaml-language-server
 brew yazi
 brew yt-dlp
 brew z3
+brew yq
 brew zeromq
 brew zimg
 brew zoxide
@@ -206,28 +221,22 @@ brew zstd
 tap homebrew/cask
 cask brave-browser
 cask claude-code
-cask cryptomator
-cask dmenu-mac
+cask dbeaver-community
 cask docker-desktop
 cask firefox
 cask font-jetbrains-mono-nerd-font
 cask font-symbols-only-nerd-font
-cask google-drive
 cask handbrake-app
 cask karabiner-elements
 cask linearmouse
 cask microsoft-teams
 cask monitorcontrol
 cask ngrok
-cask nvidia-geforce-now
 cask obs
 cask spaceid
 cask spotify
-cask utm
 cask vlc
 cask wezterm
-cask whisky
-cask wine-stable
 cask zed
 cask zoom
 
@@ -235,17 +244,14 @@ tap homebrew/bundle
 
 tap homebrew/services
 
-tap koekeishiya/formulae
-brew skhd
-brew yabai
-
 tap mhaeuser/mhaeuser
 cask battery-toolkit
 
-tap nikitabobko/tap
-cask aerospace
-
 tap rcmdnk/file
 brew brew-file
+
+# App Store applications
 appstore 409203825 Numbers (14.4)
 appstore 409201541 Pages (14.4)
+
+main ./Brewfile.$HOSTNAME

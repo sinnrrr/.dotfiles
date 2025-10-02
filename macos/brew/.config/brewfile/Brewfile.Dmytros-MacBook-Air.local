@@ -1,0 +1,17 @@
+#!/usr/bin/env ruby
+
+tap homebrew/cask
+cask cryptomator
+cask dmenu-mac
+cask nvidia-geforce-now
+cask utm
+cask whisky
+cask wine-stable
+cast google-drive
+
+tap koekeishiya/formulae
+brew skhd
+brew yabai
+
+appstore 682658836 GarageBand (10.4.12)
+

@@ -4,6 +4,11 @@ auto-format = true
 formatter = { command = "prettier", args = ["--parser", "typescript"] }
 
 [[language]]
+name = "lua"
+auto-format = true
+formatter = { command = "stylua", args = ["-"] }
+
+[[language]]
 name = "json"
 file-types = ["json", "pp"]
 
@@ -13,3 +18,4 @@ language-servers = [ "mdpls" ]
 [language-server.mdpls]
 command = "mdpls"
 config = { markdown.preview.auto = true }
+

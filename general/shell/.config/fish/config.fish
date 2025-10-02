@@ -1,5 +1,6 @@
 set fish_greeting
 set -x EDITOR hx
+set -gx XDG_CONFIG_HOME "$HOME/.config" # for lazygit
 set -gx PATH $PATH ~/.cargo/bin
 set -gx PATH $PATH ~/.local/bin
 set -gx PATH $PATH /opt/homebrew/bin
@@ -25,6 +26,8 @@ end
 if test -f ~/.local/.env.fish
     source ~/.local/.env.fish
 end
+
+fnm env --use-on-cd --shell fish | source
 
 alias k kubectl
 alias lg lazygit

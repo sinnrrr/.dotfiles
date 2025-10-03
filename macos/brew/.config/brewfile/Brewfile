@@ -1,3 +1,4 @@
+
 # tap repositories and their packages
 
 tap homebrew/core
@@ -160,9 +161,9 @@ brew readline
 brew resvg
 brew ripgrep
 brew rubberband
+brew ruff
 brew rust
 brew rustup
-brew ruff
 brew scc
 brew screenresolution
 brew sdl2
@@ -192,13 +193,12 @@ brew typescript
 brew typescript-language-server
 brew uchardet
 brew unbound
-brew utf8proc
 brew uv
 brew uvwasi
 brew vapoursynth
+brew vscode-langservers-extracted
 brew vulkan-headers
 brew vulkan-loader
-brew vscode-langservers-extracted
 brew webp
 brew x264
 brew x265
@@ -246,8 +246,5 @@ cask battery-toolkit
 tap rcmdnk/file
 brew brew-file
 
-# App Store applications
-appstore 409203825 Numbers (14.4)
-appstore 409201541 Pages (14.4)
-
+# Main file
 main ./Brewfile.$HOSTNAME

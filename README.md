@@ -1,5 +1,7 @@
 # Minimal, Simple, Opinionated, Fast
 
+<img src="https://i.imgur.com/rdkAsQ0.png" />
+
 ```bash
 git clone git@github.com:sinnrrr/.dotfiles.git ~/.dotfiles
 cd ~/.dotfiles && ./my.sh --init
@@ -67,6 +69,3 @@ See the philosophy? Choose software wisely. Don’t pick something you’ll thro
 
 Btw I don’t use Spotify TUI as I like seeing album covers. Music is an art and I want to experience it in its full, as it was designed by the artists.
 </details>
-
-<img src="https://i.imgur.com/m3uTCoL.png" />
-<img src="https://i.imgur.com/BHnxu1P.png" />

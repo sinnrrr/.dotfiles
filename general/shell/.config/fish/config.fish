@@ -27,6 +27,25 @@ function fish_user_key_bindings
     bind \ee edit_command_buffer
 end
 
+function auto_activate_venv --on-variable PWD
+    # Deactivate if we're in a venv but outside its directory
+    if set -q VIRTUAL_ENV
+        if not string match -q "$VIRTUAL_ENV*" "$PWD"
+            deactivate
+        end
+    end
+
+    # Activate venv if found in current directory
+    if test -d venv
+        source venv/bin/activate.fish
+    else if test -d .venv
+        source .venv/bin/activate.fish
+    end
+end
+
+# Run once on shell startup for current directory
+auto_activate_venv
+
 if test -f (brew --prefix)/etc/brew-wrap.fish
     source (brew --prefix)/etc/brew-wrap.fish
 end

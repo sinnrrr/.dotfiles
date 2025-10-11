@@ -20,7 +20,7 @@ tap homebrew/services
 
 tap koekeishiya/formulae
 brew skhd
-brew yabai
+brew yabai --HEAD
 
 tap mhaeuser/mhaeuser
 

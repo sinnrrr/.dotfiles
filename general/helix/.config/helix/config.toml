@@ -3,6 +3,10 @@ theme = "catppuccin_mocha"
 [editor]
 bufferline = "always"
 
+[editor.inline-diagnostics]
+cursor-line = "hint"
+other-lines = "error"
+
 [keys.normal.space]
 g = [
     ":write-all", 

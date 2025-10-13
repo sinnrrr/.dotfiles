@@ -246,5 +246,9 @@ cask battery-toolkit
 tap rcmdnk/file
 brew brew-file
 
+# App Store applications
+appstore 409203825 Numbers (14.4)
+appstore 409201541 Pages (14.4)
+
 # Main file
 main ./Brewfile.$HOSTNAME

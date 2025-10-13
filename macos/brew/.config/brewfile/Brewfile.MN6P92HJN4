@@ -1,24 +1,44 @@
-#!/usr/bin/env ruby
+
+# tap repositories and their packages
 
 tap homebrew/core
+brew argocd
+brew dotnet@8
 brew helm
 brew istioctl
 brew jira-cli
+brew kind
 brew krb5
 brew krew
 brew kubie
-brew kind
 brew yq
-brew argocd
+
+tap homebrew/cask
+
+tap homebrew/bundle
+
+tap homebrew/services
 
 tap ankitpokhrel/jira-cli
 
 tap devproductivity/devx-cli
 brew devx-cli
 
+tap hashicorp/tap
+
+tap jesseduffield/lazydocker
+
 tap kreuzwerker/taps
 brew m1-terraform-provider-helper
+
+tap leg100/tap
+
+tap mhaeuser/mhaeuser
 
 tap nikitabobko/tap
 cask aerospace
 
+tap rcmdnk/file
+
+# App Store applications
+appstore 682658836 GarageBand (10.4.12)

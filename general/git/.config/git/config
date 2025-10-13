@@ -11,3 +11,6 @@
 
 [includeIf "gitdir:~/.dotfiles/"]
 	path = ~/.config/git/.gitconfig.personal
+
+[includeIf "gitdir:~/Work/public/"]
+	path = ~/.config/git/.gitconfig.work-public

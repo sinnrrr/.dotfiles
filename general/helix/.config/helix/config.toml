@@ -3,6 +3,9 @@ theme = "catppuccin_mocha"
 [editor]
 bufferline = "always"
 
+[editor.statusline]
+right = ["file-type"]
+
 [editor.inline-diagnostics]
 cursor-line = "hint"
 other-lines = "error"

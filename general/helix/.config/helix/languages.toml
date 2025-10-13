@@ -9,6 +9,10 @@ auto-format = true
 formatter = { command = "stylua", args = ["-"] }
 
 [[language]]
+name = "git-config"
+file-types = [{ glob = "*gitconfig*"}, { glob = ".config/git/*config*" }]
+
+[[language]]
 name = "json"
 file-types = ["json", "pp"]
 

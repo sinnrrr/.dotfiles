@@ -155,7 +155,6 @@ brew pkgconf
 brew poppler
 brew prettier
 brew pug
-brew python
 brew rav1e
 brew readline
 brew resvg

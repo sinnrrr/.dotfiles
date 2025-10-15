@@ -11,6 +11,9 @@ brew kind
 brew krb5
 brew krew
 brew kubie
+brew libzip
+brew python@3.13
+brew utf8proc
 brew yq
 
 tap homebrew/cask

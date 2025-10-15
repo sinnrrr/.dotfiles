@@ -1,8 +1,5 @@
 # yaml-language-server: $schema=https://raw.githubusercontent.com/jesseduffield/lazygit/master/schema/config.json
 ---
-os:
-  shellFunctionsFile: ~/.config/fish/config.fish
-  editPreset: 'helix'
 services:
   'github.prod.hulu.com': 'github:github.prod.hulu.com'
   'github.twdcgrid.net': 'github:github.twdcgrid.net'

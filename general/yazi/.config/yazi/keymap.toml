@@ -1,12 +1,7 @@
 [[mgr.prepend_keymap]]
-on = "u"
-run = "plugin restore" 
-desc = "Restore last deleted files/folders"
-
-[[mgr.prepend_keymap]]
 on = "U"
-run = "shell --block -- clear && trash-restore --overwrite"
-desc = "Restore deleted file (Interactive)"
+run = "plugin recycle-bin" 
+desc = "Restore last deleted files/folders"
 
 [[mgr.prepend_keymap]]
 on = "!"

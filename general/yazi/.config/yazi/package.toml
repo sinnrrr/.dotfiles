@@ -34,14 +34,14 @@ rev = "ce060d9"
 hash = "1c0465351f2a344e842f065ab316f265"
 
 [[plugin.deps]]
-use = "boydaihungst/restore"
-rev = "dc40509"
-hash = "e7e377f9b1bbaca4a2e5d9ec9709ac4d"
-
-[[plugin.deps]]
 use = "yazi-rs/plugins:smart-enter"
 rev = "109b13d"
 hash = "56fdabc96fc1f4d53c96eb884b02a5be"
+
+[[plugin.deps]]
+use = "uhs-robert/recycle-bin"
+rev = "03f6c4a"
+hash = "f14a951bf376d7fe73033c4a48aa5fa4"
 
 [[flavor.deps]]
 use = "BennyOe/tokyo-night"

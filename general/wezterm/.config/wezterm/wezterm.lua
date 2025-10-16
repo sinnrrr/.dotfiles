@@ -1,11 +1,12 @@
 local wezterm = require("wezterm")
 local config = wezterm.config_builder()
+local act = wezterm.action
 
 config.default_prog = { "/opt/homebrew/bin/fish", "-l" }
 config.font = wezterm.font("JetBrainsMono Nerd Font", { weight = "DemiBold" })
 config.color_scheme = "Catppuccin Mocha"
+config.window_decorations = "RESIZE"
 config.font_size = 15
-config.enable_tab_bar = false
 config.window_close_confirmation = "NeverPrompt"
 config.window_padding = {
 	left = 0,
@@ -39,6 +40,26 @@ config.keys = {
 			size = { Percent = 50 },
 			cwd = wezterm.GLOBAL.current_working_dir,
 		}),
+	},
+	{
+		key = "n",
+		mods = "CTRL",
+		action = act.SpawnTab("CurrentPaneDomain"),
+	},
+	{
+		key = "q",
+		mods = "CTRL",
+		action = act.CloseCurrentTab({ confirm = false }),
+	},
+	{
+		key = "h",
+		mods = "CTRL",
+		action = act.ActivateTabRelative(-1),
+	},
+	{
+		key = "l",
+		mods = "CTRL",
+		action = act.ActivateTabRelative(1),
 	},
 }
 

@@ -1,0 +1,26 @@
+{
+  "env": {
+    "AWS_REGION": "us-west-2"
+  },
+  "permissions": {
+    "allow": [
+      "Read(**)",
+      "Write(**)",
+      "Bash(ls:*)",
+      "Bash(git clone:*)",
+      "Bash(git checkout:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "mcp__datadog",
+      "mcp__context7",
+      "mcp__atlassian__jira"
+    ],
+    "deny": []
+  },
+  "statusLine": {
+    "type": "command",
+    "command": "ccusage statusline",
+    "padding": 0
+  },
+  "alwaysThinkingEnabled": false
+}

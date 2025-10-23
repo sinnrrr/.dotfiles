@@ -3,6 +3,7 @@
 
 tap homebrew/core
 brew argocd
+brew ccusage
 brew dotnet@8
 brew helm
 brew istioctl
@@ -12,11 +13,14 @@ brew krb5
 brew krew
 brew kubie
 brew libzip
+brew pipx
 brew python@3.13
+brew python@3.14
 brew utf8proc
 brew yq
 
 tap homebrew/cask
+cask font-sf-mono-nerd-font-ligaturized
 
 tap homebrew/bundle
 

@@ -16,7 +16,6 @@ brew ca-certificates
 brew cairo
 brew certifi
 brew cjson
-brew codex
 brew dav1d
 brew fd
 brew ffmpeg
@@ -125,7 +124,6 @@ brew markdown-oxide
 brew marksman
 brew mas
 brew mbedtls
-brew minikube
 brew molten-vk
 brew mpdecimal
 brew mpg123
@@ -244,6 +242,9 @@ cask battery-toolkit
 
 tap rcmdnk/file
 brew brew-file
+
+# Other Homebrew packages
+brew codex
 
 # App Store applications
 appstore 409203825 Numbers (14.4)

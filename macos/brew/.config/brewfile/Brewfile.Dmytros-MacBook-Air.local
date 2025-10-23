@@ -3,11 +3,25 @@
 
 tap homebrew/core
 brew bottom
+brew ccusage
 brew dotnet@8
+brew gdk-pixbuf
+brew gh
+brew graphene
+brew gtk4
+brew hicolor-icon-theme
+brew libepoxy
+brew librsvg
+brew libzip
+brew minikube
+brew pipx
+brew python@3.13
+brew python@3.14
 
 tap homebrew/cask
 cask cryptomator
 cask dmenu-mac
+cask google-chrome
 cask google-drive
 cask nvidia-geforce-now
 cask utm
@@ -23,5 +37,8 @@ brew skhd
 brew yabai --HEAD
 
 tap mhaeuser/mhaeuser
+
+tap oven-sh/bun
+brew bun
 
 tap rcmdnk/file

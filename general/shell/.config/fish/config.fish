@@ -4,6 +4,7 @@ set -gx XDG_CONFIG_HOME "$HOME/.config" # for lazygit
 set -gx PATH $PATH ~/.cargo/bin
 set -gx PATH $PATH ~/.local/bin
 set -gx PATH $PATH /opt/homebrew/bin
+set -gx PATH $PATH "$HOME/.bun/bin"
 
 set -gx EDITOR hx
 set -gx SHELL $(which fish)

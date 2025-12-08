@@ -4,6 +4,8 @@
 tap homebrew/core
 brew argocd
 brew ccusage
+brew docker
+brew docker-completion
 brew dotnet@8
 brew helm
 brew istioctl
@@ -31,6 +33,9 @@ tap ankitpokhrel/jira-cli
 tap devproductivity/devx-cli
 brew devx-cli
 
+tap f/mcptools
+brew mcp
+
 tap hashicorp/tap
 
 tap jesseduffield/lazydocker
@@ -45,7 +50,12 @@ tap mhaeuser/mhaeuser
 tap nikitabobko/tap
 cask aerospace
 
+tap oven-sh/bun
+brew bun
+
 tap rcmdnk/file
 
 # App Store applications
 appstore 682658836 GarageBand (10.4.12)
+appstore 409203825 Numbers (14.4)
+appstore 409201541 Pages (14.4)

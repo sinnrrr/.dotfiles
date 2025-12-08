@@ -58,6 +58,7 @@ end
 fnm env --use-on-cd --shell fish | source
 
 alias k kubectl
+alias tf terraform
 alias lg lazygit
 alias ji "jira issue list -w -s~Done --order-by status"
 alias k10s "devx login && devx mariner kubeconfig && k9s --context cp3-nonprod-main-us-east-1 --namespace winnie"

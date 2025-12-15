@@ -4,15 +4,11 @@ run = "plugin recycle-bin"
 desc = "Restore last deleted files/folders"
 
 [[mgr.prepend_keymap]]
-on = "!"
-run = 'shell "$SHELL" --block'
-desc = "Open shell here"
-
-[[mgr.prepend_keymap]]
-on = "<C-o>"
-run = '''
-	shell --block 'nvim +"lua require(\"persistence\").load()"' --confirm
-'''
+on = "o"
+run = """
+	shell 'qlmanage -p "$1"'
+"""
+desc = "QuickLook"
 
 [[mgr.prepend_keymap]]
 on = "U"
@@ -23,15 +19,17 @@ desc = "Restory deleted files"
 
 [[mgr.prepend_keymap]]
 on = ["c", "i"]
-run = "plugin convert --extension=png"
+run = """
+	shell 'magick -quality 70 "$1" ${1%.*}.jpg'
+"""
 desc = "Convert image to PNG"
 
 [[mgr.prepend_keymap]]
-on = ["c", "D"]
-run = '''
-	shell 'ripdrag -x --all -b "$@"' --confirm
-'''
-desc = "Drag and drop"
+on = ["c", "p"]
+run = """
+	shell 'pdfunite "$@" merged.pdf'
+"""
+desc = "Merge selected PDFs"
 
 [[mgr.prepend_keymap]]
 on = ["c", "s"]
@@ -39,21 +37,6 @@ run = '''
   shell 'curl -F"file=@$1" https://0x0.st | pbcopy' --confirm
 '''
 desc = "Share file"
-
-[[mgr.prepend_keymap]]
-on = "e"
-run = "plugin run-file 1"
-desc = "Execute file (sync)"
-
-[[mgr.prepend_keymap]]
-on = "E"
-run = "plugin run-file 2"
-desc = "Execute file with args (sync)"
-
-[[mgr.prepend_keymap]]
-on = "<C-e>"
-run = "plugin run-file 3"
-desc = "Execute file with args (async)"
 
 [[mgr.prepend_keymap]]
 on = ["c", "a"]
@@ -64,12 +47,6 @@ desc = "Archive selected files"
 on = ["c", "m"]
 run = "plugin chmod"
 desc = "chmod"
-
-# keymap.toml
-[[mgr.prepend_keymap]]
-on = "T"
-run = "plugin toggle-pane max-preview"
-desc = "Maximize or restore the preview pane"
 
 [[mgr.prepend_keymap]]
 on = "l"

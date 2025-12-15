@@ -9,6 +9,14 @@ set -gx PATH $PATH "$HOME/.bun/bin"
 set -gx EDITOR hx
 set -gx SHELL $(which fish)
 
+function envsource
+    for line in (cat $argv | grep -v '^#' |  grep -v '^\s*$' | sed -e 's/=/ /' -e "s/'//g" -e 's/"//g' )
+        set export (string split ' ' $line)
+        set -gx $export[1] $export[2]
+        echo "Exported key $export[1]"
+    end
+end
+
 function yazi
     set tmp (mktemp -t "yazi-cwd.XXXXXX")
     command yazi $argv --cwd-file="$tmp"

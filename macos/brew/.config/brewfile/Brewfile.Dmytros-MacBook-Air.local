@@ -19,7 +19,6 @@ brew python@3.13
 brew python@3.14
 
 tap homebrew/cask
-cask cryptomator
 cask dmenu-mac
 cask google-chrome
 cask google-drive

@@ -40,8 +40,13 @@ hash = "56fdabc96fc1f4d53c96eb884b02a5be"
 
 [[plugin.deps]]
 use = "uhs-robert/recycle-bin"
-rev = "03f6c4a"
-hash = "f14a951bf376d7fe73033c4a48aa5fa4"
+rev = "bce0eb1"
+hash = "fc696aa2ff140e8d8ee1f490ca787bb0"
+
+[[plugin.deps]]
+use = "boydaihungst/pref-by-location"
+rev = "882e752"
+hash = "f45cf212024c85b5f0ea0423e27196a"
 
 [[flavor.deps]]
 use = "BennyOe/tokyo-night"

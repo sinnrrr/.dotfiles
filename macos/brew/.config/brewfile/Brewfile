@@ -215,7 +215,6 @@ tap homebrew/cask
 cask brave-browser
 cask claude-code
 cask dbeaver-community
-cask docker-desktop
 cask firefox
 cask font-jetbrains-mono-nerd-font
 cask font-symbols-only-nerd-font

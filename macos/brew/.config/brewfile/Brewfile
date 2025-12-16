@@ -123,7 +123,6 @@ brew make
 brew markdown-oxide
 brew marksman
 brew mas
-brew mbedtls
 brew molten-vk
 brew mpdecimal
 brew mpg123
@@ -181,7 +180,6 @@ brew terraform
 brew terraform-ls
 brew tesseract
 brew theora
-brew tombi
 brew trash
 brew trash-cli
 brew tree

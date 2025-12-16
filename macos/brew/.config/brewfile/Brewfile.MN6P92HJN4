@@ -3,18 +3,23 @@
 
 tap homebrew/core
 brew argocd
+brew biome
 brew ccusage
+brew deno
 brew docker
 brew docker-completion
-brew dotnet@8
+brew dotnet
 brew helm
+brew icu4c@78
 brew istioctl
 brew jira-cli
 brew kind
 brew krb5
 brew krew
 brew kubie
+brew libultrahdr
 brew libzip
+brew mbedtls@3
 brew pipx
 brew python@3.13
 brew python@3.14

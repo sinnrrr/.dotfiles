@@ -1,32 +1,32 @@
 [[plugin.deps]]
 use = "Lil-Dank/lazygit"
-rev = "8f37dc5"
-hash = "ee71543790f0ce3951161045a3787abd"
+rev = "0e56060"
+hash = "ab2e66065a94cca4886b303518e44bd8"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:full-border"
-rev = "8f1d971"
+rev = "57f1863"
 hash = "3996fc74044bc44144b323686f887e1"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:toggle-pane"
-rev = "8f1d971"
+rev = "57f1863"
 hash = "8a7c58225816a163a6e8730c0adafbc8"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:git"
-rev = "8f1d971"
-hash = "63b6c222bf2103b3023389dde5e2ecfe"
+rev = "57f1863"
+hash = "36a484acf6a0a0219c543ccb4cee218f"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:chmod"
-rev = "8f1d971"
-hash = "8ad3e90b079190b4905f24a44f4ca06b"
+rev = "57f1863"
+hash = "8da0b15a97b5dfd13941d1ecc617ac7c"
 
 [[plugin.deps]]
 use = "KKV9/compress"
-rev = "c264639"
-hash = "e17c11b605d989568a1d1741ca17c584"
+rev = "e6007f7"
+hash = "e0b1051849756dd72fca874c320259a"
 
 [[plugin.deps]]
 use = "atareao/convert"
@@ -35,25 +35,25 @@ hash = "1c0465351f2a344e842f065ab316f265"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:smart-enter"
-rev = "8f1d971"
+rev = "57f1863"
 hash = "56fdabc96fc1f4d53c96eb884b02a5be"
 
 [[plugin.deps]]
 use = "uhs-robert/recycle-bin"
-rev = "bce0eb1"
-hash = "fc696aa2ff140e8d8ee1f490ca787bb0"
+rev = "69d7d4c"
+hash = "38dac2fc8f4b50bbdaa46e699720a54a"
 
 [[plugin.deps]]
 use = "boydaihungst/pref-by-location"
-rev = "882e752"
-hash = "f45cf212024c85b5f0ea0423e27196a"
+rev = "a2fbb05"
+hash = "b4e378df653fa211d22ed04d3c8c1c0a"
 
 [[flavor.deps]]
 use = "BennyOe/tokyo-night"
-rev = "5f56364"
-hash = "c0bf69ad2c44005892d586e9693993c6"
+rev = "8e6296f"
+hash = "d9da921c3bd37ba32ee27a8a7a40461f"
 
 [[flavor.deps]]
 use = "yazi-rs/flavors:catppuccin-mocha"
-rev = "f6b425a"
-hash = "14b111562c00eb1917fe3ca3ae9bb771"
+rev = "4a1802a"
+hash = "b951d27afe197d154f6da9683b46c5f8"

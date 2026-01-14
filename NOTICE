@@ -1,0 +1,20 @@
+NOTICE
+
+This repository contains personal, general-purpose configuration files
+("dotfiles") authored and maintained by Dmytro Soltysiuk.
+
+These files are intended for use across multiple operating systems and
+hardware environments and are not specific to any employer, client,
+project, or internal system.
+
+Host-specific configuration data may be included to adapt behavior to
+different machines (e.g., hardware capabilities, OS defaults, user
+preferences). Such data:
+- contains no proprietary logic, algorithms, or workflows;
+- contains no confidential, internal, or employer-specific information;
+- is provided solely as configuration parameters consumed by the
+  general-purpose code in this repository.
+
+No employer is granted ownership of this repository or its contents by
+virtue of execution, use, or modification on employer-provided hardware,
+except as required by applicable law or written agreement.

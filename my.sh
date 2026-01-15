@@ -13,6 +13,8 @@ CYGWIN* | MINGW32* | MSYS* | MINGW*)
   ;;
 esac
 
+mkdir -p $HOME/.local/bin
+
 SCRIPT_PATH=$(dirname "$(realpath "$0")")
 
 # Process general and OS-specific directories

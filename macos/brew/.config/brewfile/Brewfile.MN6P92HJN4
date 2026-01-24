@@ -5,10 +5,12 @@ tap homebrew/core
 brew argocd
 brew biome
 brew ccusage
+brew colima
 brew deno
 brew docker
 brew docker-completion
 brew dotnet
+brew dotnet@9
 brew helm
 brew icu4c@78
 brew istioctl
@@ -17,8 +19,7 @@ brew kind
 brew krb5
 brew krew
 brew kubie
-brew libultrahdr
-brew libzip
+brew lima
 brew mbedtls@3
 brew pipx
 brew python@3.13
@@ -27,6 +28,8 @@ brew utf8proc
 brew yq
 
 tap homebrew/cask
+cask codex
+cask docker-desktop
 cask font-sf-mono-nerd-font-ligaturized
 
 tap homebrew/bundle
@@ -61,6 +64,6 @@ brew bun
 tap rcmdnk/file
 
 # App Store applications
-appstore 682658836 GarageBand (10.4.12)
+appstore 682658836 GarageBand (10.4.13)
 appstore 409203825 Numbers (14.4)
 appstore 409201541 Pages (14.4)

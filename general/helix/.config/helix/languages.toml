@@ -18,66 +18,9 @@ language-servers = ["mdpls"]
 command = "mdpls"
 config = { markdown.preview.auto = true }
 
-### ============== JS
-[language-server]
-biome = { command = "biome", args = ["lsp-proxy"] }
-
-[[language]]
-name = "javascript"
-language-servers = [
-  { name = "typescript-language-server", except-features = [
-    "format",
-  ] },
-  "biome",
-]
-auto-format = true
-
-[[language]]
-name = "typescript"
-language-servers = [
-  { name = "typescript-language-server", except-features = [
-    "format",
-  ] },
-  "biome",
-]
-auto-format = true
-
-[[language]]
-name = "tsx"
-auto-format = true
-language-servers = [
-  { name = "typescript-language-server", except-features = [
-    "format",
-  ] },
-  "biome",
-]
-
-[[language]]
-name = "jsx"
-auto-format = true
-language-servers = [
-  { name = "typescript-language-server", except-features = [
-    "format",
-  ] },
-  "biome",
-]
-
-[[language]]
-name = "json"
-language-servers = [
-  { name = "vscode-json-language-server", except-features = [
-    "format",
-  ] },
-  "biome",
-]
-### =================
-
-### ================= TOML
 [language-server.taplo.config]
 root_dir = [".git", "*.toml"]
-
 [[language]]
 name = "toml"
 auto-format = true
 formatter = { command = "taplo", args = ["fmt", "-"] }
-### =================

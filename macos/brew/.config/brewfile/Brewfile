@@ -48,7 +48,6 @@ brew icu4c@77
 brew imagemagick
 brew imath
 brew jansson
-brew jasper
 brew jpeg-turbo
 brew jpeg-xl
 brew jq
@@ -76,7 +75,6 @@ brew libheif
 brew libidn2
 brew libksba
 brew liblinear
-brew liblqr
 brew libmicrohttpd
 brew libnghttp2
 brew libnghttp3
@@ -85,7 +83,6 @@ brew libogg
 brew libomp
 brew libplacebo
 brew libpng
-brew libraw
 brew librist
 brew libsamplerate
 brew libsndfile
@@ -239,9 +236,6 @@ cask battery-toolkit
 
 tap rcmdnk/file
 brew brew-file
-
-# Other Homebrew packages
-brew codex
 
 # Main file
 main ./Brewfile.$HOSTNAME

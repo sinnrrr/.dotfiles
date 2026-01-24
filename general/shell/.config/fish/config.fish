@@ -33,6 +33,7 @@ end
 
 function fish_user_key_bindings
     bind \ce 'yazi; commandline -f repaint'
+    bind \co 'ai; commandline -f repaint'
     bind \ee edit_command_buffer
 end
 

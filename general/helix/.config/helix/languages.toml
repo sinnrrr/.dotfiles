@@ -4,12 +4,17 @@ auto-format = true
 formatter = { command = "stylua", args = ["-"] }
 
 [[language]]
+name = "typescript"
+auto-format = true
+
+[[language]]
 name = "git-config"
 file-types = [{ glob = "*gitconfig*" }, { glob = ".config/git/*config*" }]
 
 [[language]]
 name = "json"
 file-types = ["json", "pp"]
+formatter = { command = "prettier", args = ["--parser", "json"] }
 
 [[language]]
 name = "markdown"

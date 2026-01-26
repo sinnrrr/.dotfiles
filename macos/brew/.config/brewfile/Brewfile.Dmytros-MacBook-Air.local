@@ -5,14 +5,17 @@ tap homebrew/core
 brew bottom
 brew ccusage
 brew deno
-brew dotnet
+brew dotnet@9
 brew gdk-pixbuf
 brew gh
 brew graphene
 brew gtk4
 brew hicolor-icon-theme
 brew icu4c@78
+brew jasper
 brew libepoxy
+brew liblqr
+brew libraw
 brew librsvg
 brew libultrahdr
 brew libzip
@@ -28,6 +31,7 @@ cask cursor
 cask dmenu-mac
 cask google-chrome
 cask google-drive
+cask gstreamer-runtime
 cask nvidia-geforce-now
 cask utm
 cask visual-studio-code
@@ -44,7 +48,13 @@ brew yabai --HEAD
 
 tap mhaeuser/mhaeuser
 
+tap nikitabobko/tap
+cask aerospace
+
 tap oven-sh/bun
 brew bun
 
 tap rcmdnk/file
+
+# Other Homebrew packages
+brew codex

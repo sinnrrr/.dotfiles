@@ -4,7 +4,7 @@
 
 ```bash
 git clone https://github.com/sinnrrr/.dotfiles/ ~/.dotfiles
-cd ~/.dotfiles && ./my.sh --init
+cd ~/.dotfiles && ./my.sh init
 ```
 
 <details>

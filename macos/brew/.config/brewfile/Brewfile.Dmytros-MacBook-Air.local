@@ -4,26 +4,33 @@
 tap homebrew/core
 brew bottom
 brew ccusage
-brew dotnet@8
+brew deno
+brew dotnet
 brew gdk-pixbuf
 brew gh
 brew graphene
 brew gtk4
 brew hicolor-icon-theme
+brew icu4c@78
 brew libepoxy
 brew librsvg
+brew libultrahdr
 brew libzip
+brew mbedtls@3
 brew minikube
 brew pipx
 brew python@3.13
 brew python@3.14
+brew tombi
 
 tap homebrew/cask
+cask cursor
 cask dmenu-mac
 cask google-chrome
 cask google-drive
 cask nvidia-geforce-now
 cask utm
+cask visual-studio-code
 cask whisky
 cask wine-stable
 

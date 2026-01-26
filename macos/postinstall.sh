@@ -34,10 +34,9 @@ defaults write com.apple.PowerChime.plist ChimeOnAllHardware -bool true
 defaults write com.apple.powerAdapter.modern BatteryUpdateInterval -int 3600
 defaults write com.apple.powerAdapter.modern OptimizedBatteryCharging -int 0
 
-log "Installing Xcode Command Line Tools"
-xcode-select --install
-
+log "Making sure all Brew packages are installed and up to date..."
 brew install rcmdnk/file/brew-file
 brew file install
 
 log "Changes applied. Some changes may require a restart to take effect."
+

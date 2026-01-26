@@ -1,9 +1,9 @@
-# Minimal, Simple, Opinionated, Fast
+# MacOS Config - Minimal, Simple, Opinionated, Fast 
 
 <img src="https://i.imgur.com/rdkAsQ0.png" />
 
 ```bash
-git clone git@github.com:sinnrrr/.dotfiles.git ~/.dotfiles
+git clone https://github.com/sinnrrr/.dotfiles/ ~/.dotfiles
 cd ~/.dotfiles && ./my.sh --init
 ```
 

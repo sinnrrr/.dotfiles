@@ -37,7 +37,14 @@ function fish_user_key_bindings
     bind \ee edit_command_buffer
 end
 
-function auto_activate_venv --on-variable PWD
+function auto_activate_env --on-variable PWD
+    # Link CLAUDE.md to AGENTS.md for tools that look for AGENTS.md
+    if test -f CLAUDE.md
+        if not test -e AGENTS.md
+            ln -s CLAUDE.md AGENTS.md
+        end
+    end
+
     # Deactivate if we're in a venv but outside its directory
     if set -q VIRTUAL_ENV
         if not string match -q "$VIRTUAL_ENV*" "$PWD"
@@ -54,7 +61,7 @@ function auto_activate_venv --on-variable PWD
 end
 
 # Run once on shell startup for current directory
-auto_activate_venv
+auto_activate_env
 
 if test -f (brew --prefix)/etc/brew-wrap.fish
     source (brew --prefix)/etc/brew-wrap.fish

@@ -80,7 +80,6 @@ brew libnghttp2
 brew libnghttp3
 brew libngtcp2
 brew libogg
-brew libomp
 brew libplacebo
 brew libpng
 brew librist

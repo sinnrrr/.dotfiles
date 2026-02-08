@@ -2,37 +2,41 @@
 # tap repositories and their packages
 
 tap homebrew/core
+brew ada-url
 brew bottom
 brew ccusage
 brew deno
 brew dotnet@9
+brew fmt
 brew gdk-pixbuf
 brew gh
 brew graphene
 brew gtk4
+brew hdrhistogram_c
 brew hicolor-icon-theme
 brew icu4c@78
-brew jasper
 brew libepoxy
-brew liblqr
-brew libraw
 brew librsvg
-brew libultrahdr
-brew libzip
+brew llhttp
 brew mbedtls@3
 brew minikube
+brew openclaw-cli
 brew pipx
 brew python@3.13
 brew python@3.14
+brew rclone
 brew tombi
 
 tap homebrew/cask
 cask cursor
+cask discord
 cask dmenu-mac
 cask google-chrome
 cask google-drive
 cask gstreamer-runtime
 cask nvidia-geforce-now
+cask prismlauncher
+cask roblox
 cask utm
 cask visual-studio-code
 cask whisky

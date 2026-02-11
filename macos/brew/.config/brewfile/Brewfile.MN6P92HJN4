@@ -2,6 +2,7 @@
 # tap repositories and their packages
 
 tap homebrew/core
+brew ada-url
 brew argocd
 brew biome
 brew ccusage
@@ -11,6 +12,9 @@ brew docker
 brew docker-completion
 brew dotnet
 brew dotnet@9
+brew fmt
+brew gh
+brew hdrhistogram_c
 brew helm
 brew icu4c@78
 brew istioctl
@@ -19,8 +23,11 @@ brew kind
 brew krb5
 brew krew
 brew kubie
+brew libdatrie
+brew libthai
 brew lima
-brew mbedtls@3
+brew llhttp
+brew openclaw-cli
 brew pipx
 brew python@3.13
 brew python@3.14

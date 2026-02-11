@@ -38,13 +38,6 @@ function fish_user_key_bindings
 end
 
 function auto_activate_env --on-variable PWD
-    # Link CLAUDE.md to AGENTS.md for tools that look for AGENTS.md
-    if test -f CLAUDE.md
-        if not test -e AGENTS.md
-            ln -s CLAUDE.md AGENTS.md
-        end
-    end
-
     # Deactivate if we're in a venv but outside its directory
     if set -q VIRTUAL_ENV
         if not string match -q "$VIRTUAL_ENV*" "$PWD"

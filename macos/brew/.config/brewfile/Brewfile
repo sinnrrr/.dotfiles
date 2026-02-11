@@ -4,7 +4,6 @@
 tap homebrew/core
 brew ansible-language-server
 brew aom
-brew aribb24
 brew autoconf
 brew automake
 brew bash
@@ -15,7 +14,6 @@ brew c-ares
 brew ca-certificates
 brew cairo
 brew certifi
-brew cjson
 brew dav1d
 brew fd
 brew ffmpeg
@@ -24,7 +22,6 @@ brew flac
 brew fnm
 brew fontconfig
 brew freetype
-brew frei0r
 brew fribidi
 brew fzf
 brew gemini-cli
@@ -75,19 +72,14 @@ brew libheif
 brew libidn2
 brew libksba
 brew liblinear
-brew libmicrohttpd
 brew libnghttp2
 brew libnghttp3
 brew libngtcp2
 brew libogg
 brew libplacebo
 brew libpng
-brew librist
 brew libsamplerate
 brew libsndfile
-brew libsodium
-brew libsoxr
-brew libssh
 brew libssh2
 brew libtasn1
 brew libtiff
@@ -97,7 +89,6 @@ brew libunibreak
 brew libunistring
 brew libusb
 brew libuv
-brew libvidstab
 brew libvmaf
 brew libvorbis
 brew libvpx
@@ -133,7 +124,6 @@ brew npth
 brew nspr
 brew nss
 brew oniguruma
-brew opencore-amr
 brew openexr
 brew openjpeg
 brew openjph
@@ -148,7 +138,6 @@ brew pkgconf
 brew poppler
 brew prettier
 brew pug
-brew rav1e
 brew readline
 brew resvg
 brew ripgrep
@@ -163,11 +152,9 @@ brew sevenzip
 brew shaderc
 brew shared-mime-info
 brew simdjson
-brew snappy
 brew speedtest-cli
 brew speex
 brew sqlite
-brew srt
 brew stow
 brew stylua
 brew svt-av1
@@ -194,13 +181,11 @@ brew webp
 brew x264
 brew x265
 brew xorgproto
-brew xvid
 brew xz
 brew yaml-language-server
 brew yazi
 brew yt-dlp
 brew z3
-brew zeromq
 brew zimg
 brew zoxide
 brew zstd

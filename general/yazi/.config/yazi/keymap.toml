@@ -1,6 +1,6 @@
 [[mgr.prepend_keymap]]
 on = "U"
-run = "plugin recycle-bin" 
+run = "plugin recycle-bin"
 desc = "Restore last deleted files/folders"
 
 [[mgr.prepend_keymap]]
@@ -23,6 +23,13 @@ run = """
 	shell 'magick -quality 70 "$1" ${1%.*}.jpg'
 """
 desc = "Convert image to PNG"
+
+[[mgr.prepend_keymap]]
+on = ["c", "v"]
+run = """
+	shell --block 'HandBrakeCLI -i "$1" -o "${1%.*}_1080p.mp4" --preset="General/Fast 1080p30"'
+"""
+desc = "Convert video to Fast 1080p30"
 
 [[mgr.prepend_keymap]]
 on = ["c", "p"]

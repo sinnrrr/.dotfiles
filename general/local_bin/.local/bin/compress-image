@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+set -e
+
+input="$1"
+output="${input%.*}.jpg"
+
+magick -quality 70 "$input" "$output"
+
+echo "Created: $output"

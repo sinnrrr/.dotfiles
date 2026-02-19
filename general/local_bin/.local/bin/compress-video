@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+set -e
+
+input="$1"
+output="${input%.*}_min.mp4"
+
+HandBrakeCLI \
+  -i "$input" \
+  -o "$output" \
+  --preset="General/Very Fast 2160p60 4K AV1"
+
+echo "Created: $output"

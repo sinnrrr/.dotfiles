@@ -20,16 +20,16 @@ desc = "Restory deleted files"
 [[mgr.prepend_keymap]]
 on = ["c", "i"]
 run = """
-	shell 'magick -quality 70 "$1" ${1%.*}.jpg'
+	shell 'compress-image "$1"'
 """
-desc = "Convert image to PNG"
+desc = "Compress image"
 
 [[mgr.prepend_keymap]]
 on = ["c", "v"]
 run = """
-	shell --block 'HandBrakeCLI -i "$1" -o "${1%.*}_1080p.mp4" --preset="General/Fast 1080p30"'
+	shell --block 'compress-video "$1"'
 """
-desc = "Convert video to Fast 1080p30"
+desc = "Compress video"
 
 [[mgr.prepend_keymap]]
 on = ["c", "p"]

@@ -8,12 +8,15 @@ brew biome
 brew ccusage
 brew colima
 brew deno
+brew difftastic
 brew docker
 brew docker-completion
 brew dotnet
 brew dotnet@9
 brew fmt
 brew gh
+brew git-delta
+brew gopls
 brew hdrhistogram_c
 brew helm
 brew icu4c@78
@@ -24,6 +27,7 @@ brew krb5
 brew krew
 brew kubie
 brew libdatrie
+brew libomp
 brew libthai
 brew lima
 brew llhttp

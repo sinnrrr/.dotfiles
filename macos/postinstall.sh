@@ -34,6 +34,13 @@ defaults write com.apple.PowerChime.plist ChimeOnAllHardware -bool true
 defaults write com.apple.powerAdapter.modern BatteryUpdateInterval -int 3600
 defaults write com.apple.powerAdapter.modern OptimizedBatteryCharging -int 0
 
+log "Setting Fish as default shell..."
+FISH_PATH=$(which fish)
+if ! grep -qx "$FISH_PATH" /etc/shells; then
+  echo "$FISH_PATH" | sudo tee -a /etc/shells
+fi
+chsh -s "$FISH_PATH"
+
 log "Making sure all Brew packages are installed and up to date..."
 brew install rcmdnk/file/brew-file
 brew file install

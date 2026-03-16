@@ -10,14 +10,19 @@ brew dotnet@9
 brew fmt
 brew gdk-pixbuf
 brew gh
+brew git-delta
 brew graphene
 brew gtk4
 brew hdrhistogram_c
 brew hicolor-icon-theme
 brew icu4c@78
+brew libdatrie
 brew libepoxy
 brew librsvg
+brew libsodium
+brew libthai
 brew llhttp
+brew llvm@21
 brew mbedtls@3
 brew minikube
 brew openclaw-cli
@@ -25,6 +30,7 @@ brew pipx
 brew python@3.13
 brew python@3.14
 brew rclone
+brew snappy
 brew tombi
 
 tap homebrew/cask

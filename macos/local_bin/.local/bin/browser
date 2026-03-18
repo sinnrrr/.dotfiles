@@ -1,2 +1,2 @@
 #!/bin/sh
-osascript -e 'tell application "Safari" to make new document'
+open -na Firefox

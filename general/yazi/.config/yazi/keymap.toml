@@ -104,3 +104,17 @@ run = "cd ~/Personal"
 [[mgr.prepend_keymap]]
 on = ["C", "W"]
 run = "cd ~/Work"
+
+[[mgr.prepend_keymap]]
+on = ["a", "c"]
+run = '''
+	shell --block 'claude'
+'''
+desc = "Open Claude Code"
+
+[[mgr.prepend_keymap]]
+on = ["a", "r"]
+run = '''
+	shell --block 'claude --resume'
+'''
+desc = "Resume Claude Code"

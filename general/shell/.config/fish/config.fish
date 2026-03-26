@@ -26,11 +26,6 @@ function yazi
     rm -f -- "$tmp"
 end
 
-function suyabai
-    set str (whoami)" ALL = (root) NOPASSWD: sha256:"(shasum -a 256 (which yabai) | awk '{print $1;}')" "(which yabai)" --load-sa"
-    echo $str | sudo tee /private/etc/sudoers.d/yabai
-end
-
 function fish_user_key_bindings
     bind \ce 'yazi; commandline -f repaint'
     bind \co 'ai; commandline -f repaint'

@@ -5,6 +5,7 @@ tap homebrew/core
 brew ada-url
 brew argocd
 brew biome
+brew bottom
 brew ccusage
 brew colima
 brew deno
@@ -33,6 +34,7 @@ brew lima
 brew llhttp
 brew openclaw-cli
 brew pipx
+brew postgresql@18
 brew python@3.13
 brew python@3.14
 brew utf8proc
@@ -68,7 +70,6 @@ tap leg100/tap
 tap mhaeuser/mhaeuser
 
 tap nikitabobko/tap
-cask aerospace
 
 tap oven-sh/bun
 brew bun

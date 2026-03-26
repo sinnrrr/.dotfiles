@@ -102,6 +102,10 @@ on = ["C", "P"]
 run = "cd ~/Personal"
 
 [[mgr.prepend_keymap]]
+on = ["C", "w"]
+run = "cd ~/Work/documents"
+
+[[mgr.prepend_keymap]]
 on = ["C", "W"]
 run = "cd ~/Work"
 

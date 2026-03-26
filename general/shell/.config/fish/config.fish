@@ -26,9 +26,19 @@ function yazi
     rm -f -- "$tmp"
 end
 
+function work
+    set -l selected (find ~/Work -mindepth 1 -maxdepth 1 -type d | sort | sed "s|$HOME/Work/||" | fzf --prompt="work> " --height=40% --reverse)
+    if test -n "$selected"
+        builtin cd ~/Work/$selected
+        commandline -f repaint
+        claude
+    end
+end
+
 function fish_user_key_bindings
     bind \ce 'yazi; commandline -f repaint'
     bind \co 'ai; commandline -f repaint'
+    bind \cw 'work; commandline -f repaint'
     bind \ee edit_command_buffer
 end
 
@@ -59,7 +69,7 @@ if test -f ~/.local/.env.fish
     source ~/.local/.env.fish
 end
 
-fnm env --use-on-cd --shell fish | source
+fnm env --use-on-cd --log-level=quiet --shell fish | source
 
 alias k kubectl
 alias tf terraform

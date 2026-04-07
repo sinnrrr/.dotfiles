@@ -19,6 +19,11 @@ config.keys = {
 		mods = "CTRL",
 		action = wezterm.action.PasteFrom("Clipboard"),
 	},
+	{
+		key = "v",
+		mods = "CTRL|SHIFT",
+		action = act.DisableDefaultAssignment,
+	},
 	{ key = "Enter", mods = "SHIFT", action = wezterm.action({ SendString = "\x1b\r" }) },
 	{
 		key = "\\",

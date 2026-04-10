@@ -1,0 +1,15 @@
+ui:
+  # Hide the header to get more screen space for diffs
+  hideHeader: true
+
+  # Hide the footer (keybindings help)
+  hideFooter: true
+
+  # Start with the file tree hidden (toggle with 'e')
+  showFileTree: true
+
+  # Show the amount of lines added / removed next to the file
+  showDiffStats: false
+
+  # Use side-by-side diff view (default: true, set false for unified)
+  sideBySide: false

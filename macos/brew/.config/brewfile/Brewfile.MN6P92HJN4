@@ -10,6 +10,7 @@ brew ccusage
 brew cmake
 brew colima
 brew deno
+brew diffnav
 brew difftastic
 brew docker
 brew docker-completion
@@ -19,6 +20,7 @@ brew fmt
 brew gdbm
 brew ggml
 brew gh
+brew git
 brew git-delta
 brew gopls
 brew hdrhistogram_c
@@ -35,6 +37,7 @@ brew libomp
 brew libthai
 brew lima
 brew llhttp
+brew llvm
 brew llvm@21
 brew mad
 brew openclaw-cli
@@ -51,6 +54,7 @@ brew utf8proc
 brew wget
 brew whisper-cpp
 brew yq
+brew z3
 
 tap homebrew/cask
 cask codex
@@ -67,12 +71,17 @@ tap ankitpokhrel/jira-cli
 tap devproductivity/devx-cli
 brew devx-cli
 
+tap dlvhdr/formulae
+
 tap f/mcptools
 brew mcp
 
 tap hashicorp/tap
 
 tap jesseduffield/lazydocker
+
+tap jnsahaj/lumen
+brew lumen
 
 tap kreuzwerker/taps
 brew m1-terraform-provider-helper

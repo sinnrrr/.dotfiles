@@ -1,9 +1,12 @@
 set fish_greeting
 
+if test -x /opt/homebrew/bin/brew
+    eval (/opt/homebrew/bin/brew shellenv)
+end
+
 set -gx XDG_CONFIG_HOME "$HOME/.config" # for lazygit
 set -gx PATH $PATH ~/.cargo/bin
 set -gx PATH $PATH ~/.local/bin
-set -gx PATH $PATH /opt/homebrew/bin
 set -gx PATH $PATH "$HOME/.bun/bin"
 
 set -gx EDITOR hx
@@ -74,6 +77,8 @@ fnm env --use-on-cd --log-level=quiet --shell fish | source
 alias k kubectl
 alias tf terraform
 alias lg lazygit
+alias pip pip3
+alias python python3
 alias ji "jira issue list -w -s~Done --order-by status"
 alias k10s "devx login && devx mariner kubeconfig && k9s --context cp3-nonprod-main-us-east-1 --namespace winnie"
 alias awsd "devx cloud aws-login -r 'arn:aws:iam::212883212683:role/bamazon-TeamInsights'"

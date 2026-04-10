@@ -16,6 +16,7 @@ brew docker-completion
 brew dotnet
 brew dotnet@9
 brew fmt
+brew gdbm
 brew ggml
 brew gh
 brew git-delta
@@ -42,6 +43,7 @@ brew pipx
 brew portaudio
 brew postgresql@18
 brew pyright
+brew python@3.10
 brew python@3.13
 brew python@3.14
 brew sox

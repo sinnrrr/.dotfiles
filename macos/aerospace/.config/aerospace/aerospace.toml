@@ -120,17 +120,53 @@ ctrl-alt-cmd-shift-g = 'move-node-to-workspace prev'
 ctrl-alt-cmd-shift-semicolon = 'move-node-to-workspace next'
 
 ctrl-alt-cmd-0 = 'workspace-back-and-forth'
-ctrl-alt-cmd-1 = 'workspace Social'
-ctrl-alt-cmd-shift-1 = 'move-node-to-workspace Social'
-ctrl-alt-cmd-2 = 'workspace Code'
-ctrl-alt-cmd-shift-2 = 'move-node-to-workspace Code'
+ctrl-alt-cmd-1 = 'workspace Code'
+ctrl-alt-cmd-shift-1 = 'move-node-to-workspace Code'
+ctrl-alt-cmd-2 = 'workspace Social'
+ctrl-alt-cmd-shift-2 = 'move-node-to-workspace Social'
 ctrl-alt-cmd-3 = 'workspace Data'
 ctrl-alt-cmd-shift-3 = 'move-node-to-workspace Data'
-ctrl-alt-cmd-4 = 'workspace Music'
-ctrl-alt-cmd-shift-4 = 'move-node-to-workspace Music'
+ctrl-alt-cmd-8 = 'workspace Music'
+ctrl-alt-cmd-shift-8 = 'move-node-to-workspace Music'
+
+ctrl-alt-cmd-9 = 'workspace Mail'
+ctrl-alt-cmd-shift-9 = 'move-node-to-workspace Mail'
 
 ctrl-alt-cmd-tab = 'workspace-back-and-forth'
 ctrl-alt-cmd-shift-tab = 'move-workspace-to-monitor --wrap-around next'
+
+# [[on-window-detected]]
+# if.app-id = 'com.insta360.studio'
+# run = ['move-node-to-workspace 7']
+
+# [[on-window-detected]]
+# if.app-id = 'com.blackmagic-design.DaVinciResolve'
+# run = ['move-node-to-workspace 8']
+
+[[on-window-detected]]
+if.app-id = 'com.readdle.SparkDesktop'
+run = ['move-node-to-workspace Mail']
+
+[[on-window-detected]]
+if.app-id = 'com.spotify.client'
+run = ['move-node-to-workspace Music']
+
+[[on-window-detected]]
+if.app-id = 'org.mozilla.firefox'
+run = ['move-node-to-workspace Code']
+
+[[on-window-detected]]
+if.app-id = 'com.github.wez.wezterm'
+run = ['move-node-to-workspace Code']
+
+[[on-window-detected]]
+if.app-id = 'com.microsoft.teams2'
+run = ['move-node-to-workspace Social']
+
+[[on-window-detected]]
+if.app-id = 'com.microsoft.teams'
+run = ['move-node-to-workspace Social']
+
 
 # # See: https://nikitabobko.github.io/AeroSpace/commands#mode
 # alt-shift-semicolon = 'mode service'
@@ -153,16 +189,3 @@ ctrl-alt-cmd-shift-tab = 'move-workspace-to-monitor --wrap-around next'
 # alt-shift-j = ['join-with down', 'mode main']
 # alt-shift-k = ['join-with up', 'mode main']
 # alt-shift-l = ['join-with right', 'mode main']
-
-
-[[on-window-detected]]
-if.app-id = 'com.insta360.studio'
-run = ['move-node-to-workspace 7']
-
-[[on-window-detected]]
-if.app-id = 'com.blackmagic-design.DaVinciResolve'
-run = ['move-node-to-workspace 8']
-
-[[on-window-detected]]
-if.app-id = 'com.readdle.SparkDesktop'
-run = ['move-node-to-workspace 9']

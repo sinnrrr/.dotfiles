@@ -99,7 +99,6 @@ brew libxdmcp
 brew libxext
 brew libxrender
 brew little-cms2
-brew llvm
 brew lua
 brew lua-language-server
 brew luajit
@@ -185,7 +184,6 @@ brew xz
 brew yaml-language-server
 brew yazi
 brew yt-dlp
-brew z3
 brew zimg
 brew zoxide
 brew zstd

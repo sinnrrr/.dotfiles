@@ -34,14 +34,18 @@ brew snappy
 brew tombi
 
 tap homebrew/cask
+cask adobe-acrobat-reader
 cask cursor
 cask discord
 cask dmenu-mac
 cask google-chrome
+cask google-chrome@beta
 cask google-drive
 cask gstreamer-runtime
+cask kitlangton-hex
 cask nvidia-geforce-now
 cask prismlauncher
+cask readdle-spark
 cask roblox
 cask utm
 cask visual-studio-code

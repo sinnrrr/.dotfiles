@@ -10,6 +10,16 @@
       "headers": {
         "Accept": "application/json, text/event-stream"
       }
+    },
+    "playwright-extension": {
+      "command": "npx",
+      "args": [
+        "@playwright/mcp@latest",
+        "--extension"
+      ],
+      "env": {
+        "PLAYWRIGHT_MCP_EXTENSION_TOKEN": "r_HrRTAw3WHi0aQFz-pUZyd53uaP9PmYh5I7HY8o7u8"
+      }
     }
   }
 }

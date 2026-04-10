@@ -31,7 +31,7 @@ function work
     if test -n "$selected"
         builtin cd ~/Work/$selected
         commandline -f repaint
-        claude
+        ai
     end
 end
 

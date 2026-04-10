@@ -7,6 +7,7 @@ brew argocd
 brew biome
 brew bottom
 brew ccusage
+brew cmake
 brew colima
 brew deno
 brew difftastic
@@ -15,6 +16,7 @@ brew docker-completion
 brew dotnet
 brew dotnet@9
 brew fmt
+brew ggml
 brew gh
 brew git-delta
 brew gopls
@@ -32,19 +34,27 @@ brew libomp
 brew libthai
 brew lima
 brew llhttp
+brew llvm@21
+brew mad
 brew openclaw-cli
+brew opusfile
 brew pipx
+brew portaudio
 brew postgresql@18
+brew pyright
 brew python@3.13
 brew python@3.14
+brew sox
 brew utf8proc
 brew wget
+brew whisper-cpp
 brew yq
 
 tap homebrew/cask
 cask codex
 cask docker-desktop
 cask font-sf-mono-nerd-font-ligaturized
+cask kitlangton-hex
 
 tap homebrew/bundle
 

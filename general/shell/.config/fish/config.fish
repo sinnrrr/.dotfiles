@@ -6,7 +6,7 @@ end
 
 set -gx XDG_CONFIG_HOME "$HOME/.config" # for lazygit
 set -gx PATH $PATH ~/.cargo/bin
-set -gx PATH $PATH ~/.local/bin
+set -gx PATH ~/.local/bin $PATH
 set -gx PATH $PATH "$HOME/.bun/bin"
 
 set -gx EDITOR hx
@@ -79,6 +79,7 @@ alias tf terraform
 alias lg lazygit
 alias pip pip3
 alias python python3
+alias gh-dash "GH_HOST=github.twdcgrid.net gh dash"
 alias ji "jira issue list -w -s~Done --order-by status"
 alias k10s "devx login && devx mariner kubeconfig && k9s --context cp3-nonprod-main-us-east-1 --namespace winnie"
 alias awsd "devx cloud aws-login -r 'arn:aws:iam::212883212683:role/bamazon-TeamInsights'"

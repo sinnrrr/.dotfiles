@@ -39,6 +39,8 @@ brew llhttp
 brew llvm
 brew llvm@21
 brew mad
+brew merve
+brew nbytes
 brew openclaw-cli
 brew opusfile
 brew pipx
@@ -48,6 +50,7 @@ brew pyright
 brew python@3.10
 brew python@3.13
 brew python@3.14
+brew simdutf
 brew sox
 brew utf8proc
 brew wget
@@ -56,6 +59,7 @@ brew yq
 brew z3
 
 tap homebrew/cask
+cask claude-code@latest
 cask codex
 cask docker-desktop
 cask font-sf-mono-nerd-font-ligaturized

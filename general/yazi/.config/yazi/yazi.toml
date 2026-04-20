@@ -18,7 +18,12 @@ ratio = [1, 2, 3]
 
 [[open.prepend_rules]]
 mime = "application/pdf"
-use = ["browser"]
+use = ["pdf_viewer"]
+
+[opener]
+pdf_viewer = [
+	{ run = 'pdf-viewer "$@"', desc = "Open PDF", orphan = true },
+]
 
 # [[plugin.prepend_fetchers]]
 # id = "git"

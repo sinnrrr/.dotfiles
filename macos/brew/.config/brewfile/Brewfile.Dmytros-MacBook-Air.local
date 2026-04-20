@@ -15,8 +15,12 @@ brew graphene
 brew gtk4
 brew hdrhistogram_c
 brew hicolor-icon-theme
+brew highway
 brew icu4c@78
+brew imath
+brew jpeg-xl
 brew libdatrie
+brew libdeflate
 brew libepoxy
 brew librsvg
 brew libsodium
@@ -26,18 +30,23 @@ brew llvm@21
 brew mbedtls@3
 brew minikube
 brew openclaw-cli
+brew openexr
+brew openjph
 brew pipx
 brew python@3.13
 brew python@3.14
 brew rclone
+brew shared-mime-info
 brew snappy
 brew tombi
 
 tap homebrew/cask
 cask adobe-acrobat-reader
+cask claude-code
 cask cursor
 cask discord
 cask dmenu-mac
+cask ghostty
 cask google-chrome
 cask google-chrome@beta
 cask google-drive

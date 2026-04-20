@@ -5,32 +5,3 @@
 [mgr]
 show_hidden = true
 ratio = [1, 2, 3]
-
-# [preview]
-# max_width = 9999
-# max_height = 9999
-
-# [[opener.open_in_browser]]
-# run = '$BROWSER "$@"'
-# desc = "$BROWSER"
-# orphan = true
-# for = "unix"
-
-[[open.prepend_rules]]
-mime = "application/pdf"
-use = ["pdf_viewer"]
-
-[opener]
-pdf_viewer = [
-	{ run = 'pdf-viewer "$@"', desc = "Open PDF", orphan = true },
-]
-
-# [[plugin.prepend_fetchers]]
-# id = "git"
-# name = "*"
-# run = "git"
-#
-# [[plugin.prepend_fetchers]]
-# id = "git"
-# name = "*/"
-# run = "git"

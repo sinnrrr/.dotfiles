@@ -7,6 +7,7 @@ brew bottom
 brew ccusage
 brew deno
 brew dotnet@9
+brew duti
 brew fmt
 brew gdk-pixbuf
 brew gh
@@ -28,7 +29,9 @@ brew libthai
 brew llhttp
 brew llvm@21
 brew mbedtls@3
+brew merve
 brew minikube
+brew nbytes
 brew openclaw-cli
 brew openexr
 brew openjph
@@ -37,6 +40,7 @@ brew python@3.13
 brew python@3.14
 brew rclone
 brew shared-mime-info
+brew simdutf
 brew snappy
 brew tombi
 

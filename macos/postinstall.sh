@@ -45,5 +45,12 @@ log "Making sure all Brew packages are installed and up to date..."
 brew install rcmdnk/file/brew-file
 brew file install
 
+log "Setting Firefox as default PDF viewer..."
+if command -v duti >/dev/null 2>&1; then
+  duti -s org.mozilla.firefox pdf all
+else
+  log "duti not found, skipping PDF association"
+fi
+
 log "Changes applied. Some changes may require a restart to take effect."
 

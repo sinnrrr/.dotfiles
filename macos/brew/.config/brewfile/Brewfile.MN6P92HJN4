@@ -93,6 +93,9 @@ tap leg100/tap
 
 tap mhaeuser/mhaeuser
 
+tap multica-ai/tap
+brew multica
+
 tap nikitabobko/tap
 
 tap oven-sh/bun

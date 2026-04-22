@@ -27,6 +27,9 @@ on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
 # You can effectively turn off macOS "Hide application" (cmd-h) feature by toggling this flag
 automatically-unhide-macos-hidden-apps = true
 
+[exec.env-vars]
+PATH = '${HOME}/.local/bin:${PATH}'
+
 # Possible values: (qwerty|dvorak)
 # See https://nikitabobko.github.io/AeroSpace/guide#key-mapping
 [key-mapping]

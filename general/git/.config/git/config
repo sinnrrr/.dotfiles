@@ -2,6 +2,12 @@
 	ignorecase = false
 [push]
 	autoSetupRemote = true
+[pull]
+	rebase = true
+[url "git@github.twdcgrid.net:"]
+	insteadOf = https://github.twdcgrid.net/
+[delta]
+	syntax-theme = "Catppuccin Mocha"
 
 [includeIf "gitdir:/Users/sinnrrr/"]
 	path = ~/.config/git/.gitconfig.personal

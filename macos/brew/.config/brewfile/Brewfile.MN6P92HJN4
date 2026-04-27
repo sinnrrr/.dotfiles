@@ -4,6 +4,7 @@
 tap homebrew/core
 brew ada-url
 brew argocd
+brew awscli
 brew biome
 brew bottom
 brew ccusage
@@ -32,12 +33,12 @@ brew krb5
 brew krew
 brew kubie
 brew libdatrie
+brew libmagic
 brew libomp
 brew libthai
 brew lima
 brew llhttp
 brew llvm
-brew llvm@21
 brew mad
 brew merve
 brew nbytes
@@ -71,10 +72,15 @@ tap homebrew/services
 
 tap ankitpokhrel/jira-cli
 
+tap cost/tap
+brew disney-claude
+
 tap devproductivity/devx-cli
 brew devx-cli
 
 tap dlvhdr/formulae
+
+tap docker/tap
 
 tap f/mcptools
 brew mcp

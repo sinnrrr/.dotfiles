@@ -65,6 +65,7 @@ cask codex
 cask docker-desktop
 cask font-sf-mono-nerd-font-ligaturized
 cask kitlangton-hex
+cask obsidian
 
 tap homebrew/bundle
 

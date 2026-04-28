@@ -45,6 +45,9 @@ log "Making sure all Brew packages are installed and up to date..."
 brew install rcmdnk/file/brew-file
 brew file install
 
+log "Symlinking AeroSpace CLI..."
+ln -sf /Applications/AeroSpace.app/Contents/MacOS/AeroSpace /opt/homebrew/bin/aerospace
+
 log "Setting Firefox as default PDF viewer..."
 if command -v duti >/dev/null 2>&1; then
   duti -s org.mozilla.firefox pdf all

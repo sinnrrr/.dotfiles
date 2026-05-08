@@ -2,6 +2,7 @@ theme = "catppuccin_mocha"
 
 [editor]
 bufferline = "always"
+auto-format = true
 
 [editor.statusline]
 right = ["file-type"]

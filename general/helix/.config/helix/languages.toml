@@ -25,7 +25,13 @@ config = { markdown.preview.auto = true }
 
 [language-server.taplo.config]
 root_dir = [".git", "*.toml"]
+
 [[language]]
 name = "toml"
 auto-format = true
 formatter = { command = "taplo", args = ["fmt", "-"] }
+
+[[language]]
+name = "python"
+auto-format = true
+formatter = { command = "ruff", args = ["format", "-"] }

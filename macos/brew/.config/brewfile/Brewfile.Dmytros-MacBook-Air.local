@@ -27,26 +27,30 @@ brew librsvg
 brew libsodium
 brew libthai
 brew llhttp
-brew llvm@21
+brew llvm
 brew mbedtls@3
 brew merve
 brew minikube
+brew mlx
+brew mlx-c
 brew nbytes
-brew openclaw-cli
+brew ollama
+brew opencode
 brew openexr
 brew openjph
 brew pipx
 brew python@3.13
 brew python@3.14
 brew rclone
-brew shared-mime-info
 brew simdutf
 brew snappy
 brew tombi
+brew z3
 
 tap homebrew/cask
 cask adobe-acrobat-reader
 cask claude-code
+cask codex
 cask cursor
 cask discord
 cask dmenu-mac
@@ -56,6 +60,7 @@ cask google-chrome@beta
 cask google-drive
 cask gstreamer-runtime
 cask kitlangton-hex
+cask lm-studio
 cask nvidia-geforce-now
 cask prismlauncher
 cask readdle-spark
@@ -69,9 +74,9 @@ tap homebrew/bundle
 
 tap homebrew/services
 
+tap anomalyco/tap
+
 tap koekeishiya/formulae
-brew skhd
-brew yabai --HEAD
 
 tap mhaeuser/mhaeuser
 
@@ -82,6 +87,3 @@ tap oven-sh/bun
 brew bun
 
 tap rcmdnk/file
-
-# Other Homebrew packages
-brew codex

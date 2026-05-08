@@ -77,9 +77,12 @@ fnm env --use-on-cd --log-level=quiet --shell fish | source
 alias k kubectl
 alias tf terraform
 alias lg lazygit
-alias pip pip3
-alias python python3
 alias ghp "GH_HOST=github.twdcgrid.net gh dash"
 alias ji "jira issue list -w -s~Done --order-by status"
 alias k10s "devx login && devx mariner kubeconfig && k9s --context cp3-nonprod-main-us-east-1 --namespace winnie"
 alias awsd "devx cloud aws-login -r 'arn:aws:iam::212883212683:role/bamazon-TeamInsights'"
+
+# Added by LM Studio CLI (lms)
+set -gx PATH $PATH /Users/sinnrrr/.lmstudio/bin
+# End of LM Studio CLI section
+

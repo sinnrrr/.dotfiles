@@ -111,7 +111,6 @@ brew mpg123
 brew mpv
 brew mujs
 brew ncurses
-brew neofetch
 brew nettle
 brew nmap
 brew node
@@ -211,6 +210,7 @@ tap rcmdnk/file
 brew brew-file
 
 # Other Homebrew packages
+brew neofetch
 brew terraform
 
 # Main file

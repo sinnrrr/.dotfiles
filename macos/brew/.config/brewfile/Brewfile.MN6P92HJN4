@@ -51,6 +51,7 @@ brew pyright
 brew python@3.10
 brew python@3.13
 brew python@3.14
+brew shellcheck
 brew simdutf
 brew sox
 brew utf8proc
@@ -74,7 +75,7 @@ tap homebrew/services
 tap ankitpokhrel/jira-cli
 
 tap cost/tap
-brew disney-claude
+cask disney-claude
 
 tap devproductivity/devx-cli
 brew devx-cli
@@ -101,12 +102,14 @@ tap leg100/tap
 tap mhaeuser/mhaeuser
 
 tap multica-ai/tap
-brew multica
 
 tap nikitabobko/tap
 
 tap oven-sh/bun
 brew bun
+
+tap raine/claude-history
+brew claude-history
 
 tap rcmdnk/file
 

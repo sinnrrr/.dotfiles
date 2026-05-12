@@ -45,6 +45,9 @@ defaults write NSGlobalDomain com.apple.sound.uiaudio.enabled -int 0
 log "Disabling Stage Manager..."
 defaults write com.apple.WindowManager GloballyEnabled -bool false
 
+log "Disabling click wallpaper to reveal desktop..."
+defaults write com.apple.WindowManager EnableStandardClickToShowDesktop -bool false
+
 log "Disabling Optimized Battery Charging..."
 defaults write com.apple.PowerChime.plist ChimeOnAllHardware -bool true
 defaults write com.apple.powerAdapter.modern BatteryUpdateInterval -int 3600

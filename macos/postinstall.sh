@@ -50,7 +50,7 @@ if command -v fish >/dev/null 2>&1; then
   if ! grep -qx "$FISH_PATH" /etc/shells; then
     echo "$FISH_PATH" | sudo tee -a /etc/shells
   fi
-  chsh -s "$FISH_PATH"
+  sudo chsh -s "$FISH_PATH" "$USER"
 fi
 
 if [[ "$(scutil --get ComputerName 2>/dev/null)" == *"MN6P92HJN4"* ]]; then
@@ -62,6 +62,8 @@ if [[ "$(scutil --get ComputerName 2>/dev/null)" == *"MN6P92HJN4"* ]]; then
     gh auth login --hostname github.twdcgrid.net
   fi
   gh auth setup-git --hostname github.twdcgrid.net
+  brew tap --custom-remote cost/tap https://github.twdcgrid.net/COST/homebrew-tap
+  brew tap --custom-remote devproductivity/devx-cli https://github.twdcgrid.net/devproductivity/homebrew-devx-cli
 fi
 
 log "Making sure all Brew packages are installed and up to date..."
@@ -78,7 +80,6 @@ ln -sf /Applications/AeroSpace.app/Contents/MacOS/AeroSpace /opt/homebrew/bin/ae
 log "Setting Firefox as default browser and PDF viewer..."
 if command -v duti >/dev/null 2>&1; then
   duti -s org.mozilla.firefox http
-  duti -s org.mozilla.firefox https
   duti -s org.mozilla.firefox pdf all
 fi
 

@@ -18,3 +18,6 @@
 
 [includeIf "gitdir:~/Work/public/"]
 	path = ~/.config/git/.gitconfig.work-public
+[credential "https://github.twdcgrid.net"]
+	helper = 
+	helper = !/opt/homebrew/bin/gh auth git-credential

@@ -25,9 +25,13 @@ sudo mdutil -a -i off
 defaults write com.apple.Spotlight MenuItemHidden -bool true
 killall Spotlight 2>/dev/null
 
+log "Setting display sleep to 30 minutes..."
+sudo pmset -b displaysleep 30
+sudo pmset -c displaysleep 30
+
 log "Setting key repeat rate..."
 defaults write NSGlobalDomain KeyRepeat -int 2
-defaults write NSGlobalDomain InitialKeyRepeat -int 25
+defaults write NSGlobalDomain InitialKeyRepeat -int 15
 
 log "Hiding dock..."
 defaults write com.apple.dock autohide -bool true
@@ -93,7 +97,7 @@ fi
 mkdir -p ~/Work
 
 log "Launching Karabiner, AeroSpace, and Hidden Bar..."
-pgrep -q karabiner_grabber || open -a "Karabiner-Elements"
+pgrep -q "Karabiner" || open -a "Karabiner-Elements"
 open -a "AeroSpace"
 open -a "Hidden Bar"
 

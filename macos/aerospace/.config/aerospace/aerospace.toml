@@ -69,6 +69,7 @@ ctrl-alt-cmd-enter = 'exec-and-forget terminal'
 ctrl-alt-cmd-equal = 'exec-and-forget open -a "Mission Control"'
 ctrl-alt-cmd-minus = 'exec-and-forget open -a "Launchpad"'
 ctrl-alt-cmd-shift-p = 'exec-and-forget screencapture -Pix /dev/null'
+ctrl-alt-cmd-x = 'exec-and-forget killall "IBM Notifier Popup"'
 ctrl-alt-cmd-shift-r = 'exec-and-forget screencapture -iU /dev/null'
 
 ctrl-alt-cmd-h = 'focus left'
@@ -137,3 +138,11 @@ run = ['move-node-to-workspace Social']
 [[on-window-detected]]
 if.app-id = 'com.apple.iWork.Pages'
 run = ['move-node-to-workspace Social']
+
+[[on-window-detected]]
+if.app-id = 'com.jamf.connect'
+run = ['move-node-to-workspace Data']
+
+[[on-window-detected]]
+if.app-id = 'com.jamfsoftware.selfservice.mac'
+run = ['move-node-to-workspace Data']

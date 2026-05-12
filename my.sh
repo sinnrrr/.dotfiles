@@ -13,13 +13,12 @@ CYGWIN* | MINGW32* | MSYS* | MINGW*)
   ;;
 esac
 
-sudo -v
-
 mkdir -p $HOME/.local/bin
 
 SCRIPT_PATH=$(dirname "$(realpath "$0")")
 
 if [[ "$1" = "init" ]]; then
+  sudo -v
   . "$SCRIPT_PATH/$OS_DIR/preinstall.sh"
 fi
 

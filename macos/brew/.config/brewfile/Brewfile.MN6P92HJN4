@@ -1,113 +1,112 @@
 
 # tap repositories and their packages
 
-tap homebrew/core
-brew ada-url
-brew argocd
-brew awscli
-brew biome
-brew bottom
-brew ccusage
-brew cmake
-brew colima
-brew deno
-brew diffnav
-brew difftastic
-brew docker
-brew docker-completion
-brew dotnet
-brew dotnet@9
-brew duti
-brew expat
-brew fmt
-brew gdbm
-brew ggml
-brew gh
-brew git
-brew git-delta
-brew gopls
-brew hdrhistogram_c
-brew helm
-brew icu4c@78
-brew istioctl
-brew kind
-brew krb5
-brew krew
-brew kubie
-brew libdatrie
-brew libmagic
-brew libomp
-brew libthai
-brew lima
-brew llhttp
-brew llvm
-brew mad
-brew merve
-brew nbytes
-brew openclaw-cli
-brew opusfile
-brew pipx
-brew portaudio
-brew postgresql@18
-brew pyright
-brew python@3.10
-brew python@3.13
-brew python@3.14
-brew shellcheck
-brew simdutf
-brew sox
-brew utf8proc
-brew wget
-brew whisper-cpp
-brew yq
-brew z3
+tap 'homebrew/core'
+brew 'ada-url'
+brew 'argocd'
+brew 'awscli'
+brew 'biome'
+brew 'bottom'
+brew 'ccusage'
+brew 'cmake'
+brew 'colima'
+brew 'deno'
+brew 'diffnav'
+brew 'difftastic'
+brew 'docker'
+brew 'docker-completion'
+brew 'dotnet'
+brew 'dotnet@9'
+brew 'duti'
+brew 'expat'
+brew 'fmt'
+brew 'gdbm'
+brew 'ggml'
+brew 'gh'
+brew 'git'
+brew 'git-delta'
+brew 'gopls'
+brew 'hdrhistogram_c'
+brew 'helm'
+brew 'icu4c@78'
+brew 'istioctl'
+brew 'kind'
+brew 'krb5'
+brew 'krew'
+brew 'kubie'
+brew 'libdatrie'
+brew 'libmagic'
+brew 'libomp'
+brew 'libthai'
+brew 'lima'
+brew 'llhttp'
+brew 'llvm'
+brew 'mad'
+brew 'merve'
+brew 'nbytes'
+brew 'openclaw-cli'
+brew 'opusfile'
+brew 'pipx'
+brew 'portaudio'
+brew 'postgresql@18'
+brew 'pyright'
+brew 'python@3.10'
+brew 'python@3.13'
+brew 'python@3.14'
+brew 'shellcheck'
+brew 'simdutf'
+brew 'sox'
+brew 'utf8proc'
+brew 'wget'
+brew 'whisper-cpp'
+brew 'yq'
+brew 'z3'
 
-tap homebrew/cask
-cask claude-code@latest
-cask codex
-cask docker-desktop
-cask font-sf-mono-nerd-font-ligaturized
-cask kitlangton-hex
-cask lumen
-cask obsidian
+tap 'homebrew/cask'
+cask 'claude-code@latest'
+cask 'codex'
+cask 'docker-desktop'
+cask 'font-sf-mono-nerd-font-ligaturized'
+cask 'kitlangton-hex'
+cask 'obsidian'
 
-tap ankitpokhrel/jira-cli
+tap 'ankitpokhrel/jira-cli'
 
-tap cost/tap, url: "https://github.twdcgrid.net/COST/homebrew-tap"
-cask disney-claude
+tap 'cost/tap'
+cask 'disney-claude'
 
-tap devproductivity/devx-cli, url: "https://github.twdcgrid.net/devproductivity/homebrew-devx-cli"
-brew devx-cli
+tap 'devproductivity/devx-cli'
+brew 'devx-cli'
 
-tap dlvhdr/formulae
+tap 'dlvhdr/formulae'
 
-tap docker/tap
+tap 'docker/tap'
 
-tap f/mcptools
-brew mcp
+tap 'f/mcptools'
+brew 'mcp'
 
-tap hashicorp/tap
+tap 'hashicorp/tap'
 
-tap jesseduffield/lazydocker
+tap 'jesseduffield/lazydocker'
 
-tap jnsahaj/lumen
+tap 'jnsahaj/lumen'
 
-tap kreuzwerker/taps
-brew m1-terraform-provider-helper
+tap 'kreuzwerker/taps'
+brew 'm1-terraform-provider-helper'
 
-tap leg100/tap
+tap 'leg100/tap'
 
-tap mhaeuser/mhaeuser
+tap 'mhaeuser/mhaeuser'
 
-tap multica-ai/tap
+tap 'multica-ai/tap'
 
-tap nikitabobko/tap
-cask aerospace
+tap 'nikitabobko/tap'
+cask 'aerospace'
 
-tap oven-sh/bun
-brew bun
+tap 'oven-sh/bun'
+brew 'bun'
 
-tap raine/claude-history
-brew claude-history
+tap 'raine/claude-history'
+brew 'claude-history'
 
-tap rcmdnk/file
+tap 'rcmdnk/file'

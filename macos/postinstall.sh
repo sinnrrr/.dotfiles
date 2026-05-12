@@ -29,9 +29,11 @@ log "Setting key repeat rate..."
 defaults write NSGlobalDomain KeyRepeat -int 2
 defaults write NSGlobalDomain InitialKeyRepeat -int 25
 
-log "Hiding menu bar..."
-defaults write NSGlobalDomain AppleMenuBarVisibleInFullscreen -bool false
-defaults write NSGlobalDomain _HIHideMenuBar -bool true
+log "Hiding dock..."
+defaults write com.apple.dock autohide -bool true
+defaults write com.apple.dock autohide-delay -float 1000
+defaults write com.apple.dock autohide-time-modifier -float 0
+killall Dock 2>/dev/null
 
 log "Disabling UI sound effects..."
 defaults write NSGlobalDomain com.apple.sound.uiaudio.enabled -int 0
@@ -59,9 +61,9 @@ if [[ "$(scutil --get ComputerName 2>/dev/null)" == *"MN6P92HJN4"* ]]; then
     brew install gh
   fi
   if ! gh auth status --hostname github.twdcgrid.net &>/dev/null; then
-    gh auth login --hostname github.twdcgrid.net
+    gh auth login --hostname github.twdcgrid.net --git-protocol https
+    gh auth setup-git --hostname github.twdcgrid.net
   fi
-  gh auth setup-git --hostname github.twdcgrid.net
   brew tap --custom-remote cost/tap https://github.twdcgrid.net/COST/homebrew-tap
   brew tap --custom-remote devproductivity/devx-cli https://github.twdcgrid.net/devproductivity/homebrew-devx-cli
 fi
@@ -90,8 +92,9 @@ fi
 
 mkdir -p ~/Work
 
-log "Launching Karabiner and AeroSpace..."
-open -a "Karabiner-Elements"
+log "Launching Karabiner, AeroSpace, and Hidden Bar..."
+pgrep -q karabiner_grabber || open -a "Karabiner-Elements"
 open -a "AeroSpace"
+open -a "Hidden Bar"
 
 log "Changes applied. Some changes may require a restart to take effect."

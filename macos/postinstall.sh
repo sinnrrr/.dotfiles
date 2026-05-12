@@ -1,6 +1,5 @@
 #!/bin/bash
-
-sudo -v
+set -e
 
 log() {
   echo "=== $1"
@@ -24,7 +23,18 @@ sudo launchctl disable 'system/com.apple.Siri.agent'
 log "Disabling Spotlight..."
 sudo mdutil -a -i off
 defaults write com.apple.Spotlight MenuItemHidden -bool true
-killall Spotlight
+killall Spotlight 2>/dev/null
+
+log "Setting key repeat rate..."
+defaults write NSGlobalDomain KeyRepeat -int 2
+defaults write NSGlobalDomain InitialKeyRepeat -int 25
+
+log "Hiding menu bar..."
+defaults write NSGlobalDomain AppleMenuBarVisibleInFullscreen -bool false
+defaults write NSGlobalDomain _HIHideMenuBar -bool true
+
+log "Disabling UI sound effects..."
+defaults write NSGlobalDomain com.apple.sound.uiaudio.enabled -int 0
 
 log "Disabling Stage Manager..."
 defaults write com.apple.WindowManager GloballyEnabled -bool false
@@ -35,25 +45,52 @@ defaults write com.apple.powerAdapter.modern BatteryUpdateInterval -int 3600
 defaults write com.apple.powerAdapter.modern OptimizedBatteryCharging -int 0
 
 log "Setting Fish as default shell..."
-FISH_PATH=$(which fish)
-if ! grep -qx "$FISH_PATH" /etc/shells; then
-  echo "$FISH_PATH" | sudo tee -a /etc/shells
+if command -v fish >/dev/null 2>&1; then
+  FISH_PATH=$(which fish)
+  if ! grep -qx "$FISH_PATH" /etc/shells; then
+    echo "$FISH_PATH" | sudo tee -a /etc/shells
+  fi
+  chsh -s "$FISH_PATH"
 fi
-chsh -s "$FISH_PATH"
+
+if [[ "$(scutil --get ComputerName 2>/dev/null)" == *"MN6P92HJN4"* ]]; then
+  log "Authenticating with GitHub Enterprise..."
+  if ! command -v gh >/dev/null 2>&1; then
+    brew install gh
+  fi
+  if ! gh auth status --hostname github.twdcgrid.net &>/dev/null; then
+    gh auth login --hostname github.twdcgrid.net
+  fi
+  gh auth setup-git --hostname github.twdcgrid.net
+fi
 
 log "Making sure all Brew packages are installed and up to date..."
-brew install rcmdnk/file/brew-file
-brew file install
+if command -v brew >/dev/null 2>&1; then
+  if ! brew list brew-file >/dev/null 2>&1; then
+    brew install rcmdnk/file/brew-file
+  fi
+  brew file install
+fi
 
 log "Symlinking AeroSpace CLI..."
 ln -sf /Applications/AeroSpace.app/Contents/MacOS/AeroSpace /opt/homebrew/bin/aerospace
 
-log "Setting Firefox as default PDF viewer..."
+log "Setting Firefox as default browser and PDF viewer..."
 if command -v duti >/dev/null 2>&1; then
+  duti -s org.mozilla.firefox http
+  duti -s org.mozilla.firefox https
   duti -s org.mozilla.firefox pdf all
-else
-  log "duti not found, skipping PDF association"
 fi
 
-log "Changes applied. Some changes may require a restart to take effect."
+log "Installing Yazi packages..."
+if command -v ya >/dev/null 2>&1; then
+  ya pkg install
+fi
 
+mkdir -p ~/Work
+
+log "Launching Karabiner and AeroSpace..."
+open -a "Karabiner-Elements"
+open -a "AeroSpace"
+
+log "Changes applied. Some changes may require a restart to take effect."

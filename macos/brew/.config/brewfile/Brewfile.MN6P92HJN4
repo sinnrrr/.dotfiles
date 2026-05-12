@@ -17,6 +17,8 @@ brew docker
 brew docker-completion
 brew dotnet
 brew dotnet@9
+brew duti
+brew expat
 brew fmt
 brew gdbm
 brew ggml
@@ -66,18 +68,15 @@ cask codex
 cask docker-desktop
 cask font-sf-mono-nerd-font-ligaturized
 cask kitlangton-hex
+cask lumen
 cask obsidian
-
-tap homebrew/bundle
-
-tap homebrew/services
 
 tap ankitpokhrel/jira-cli
 
-tap cost/tap
+tap cost/tap, url: "https://github.twdcgrid.net/COST/homebrew-tap"
 cask disney-claude
 
-tap devproductivity/devx-cli
+tap devproductivity/devx-cli, url: "https://github.twdcgrid.net/devproductivity/homebrew-devx-cli"
 brew devx-cli
 
 tap dlvhdr/formulae
@@ -92,7 +91,6 @@ tap hashicorp/tap
 tap jesseduffield/lazydocker
 
 tap jnsahaj/lumen
-brew lumen
 
 tap kreuzwerker/taps
 brew m1-terraform-provider-helper
@@ -104,6 +102,7 @@ tap mhaeuser/mhaeuser
 tap multica-ai/tap
 
 tap nikitabobko/tap
+cask aerospace
 
 tap oven-sh/bun
 brew bun
@@ -112,10 +111,3 @@ tap raine/claude-history
 brew claude-history
 
 tap rcmdnk/file
-
-# App Store applications
-appstore 682658836 GarageBand (10.4.13)
-appstore 408981434 iMovie (10.4.3)
-appstore 409183694 Keynote (14.5)
-appstore 409203825 Numbers (14.5)
-appstore 409201541 Pages (14.5)

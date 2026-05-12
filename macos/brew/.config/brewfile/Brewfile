@@ -199,10 +199,6 @@ cask wezterm
 cask zed
 cask zoom
 
-tap homebrew/bundle
-
-tap homebrew/services
-
 tap mhaeuser/mhaeuser
 cask battery-toolkit
 
@@ -210,7 +206,6 @@ tap rcmdnk/file
 brew brew-file
 
 # Other Homebrew packages
-brew neofetch
 brew terraform
 
 # Main file

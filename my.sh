@@ -13,6 +13,8 @@ CYGWIN* | MINGW32* | MSYS* | MINGW*)
   ;;
 esac
 
+sudo -v
+
 mkdir -p $HOME/.local/bin
 
 SCRIPT_PATH=$(dirname "$(realpath "$0")")

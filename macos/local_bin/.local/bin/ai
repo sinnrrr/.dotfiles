@@ -1,2 +1,5 @@
 #!/bin/sh
+if ! command -v wezcld >/dev/null 2>&1; then
+  curl -fsSL https://github.com/afewyards/wezcld/releases/latest/download/install.sh | sh
+fi
 wezcld "$@"

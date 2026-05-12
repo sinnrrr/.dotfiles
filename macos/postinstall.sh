@@ -20,10 +20,14 @@ launchctl disable "user/$UID/com.apple.Siri.agent"
 launchctl disable "gui/$UID/com.apple.Siri.agent"
 sudo launchctl disable 'system/com.apple.Siri.agent'
 
-log "Disabling Spotlight..."
-sudo mdutil -a -i off
+log "Configuring Spotlight shortcuts..."
 defaults write com.apple.Spotlight MenuItemHidden -bool true
-killall Spotlight 2>/dev/null
+# Disable "Show Spotlight search" (key 64) and "Show Finder search window" (key 65)
+defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 64 '<dict><key>enabled</key><false/><key>value</key><dict><key>parameters</key><array><integer>32</integer><integer>49</integer><integer>1048576</integer></array><key>type</key><string>standard</string></dict></dict>'
+defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 65 '<dict><key>enabled</key><false/><key>value</key><dict><key>parameters</key><array><integer>32</integer><integer>49</integer><integer>1572864</integer></array><key>type</key><string>standard</string></dict></dict>'
+# Set "Show Apps" (key 160) to Ctrl+Cmd+Option+D
+defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 160 '<dict><key>enabled</key><true/><key>value</key><dict><key>parameters</key><array><integer>100</integer><integer>2</integer><integer>1835008</integer></array><key>type</key><string>standard</string></dict></dict>'
+/System/Library/PrivateFrameworks/SystemAdministration.framework/Resources/activateSettings -u
 
 log "Setting display sleep to 30 minutes..."
 sudo pmset -b displaysleep 30
@@ -99,9 +103,12 @@ fi
 
 mkdir -p ~/Work
 
-log "Launching Karabiner, AeroSpace, and Hidden Bar..."
+log "Launching Karabiner, AeroSpace, Hidden Bar, LinearMouse, MonitorControl, and WezTerm..."
 pgrep -q "Karabiner" || open -a "Karabiner-Elements"
 open -a "AeroSpace"
 open -a "Hidden Bar"
+pgrep -q "LinearMouse" || open -a "LinearMouse"
+pgrep -q "MonitorControl" || open -a "MonitorControl"
+pgrep -q "wezterm-gui" || open -a "WezTerm"
 
 log "Changes applied. Some changes may require a restart to take effect."

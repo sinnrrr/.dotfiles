@@ -72,8 +72,6 @@ if test -f ~/.local/.env.fish
     source ~/.local/.env.fish
 end
 
-fnm env --use-on-cd --log-level=quiet --shell fish | source
-
 alias k kubectl
 alias tf terraform
 alias lg lazygit

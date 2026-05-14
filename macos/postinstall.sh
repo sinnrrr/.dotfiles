@@ -87,6 +87,11 @@ if command -v brew >/dev/null 2>&1; then
   brew file install
 fi
 
+log "Installing mise tools..."
+if command -v mise >/dev/null 2>&1; then
+  mise install --yes
+fi
+
 log "Setting Firefox as default browser and PDF viewer..."
 if command -v duti >/dev/null 2>&1; then
   duti -s org.mozilla.firefox http

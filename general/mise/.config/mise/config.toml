@@ -1,0 +1,9 @@
+[tools]
+node = "22"
+python = "3.14"
+go = "latest"
+bun = "latest"
+terraform = "latest"
+"npm:prettier" = "latest"
+"npm:typescript" = "latest"
+"npm:typescript-language-server" = "latest"

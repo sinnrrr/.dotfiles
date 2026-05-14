@@ -23,11 +23,17 @@ if [[ "$1" = "init" ]]; then
 fi
 
 # Process general and OS-specific directories
-cd "$SCRIPT_PATH/general" && stow -t "$HOME" */
-cd "$SCRIPT_PATH/$OS_DIR" && stow -t "$HOME" */
+cd "$SCRIPT_PATH/general" && stow --no-folding -t "$HOME" */
+cd "$SCRIPT_PATH/$OS_DIR" && stow --no-folding -t "$HOME" */
+if [ -d "$SCRIPT_PATH/work" ]; then
+  cd "$SCRIPT_PATH/work" && stow --no-folding -t "$HOME" */
+fi
 
 if [[ "$1" = "init" ]]; then
   . "$SCRIPT_PATH/$OS_DIR/postinstall.sh"
+  if [ -f "$SCRIPT_PATH/work/postinstall.sh" ]; then
+    . "$SCRIPT_PATH/work/postinstall.sh"
+  fi
 fi
 
 echo "Config sourced."

@@ -66,19 +66,6 @@ if command -v fish >/dev/null 2>&1; then
   sudo chsh -s "$FISH_PATH" "$USER"
 fi
 
-if [[ "$(scutil --get ComputerName 2>/dev/null)" == *"MN6P92HJN4"* ]]; then
-  log "Authenticating with GitHub Enterprise..."
-  if ! command -v gh >/dev/null 2>&1; then
-    brew install gh
-  fi
-  if ! gh auth status --hostname github.twdcgrid.net &>/dev/null; then
-    gh auth login --hostname github.twdcgrid.net --git-protocol https
-    gh auth setup-git --hostname github.twdcgrid.net
-  fi
-  brew tap --custom-remote cost/tap https://github.twdcgrid.net/COST/homebrew-tap
-  brew tap --custom-remote devproductivity/devx-cli https://github.twdcgrid.net/devproductivity/homebrew-devx-cli
-fi
-
 log "Making sure all Brew packages are installed and up to date..."
 if command -v brew >/dev/null 2>&1; then
   if ! brew list brew-file >/dev/null 2>&1; then

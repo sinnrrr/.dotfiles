@@ -258,14 +258,6 @@ cask 'wezterm'
 cask 'zed'
 cask 'zoom'
 
-tap 'ankitpokhrel/jira-cli'
-
-tap 'cost/tap'
-cask 'disney-claude'
-
-tap 'devproductivity/devx-cli'
-brew 'devx-cli'
-
 tap 'dlvhdr/formulae'
 
 tap 'docker/tap'

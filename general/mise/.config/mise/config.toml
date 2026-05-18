@@ -2,6 +2,7 @@
 node = "22"
 python = "3.14"
 go = "latest"
+uv = "latest"
 bun = "latest"
 terraform = "latest"
 "npm:prettier" = "latest"
@@ -13,4 +14,7 @@ postinstall = 'corepack enable pnpm'
 
 [settings]
 experimental = true
-idiomatic_version_file_enable_tools = ["node"]
+idiomatic_version_file_enable_tools = ["node", "python", "go"]
+
+[settings.python]
+uv_venv_auto = "create|source"

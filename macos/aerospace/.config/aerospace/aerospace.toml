@@ -146,3 +146,7 @@ run = ['move-node-to-workspace Data']
 [[on-window-detected]]
 if.app-id = 'com.jamfsoftware.selfservice.mac'
 run = ['move-node-to-workspace Data']
+
+[[on-window-detected]]
+if.app-id = 'md.obsidian'
+run = ['move-node-to-workspace Data']

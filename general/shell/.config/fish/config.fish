@@ -80,3 +80,4 @@ alias lg lazygit
 set -gx PATH $PATH /Users/sinnrrr/.lmstudio/bin
 # End of LM Studio CLI section
 
+mise activate fish | source

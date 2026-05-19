@@ -1,3 +1,10 @@
+[language-server.mdpls]
+command = "mdpls"
+config = { markdown.preview.auto = true }
+
+[language-server.taplo.config]
+root_dir = [".git", "*.toml"]
+
 [[language]]
 name = "lua"
 auto-format = true
@@ -18,13 +25,9 @@ formatter = { command = "prettier", args = ["--parser", "json"] }
 
 [[language]]
 name = "markdown"
+auto-format = true
 language-servers = ["mdpls"]
-[language-server.mdpls]
-command = "mdpls"
-config = { markdown.preview.auto = true }
-
-[language-server.taplo.config]
-root_dir = [".git", "*.toml"]
+formatter = { command = "dprint", args = ["fmt", "--stdin", "md"] }
 
 [[language]]
 name = "toml"

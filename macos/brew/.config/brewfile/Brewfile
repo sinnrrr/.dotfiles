@@ -20,6 +20,7 @@ brew 'ca-certificates'
 brew 'cairo'
 brew 'ccusage'
 brew 'certifi'
+brew 'claude-squad'
 brew 'cmake'
 brew 'colima'
 brew 'dav1d'
@@ -144,6 +145,7 @@ brew 'make'
 brew 'markdown-oxide'
 brew 'marksman'
 brew 'mas'
+brew 'mergiraf'
 brew 'merve'
 brew 'mise'
 brew 'molten-vk'
@@ -203,6 +205,7 @@ brew 'taplo'
 brew 'terraform-ls'
 brew 'tesseract'
 brew 'theora'
+brew 'tmux'
 brew 'trash'
 brew 'trash-cli'
 brew 'tree'
@@ -297,3 +300,5 @@ mas 'iMovie (10.4.4)', id: 408981434
 mas 'Keynote (14.5)', id: 409183694
 mas 'Numbers (14.5)', id: 409203825
 mas 'Pages (14.5)', id: 409201541
+
+main ./Brewfile.$HOSTNAME

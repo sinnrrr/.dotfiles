@@ -56,6 +56,7 @@ end
 alias k kubectl
 alias tf terraform
 alias lg lazygit
+alias cs claude-squad
 
 # Added by LM Studio CLI (lms)
 set -gx PATH $PATH /Users/sinnrrr/.lmstudio/bin

@@ -47,7 +47,7 @@ config.keys = {
 	},
 	{
 		key = "q",
-		mods = "CTRL",
+		mods = "CTRL|SHIFT",
 		action = act.CloseCurrentTab({ confirm = false }),
 	},
 	{

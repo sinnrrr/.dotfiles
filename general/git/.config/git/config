@@ -1,12 +1,3 @@
-[core]
-	ignorecase = false
-[push]
-	autoSetupRemote = true
-[pull]
-	rebase = true
-[delta]
-	syntax-theme = "Catppuccin Mocha"
-
 [includeIf "gitdir:/Users/sinnrrr/"]
 	path = ~/.config/git/.gitconfig.personal
 
@@ -18,5 +9,23 @@
 
 [includeIf "gitdir:~/.dotfiles/work/"]
 	path = ~/.config/git/.gitconfig.work
+
+[includeIf "gitdir:/opt/homebrew/"]
+	path = ~/.config/git/.gitconfig.work
+
+[core]
+	ignorecase = false
+[push]
+	autoSetupRemote = true
+[pull]
+	rebase = true
+[delta]
+	syntax-theme = "Catppuccin Mocha"
+[merge]
+	conflictStyle = diff3
+[merge "mergiraf"]
+	name = mergiraf
+	driver = mergiraf merge --git %O %A %B -p %P -l %L
 [init]
 	defaultBranch = main
+

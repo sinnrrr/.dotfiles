@@ -1,0 +1,64 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+target_brightness_percent="55"
+target_brightness_float="0.55"
+target_brightness_steps="${PHEDIT_BRIGHTNESS_STEPS:-35}"
+
+refresh_display_prefs() {
+  killall ControlCenter cfprefsd 2>/dev/null || true
+}
+
+set_true_tone() {
+  defaults -currentHost write com.apple.CoreBrightness CBTrueToneAutoSwitch -bool "$1"
+}
+
+set_night_shift() {
+  defaults write com.apple.CoreBrightness CBBlueReductionEnabled -bool "$1"
+}
+
+set_display_brightness() {
+  if command -v lunar >/dev/null 2>&1; then
+    lunar displays "Built-in" brightness "$target_brightness_percent" >/dev/null && return 0
+  fi
+
+  if [ -x /Applications/BetterDisplay.app/Contents/MacOS/BetterDisplay ]; then
+    /Applications/BetterDisplay.app/Contents/MacOS/BetterDisplay set -namelike="Built-in" -brightness="$target_brightness_float" >/dev/null && return 0
+    /Applications/BetterDisplay.app/Contents/MacOS/BetterDisplay set -displaywithmainstatus -brightness="$target_brightness_float" >/dev/null && return 0
+  fi
+
+  osascript <<APPLESCRIPT
+tell application "System Events"
+  repeat 64 times
+    key code 145 using {option down, shift down}
+    delay 0.02
+  end repeat
+  repeat $target_brightness_steps times
+    key code 144 using {option down, shift down}
+    delay 0.02
+  end repeat
+end tell
+APPLESCRIPT
+}
+
+case "${1:-}" in
+  on)
+    brightness_status=""
+    set_display_brightness || brightness_status=" (brightness unchanged)"
+    set_true_tone false
+    set_night_shift false
+    defaults write com.apple.CoreBrightness CBBlueReductionStatus -int 0
+    refresh_display_prefs
+    echo "Instagram edit mode ON$brightness_status"
+    ;;
+  off)
+    set_true_tone true
+    set_night_shift true
+    refresh_display_prefs
+    echo "Display restored"
+    ;;
+  *)
+    echo "Usage: $(basename "$0") on|off" >&2
+    exit 2
+    ;;
+esac

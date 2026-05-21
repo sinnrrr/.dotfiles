@@ -2,50 +2,14 @@
 # tap repositories and their packages
 
 tap homebrew/core
-brew ada-url
-brew bottom
-brew ccusage
-brew deno
-brew dotnet@9
-brew duti
-brew fmt
-brew gdk-pixbuf
-brew gh
-brew git-delta
-brew graphene
-brew gtk4
-brew hdrhistogram_c
-brew hicolor-icon-theme
-brew highway
-brew icu4c@78
-brew imath
-brew jpeg-xl
-brew libdatrie
-brew libdeflate
-brew libepoxy
-brew librsvg
-brew libsodium
-brew libthai
-brew llhttp
 brew llvm
-brew mbedtls@3
-brew merve
 brew minikube
 brew mlx
 brew mlx-c
-brew nbytes
 brew ollama
 brew opencode
-brew openexr
-brew openjph
-brew pipx
-brew python@3.13
-brew python@3.14
 brew rclone
-brew simdutf
-brew snappy
 brew tombi
-brew z3
 
 tap homebrew/cask
 cask adobe-acrobat-reader
@@ -82,8 +46,5 @@ tap mhaeuser/mhaeuser
 
 tap nikitabobko/tap
 cask aerospace
-
-tap oven-sh/bun
-brew bun
 
 tap rcmdnk/file

@@ -57,6 +57,8 @@ alias k kubectl
 alias tf terraform
 alias lg lazygit
 alias cs claude-squad
+alias bfi 'brew file install -F file'
+alias bfc 'brew file clean -F file'
 
 # Added by LM Studio CLI (lms)
 set -gx PATH $PATH /Users/sinnrrr/.lmstudio/bin

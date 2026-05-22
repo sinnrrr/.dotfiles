@@ -71,7 +71,7 @@ if command -v brew >/dev/null 2>&1; then
   if ! brew list brew-file >/dev/null 2>&1; then
     brew install rcmdnk/file/brew-file
   fi
-  brew file install
+  brew file install -F file
 fi
 
 log "Installing mise tools..."

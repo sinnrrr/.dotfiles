@@ -1,11 +1,25 @@
 
+# tap repositories and their packages
+
+tap librespeed/tap
+brew librespeed-cli
+
+tap mhaeuser/mhaeuser
+cask battery-toolkit
+
+tap nikitabobko/tap
+cask aerospace
+
+tap rcmdnk/file
+brew brew-file
+
+# Other Homebrew packages
 brew ansible-language-server
 brew autoconf
 brew automake
 brew bash
 brew bat
 brew bottom
-brew brew-file
 brew btop
 brew ccusage
 brew duti
@@ -23,11 +37,9 @@ brew htop
 brew imagemagick
 brew jq
 brew k9s
-brew kubernetes-cli
 brew lazydocker
 brew lazygit
 brew libtool
-brew librespeed-cli
 brew lua-language-server
 brew make
 brew markdown-oxide
@@ -59,8 +71,7 @@ brew yazi
 brew yt-dlp
 brew zoxide
 
-cask aerospace
-cask battery-toolkit
+# Other Cask applications
 cask brave-browser
 cask codex
 cask dbeaver-community
@@ -83,9 +94,5 @@ cask wezterm
 cask zed
 cask zoom
 
-tap librespeed/tap
-tap mhaeuser/mhaeuser
-tap nikitabobko/tap
-tap rcmdnk/file
-
+# Main file
 main ./Brewfile.$HOSTNAME

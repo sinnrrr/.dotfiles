@@ -26,6 +26,8 @@
 [merge "mergiraf"]
 	name = mergiraf
 	driver = mergiraf merge --git %O %A %B -p %P -l %L
+[rebase]
+	committerDateIsAuthorDate = true
 [init]
 	defaultBranch = main
 

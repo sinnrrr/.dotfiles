@@ -16,6 +16,7 @@ dprint = "latest"
 "npm:typescript" = "latest"
 "npm:typescript-language-server" = "latest"
 "cargo:https://github.com/euclio/mdpls" = "HEAD"
+"pipx:ty" = "latest"
 
 [hooks]
 postinstall = 'corepack enable pnpm'

@@ -15,7 +15,6 @@ brew brew-file
 
 # Other Homebrew packages
 brew ansible-language-server
-brew autoconf
 brew automake
 brew bash
 brew bat
@@ -24,35 +23,29 @@ brew btop
 brew ccusage
 brew duti
 brew fd
-brew ffmpeg
 brew fish
 brew fzf
 brew gh
 brew git-delta
-brew gnupg
 brew grep
 brew handbrake
 brew helix
 brew htop
 brew imagemagick
-brew jq
 brew k9s
 brew lazydocker
 brew lazygit
-brew libtool
 brew lua-language-server
 brew make
 brew markdown-oxide
 brew marksman
 brew mas
 brew mergiraf
-brew merve
 brew mise
 brew mpv
 brew nmap
 brew poppler
 brew pug
-brew ripgrep
 brew ruff
 brew scc
 brew sevenzip
@@ -64,11 +57,9 @@ brew tesseract
 brew trash
 brew trash-cli
 brew tree
-brew usage
 brew vscode-langservers-extracted
 brew yaml-language-server
 brew yazi
-brew yt-dlp
 brew zoxide
 
 # Other Cask applications

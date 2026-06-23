@@ -4,9 +4,6 @@
 tap librespeed/tap
 brew librespeed-cli
 
-tap mhaeuser/mhaeuser
-cask battery-toolkit
-
 tap nikitabobko/tap
 cask aerospace
 
@@ -44,7 +41,6 @@ brew mergiraf
 brew mise
 brew mpv
 brew nmap
-brew poppler
 brew pug
 brew ruff
 brew scc

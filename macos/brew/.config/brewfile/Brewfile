@@ -23,7 +23,6 @@ brew fd
 brew fish
 brew fzf
 brew gh
-brew git-delta
 brew grep
 brew handbrake
 brew helix
@@ -77,7 +76,7 @@ cask obs
 cask obsidian
 cask spotify
 cask vlc
-cask wezterm
+cask wezterm@nightly
 cask zed
 cask zoom
 

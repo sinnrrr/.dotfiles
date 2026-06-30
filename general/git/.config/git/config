@@ -27,6 +27,7 @@
 	name = mergiraf
 	driver = mergiraf merge --git %O %A %B -p %P -l %L
 [rebase]
+	autoStash = true
 	committerDateIsAuthorDate = true
 [init]
 	defaultBranch = main

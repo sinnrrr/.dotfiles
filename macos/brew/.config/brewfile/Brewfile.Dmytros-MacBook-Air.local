@@ -1,31 +1,27 @@
 
-brew llvm
-brew minikube
-brew mlx
-brew mlx-c
-brew ollama
-brew opencode
-brew rclone
-brew tombi
+# tap repositories and their packages
 
+tap homebrew/core
+brew biome
+brew gemini-cli
+brew jq
+brew kubernetes-cli
+brew speedtest-cli
+
+tap homebrew/cask
 cask adobe-acrobat-reader
 cask claude-code
-cask cursor
-cask discord
-cask dmenu-mac
-cask ghostty
-cask google-chrome
-cask google-chrome@beta
 cask google-drive
 cask lm-studio
-cask nvidia-geforce-now
-cask prismlauncher
-cask readdle-spark
-cask roblox
-cask utm
-cask visual-studio-code
-cask whisky
-cask wine-stable
+cask orbstack
+cask quarto
+cask spaceid
 
-tap anomalyco/tap
-tap koekeishiya/formulae
+tap mhaeuser/mhaeuser
+
+tap nikitabobko/tap
+
+tap raine/claude-history
+brew claude-history
+
+tap rcmdnk/file

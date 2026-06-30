@@ -39,6 +39,13 @@ run = """
 desc = "Merge selected PDFs"
 
 [[mgr.prepend_keymap]]
+on = ["c", "j"]
+run = """
+	shell 'pdftoppm -jpeg -jpegopt quality=92 -r 300 "$1" "${1%.pdf}"'
+"""
+desc = "PDF to JPEG"
+
+[[mgr.prepend_keymap]]
 on = ["c", "s"]
 run = '''
   shell 'curl -F"file=@$1" https://0x0.st | pbcopy' --confirm

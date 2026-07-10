@@ -141,7 +141,7 @@ if.app-id = 'com.microsoft.teams'
 run = ['move-node-to-workspace Social']
 
 [[on-window-detected]]
-if.app-id = 'com.apple.iWork.Pages'
+if.app-id = 'com.apple.Pages'
 run = ['move-node-to-workspace Social']
 
 [[on-window-detected]]

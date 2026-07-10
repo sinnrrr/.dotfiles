@@ -157,3 +157,9 @@ run = ['move-node-to-workspace Data']
 [[on-window-detected]]
 if.app-id = 'md.obsidian'
 run = ['move-node-to-workspace Data']
+
+# Catch-all — must stay last. First match wins, so specific rules above run
+# first; anything unmatched falls through to Data (ws 3).
+[[on-window-detected]]
+if = 'true'
+run = ['move-node-to-workspace Data']

@@ -33,7 +33,9 @@ on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
 automatically-unhide-macos-hidden-apps = true
 
 [exec.env-vars]
-PATH = '${HOME}/.local/bin:${PATH}'
+# ${PATH} at login can be just ~/.local/bin, so list system+brew dirs explicitly
+# or exec'd scripts (terminal, browser) can't find /usr/bin/open.
+PATH = '${HOME}/.local/bin:/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:${PATH}'
 
 # Possible values: (qwerty|dvorak)
 # See https://nikitabobko.github.io/AeroSpace/guide#key-mapping

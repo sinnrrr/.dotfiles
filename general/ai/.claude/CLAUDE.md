@@ -6,6 +6,14 @@
 - Don't narrate what you're about to do, just execute.
 - Launch PR reviewer subagent when finished implementing PR together with `/ponytail` skill
 
+## Autonomy
+
+- Decide reversible, low-stakes things yourself. State the choice in one line and move on. Ask only when the call is truly mine: hard to undo, or needs context you don't have.
+- Batch questions into one check-in. Interrupt mid-task only for blocking or irreversible decisions.
+- Proofread before reporting done. Self-review the diff as the PR reviewer would, and fix what you'd flag.
+- Report at altitude. Lead with what needs my eyes or judgment, then a short summary of what changed, not a blow-by-blow.
+- Ambiguous or large task? Propose a short plan and get one approval before diving in.
+
 ## Style
 
 - Never use em dashes or `;` in your text.

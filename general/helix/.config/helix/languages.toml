@@ -26,6 +26,7 @@ formatter = { command = "prettier", args = ["--parser", "json"] }
 [[language]]
 name = "markdown"
 auto-format = true
+soft-wrap.enable = true
 language-servers = ["mdpls"]
 formatter = { command = "dprint", args = ["fmt", "--stdin", "md"] }
 

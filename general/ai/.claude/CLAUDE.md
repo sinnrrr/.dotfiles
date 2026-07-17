@@ -37,7 +37,7 @@
 ## GitHub
 
 - Use `gh` CLI.
-- Commits: title ≤50 chars (shorter is better), plain high-level words, follow the repo's commit format. Body only if necessary.
+- Commits: title ≤50 chars (shorter is better), max 4 words, plain high-level words, follow the repo's commit format. No commit body.
 - Branch names: include ticket name if available, must not exceed 27 chars.
 - PRs: follow the PR template in local `.github` if one exists.
 - Send the PR body to the user to validate before creating the PR.

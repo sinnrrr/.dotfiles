@@ -20,6 +20,7 @@ file-types = [{ glob = "*gitconfig*" }, { glob = ".config/git/*config*" }]
 
 [[language]]
 name = "json"
+auto-format = true
 file-types = ["json", "pp"]
 formatter = { command = "prettier", args = ["--parser", "json"] }
 

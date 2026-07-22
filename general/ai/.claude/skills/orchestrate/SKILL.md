@@ -85,6 +85,38 @@ condition can be stated, treat it as a hard gate: keep going until it holds.
   to know what happened (list runs, view a comment, git status) is direction,
   not doing the work. The heavy lifting still goes to subagents.
 
+## Scriptable loops: use the Workflow tool
+
+When the task's shape is knowable up front — independent units reviewed or
+built in parallel, feeding a synthesis or fix step, repeated until a
+convergence condition holds — write it as a Workflow script instead of
+re-deciding the loop by hand every turn. The script (`agent()`/`parallel()`/
+`pipeline()`/`phase()`) IS the orchestrator: it runs in the background, forces
+structured output via `schema` so results compose reliably round to round,
+and is resumable (edit the script, resume from the same `runId`, only the
+changed step and everything after it reruns).
+
+This skill's own instruction to use Workflow satisfies its opt-in gate — no
+separate user confirmation is needed once `/orchestrate` (or an equivalent
+goal-driven ask) is already in play.
+
+Pattern that works well: N independent reviewers/builders with schema-
+constrained output, feeding one evaluator/fixer agent that verifies each
+result against real state and applies only what's real, repeated until a
+round comes back clean (zero findings, or the fixer applies zero fixes). Cap
+the round count so it cannot run away.
+
+Keep doing turn-by-turn Agent dispatch from the main thread instead when the
+next step is genuinely unknown until you read the previous step's freeform
+output and must apply judgment a script can't encode — ambiguous diagnosis, a
+fix approach that depends on a human-style read of the evidence.
+
+Gotcha: if a run fails instantly with zero agents dispatched (something like
+`args.X is undefined` thrown before any `agent()` call runs), that's
+args-threading breaking, not a logic bug in your loop. Hardcode the values as
+literals directly in the script body instead of passing them through `args`,
+then resume from the same `runId` — nothing ran yet, so the retry is free.
+
 ## Model selection
 
 Match the model to the difficulty and consequence of the unit, independent of

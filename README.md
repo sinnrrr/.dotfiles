@@ -46,17 +46,15 @@ Use shell script and [**stow**](https://www.gnu.org/software/stow/)! It’s 0 ve
 
 While I am a fan of terminal multiplexers, they inherently introduce another layer of abstraction, additional keybinds and complexity to the terminal. It’s already pretty hard to grasp, why making it harder?
 
-As an alternative, I propose using combination of [**Wezterm**](https://wezfurlong.org/wezterm/)'s Panes and [**Yabai**](https://github.com/koekeishiya/yabai) window manager. **Wezterm** can manage panes, and **Yabai** will manage windows, as they were created for that.
+As an alternative, I propose using combination of [**Wezterm**](https://wezfurlong.org/wezterm/)'s Panes and [**AeroSpace**](https://github.com/nikitabobko/AeroSpace) window manager. **Wezterm** can manage panes, and **AeroSpace** will manage windows, as they were created for that.
 </details>
 
 <details>
-<summary>🤔 Why yabai?</summary>
+<summary>🤔 Why AeroSpace?</summary>
 
-While I know [**yabai**](https://github.com/koekeishiya/yabai) is one of the harder to learn ones it’s also best in class. My 2020 Macbook Air 8/256 just sometimes freezes with other window managers. **Yabai** is open source, VERY configurable and BLAZINGLY FAST ⚡️⚡️
+Used [**yabai**](https://github.com/koekeishiya/yabai) for years, it's best in class, but it needs System Integrity Protection disabled for full functionality. [**AeroSpace**](https://github.com/nikitabobko/AeroSpace) doesn't, config is plain TOML, and the i3-style tree layout clicks fast if you've used a tiling WM before.
 
-I also love that it’s using native MacOS windows instead of virtual ones. You can call mission control and see all of your workspaces at glance — it’s all native!
-
-Please consider [supporting Yabai’s developer](https://github.com/sponsors/koekeishiya)! He’s been doing it for years solo, he deserves to be supported!
+Still native MacOS windows, not virtual ones. Mission control shows all your workspaces at a glance, same as before.
 </details>
 <details>
 <summary>💻 Use TUI, PLEASE</summary>

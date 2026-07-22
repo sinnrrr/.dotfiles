@@ -1,1 +1,0 @@
-../LLM_SYSTEM_PROMPT.md

@@ -22,11 +22,13 @@ if [[ "$1" = "init" ]]; then
   . "$SCRIPT_PATH/$OS_DIR/preinstall.sh"
 fi
 
-# Process general and OS-specific directories
-cd "$SCRIPT_PATH/general" && stow --no-folding -t "$HOME" */
-cd "$SCRIPT_PATH/$OS_DIR" && stow --no-folding -t "$HOME" */
+# --adopt: if a target got delinked (some tool rewrote a stowed file in
+# place, replacing the symlink with a plain file), pull it back into the
+# repo instead of aborting. No-op for targets already correctly symlinked.
+cd "$SCRIPT_PATH/general" && stow --no-folding --adopt -t "$HOME" */
+cd "$SCRIPT_PATH/$OS_DIR" && stow --no-folding --adopt -t "$HOME" */
 if [ -d "$SCRIPT_PATH/work" ]; then
-  cd "$SCRIPT_PATH/work" && stow --no-folding -t "$HOME" */
+  cd "$SCRIPT_PATH/work" && stow --no-folding --adopt -t "$HOME" */
 fi
 
 if [[ "$1" = "init" ]]; then

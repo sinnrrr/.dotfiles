@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+# awake [minutes] [battery-floor%] - keep the Mac awake (even lid-closed) on a timer.
+# Reverts sleep on timeout, Ctrl-C, or when battery drops to the floor.
+
+mins=${1:-60}
+floor=${2:-20}
+limit=$(( mins * 60 ))
+
+cleanup() { sudo pmset -a disablesleep 0; echo "sleep re-enabled"; }
+trap 'exit 130' INT TERM
+trap cleanup EXIT
+
+sudo pmset -a disablesleep 1 || exit 1
+echo "awake ${mins}m, battery floor ${floor}%. lid can close. Ctrl-C to stop."
+
+while (( SECONDS < limit )); do
+    sudo -v
+    src=$(pmset -g batt | head -1)
+    pct=$(pmset -g batt | grep -Eo '[0-9]+%' | head -1 | tr -d '%')
+    if [[ $src == *Battery* && -n $pct ]] && (( pct <= floor )); then
+        echo "battery ${pct}% <= ${floor}%, stopping"
+        break
+    fi
+    sleep 30
+done

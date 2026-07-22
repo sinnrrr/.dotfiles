@@ -1,7 +1,7 @@
 [[mgr.prepend_keymap]]
-on = "U"
-run = "plugin recycle-bin"
-desc = "Restore last deleted files/folders"
+on = "R"
+run = "plugin macos-trash"
+desc = "Open macOS Trash"
 
 [[mgr.prepend_keymap]]
 on = "o"
@@ -9,13 +9,6 @@ run = """
 	shell 'qlmanage -p "$1"'
 """
 desc = "QuickLook"
-
-[[mgr.prepend_keymap]]
-on = "U"
-run = '''
-	shell --block "ids=$(echo -ne '\n' | trash-restore | awk '$1 ~ /^[0-9]+/ {print $0}' | fzf --multi | awk '{print $1}' | sed -z 's/\n/,/g;s/,$/\n/'); echo $ids | trash-restore; clear" --confirm
-'''
-desc = "Restory deleted files"
 
 [[mgr.prepend_keymap]]
 on = ["c", "i"]
@@ -30,6 +23,13 @@ run = """
 	shell --block 'compress-video "$1"'
 """
 desc = "Compress video"
+
+[[mgr.prepend_keymap]]
+on = ["c", "o"]
+run = """
+	shell --block 'magick $(ls -1 | sort) -compress jpeg -quality 85 output.pdf && echo "PDF created: output.pdf"' --confirm
+"""
+desc = "Convert sorted images to PDF"
 
 [[mgr.prepend_keymap]]
 on = ["c", "p"]

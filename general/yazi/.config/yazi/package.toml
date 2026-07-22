@@ -39,14 +39,14 @@ rev = "88990a6"
 hash = "56fdabc96fc1f4d53c96eb884b02a5be"
 
 [[plugin.deps]]
-use = "uhs-robert/recycle-bin"
-rev = "fa68711"
-hash = "8714306b5cac6359edbacbf545fbd691"
-
-[[plugin.deps]]
 use = "boydaihungst/pref-by-location"
 rev = "a2fbb05"
 hash = "b4e378df653fa211d22ed04d3c8c1c0a"
+
+[[plugin.deps]]
+use = "walavave/macos-trash"
+rev = "130e6dd"
+hash = "e480ef57299a14ae1414bc010a02551d"
 
 [[flavor.deps]]
 use = "BennyOe/tokyo-night"

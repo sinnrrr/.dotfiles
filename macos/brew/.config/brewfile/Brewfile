@@ -1,84 +1,82 @@
 
 # tap repositories and their packages
 
-tap librespeed/tap
-brew librespeed-cli
-
-tap nikitabobko/tap
-cask aerospace
-
-tap rcmdnk/file
-brew brew-file
-
-# Other Homebrew packages
-brew ansible-language-server
-brew automake
 brew bash
-brew bat
+brew biome
 brew bottom
-brew btop
 brew ccusage
 brew duti
+brew exiftool
 brew fd
+brew ffmpeg
 brew fish
 brew fzf
 brew gh
+brew git-delta
 brew grep
-brew handbrake
 brew helix
-brew htop
 brew imagemagick
-brew k9s
-brew lazydocker
+brew jq
 brew lazygit
+brew libarchive
+brew lua
 brew lua-language-server
+brew luajit
 brew make
-brew markdown-oxide
-brew marksman
 brew mas
 brew mergiraf
 brew mise
-brew mpv
-brew nmap
-brew pug
+brew poppler
 brew ruff
+brew rust
 brew scc
-brew sevenzip
+brew speedtest-cli
 brew stow
 brew stylua
 brew taplo
-brew terraform-ls
-brew tesseract
-brew trash
 brew trash-cli
-brew tree
 brew vscode-langservers-extracted
 brew yaml-language-server
 brew yazi
-brew zoxide
 
-# Other Cask applications
-cask brave-browser
+cask claude-code
 cask codex
-cask dbeaver-community
 cask firefox
 cask font-jetbrains-mono-nerd-font
 cask font-symbols-only-nerd-font
+cask gimp
+cask google-chrome
+cask google-drive
 cask handbrake-app
 cask hiddenbar
+cask insta360-studio
 cask karabiner-elements
 cask kitlangton-hex
 cask linearmouse
-cask microsoft-teams
 cask monitorcontrol
 cask ngrok
-cask obs
-cask obsidian
+cask orbstack
+cask quarto
+cask rawtherapee
+cask readdle-spark
 cask spotify
 cask vlc
 cask wezterm@nightly
 cask zed
 cask zoom
+
+tap mhaeuser/mhaeuser
+
+tap nikitabobko/tap
+cask aerospace
+
+tap raine/claude-history
+brew claude-history
+
+tap rcmdnk/file
+brew brew-file
+
+tap walavave/tap
 
 # Main file
 main ./Brewfile.$HOSTNAME

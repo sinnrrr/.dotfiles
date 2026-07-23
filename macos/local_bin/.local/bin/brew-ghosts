@@ -1,0 +1,29 @@
+#!/usr/bin/env bash
+# brew-ghosts [--clean] - list (or uninstall) casks Homebrew thinks are installed
+# whose .app is actually gone from disk (deleted by hand, not via brew uninstall).
+
+set -e
+
+ghosts=()
+while IFS=$'\t' read -r token app; do
+    [[ -z "$app" ]] && continue
+    base=$(basename "$app")
+    if [[ ! -e "/Applications/$base" && ! -e "$HOME/Applications/$base" ]]; then
+        ghosts+=("$token")
+    fi
+done < <(
+    brew info --cask --json=v2 $(brew list --cask 2>/dev/null) 2>/dev/null |
+        jq -r '.casks[] | . as $c | ($c.artifacts[]? | .app[0]? // empty) as $a | "\($c.token)\t\($a)"'
+)
+
+if [[ ${#ghosts[@]} -eq 0 ]]; then
+    echo "no ghost casks found"
+    exit 0
+fi
+
+if [[ "$1" == "--clean" ]]; then
+    brew uninstall --cask "${ghosts[@]}"
+else
+    printf 'ghost cask: %s\n' "${ghosts[@]}"
+    echo "-> rerun with --clean to uninstall these"
+fi

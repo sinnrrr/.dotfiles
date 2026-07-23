@@ -1,27 +1,38 @@
 
 # tap repositories and their packages
 
-tap homebrew/core
-brew biome
-brew gemini-cli
-brew jq
-brew kubernetes-cli
-brew speedtest-cli
+tap 'homebrew/core'
+brew 'biome'
+brew 'exiftool'
+brew 'ffmpeg'
+brew 'git-delta'
+brew 'jq'
+brew 'libarchive'
+brew 'lua'
+brew 'luajit'
+brew 'mas'
+brew 'mergiraf'
+brew 'poppler'
+brew 'rust'
+brew 'speedtest-cli'
 
-tap homebrew/cask
-cask adobe-acrobat-reader
-cask claude-code
-cask google-drive
-cask lm-studio
-cask orbstack
-cask quarto
-cask spaceid
+tap 'homebrew/cask'
+cask 'claude-code'
+cask 'gimp'
+cask 'google-chrome'
+cask 'google-drive'
+cask 'insta360-studio'
+cask 'orbstack'
+cask 'quarto'
+cask 'rawtherapee'
+cask 'readdle-spark'
 
-tap mhaeuser/mhaeuser
+tap 'mhaeuser/mhaeuser'
 
-tap nikitabobko/tap
+tap 'nikitabobko/tap'
 
-tap raine/claude-history
-brew claude-history
+tap 'raine/claude-history'
 
-tap rcmdnk/file
+tap 'rcmdnk/file'
+
+tap 'walavave/tap'

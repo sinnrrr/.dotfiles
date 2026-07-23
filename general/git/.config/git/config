@@ -15,6 +15,7 @@
 
 [core]
 	ignorecase = false
+	pager = delta
 [push]
 	autoSetupRemote = true
 [pull]

@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+# brew-file-fixup - run after any `brew file dump/install/clean`. Strips the
+# `tap homebrew/core` / `tap homebrew/cask` lines brew-file always re-adds
+# (Homebrew's JSON-API mode errors if you actually tap these - see
+# tap.rb's "Tapping ... is no longer typically necessary" - and there's no
+# dump flag to suppress it), and restores the `main ./Brewfile.$HOSTNAME`
+# include if a dump dropped it (which merges the host file's packages back
+# into the shared one - restoring the include is always an improvement,
+# but check for duplicate lines across both files if this warns).
+
+main="$HOME/.config/brewfile/Brewfile"
+
+[[ -f "$main" ]] || exit 0
+
+sed -i '' -E "/^tap ['\"]?homebrew\/(core|cask)['\"]?$/d" "$main"
+
+if ! grep -q '^main ' "$main"; then
+    echo "brew-file-fixup: main include was missing, restoring it - check for duplicate lines between Brewfile and Brewfile.\$HOSTNAME.local" >&2
+    printf '\n# Main file\nmain ./Brewfile.$HOSTNAME\n' >> "$main"
+fi

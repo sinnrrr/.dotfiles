@@ -42,7 +42,5 @@
 - PRs: follow the PR template in local `.github` if one exists.
 - Send the PR body to the user to validate before creating the PR.
 - PR body: high-level and concise, deliver the _why_ early, no newlines, don't restate what people can see in diff or Jira ticket
-- PR reviews: use `/ponytail`. Draft inline comments as conventional comments (simple wording, nice tone), then self-answer each from the code, ticket, and precedent PRs (run the branch if needed) and drop any you can answer. Only present the survivors, run through `/humanizer` first. Never surface a comment you haven't tried to answer yourself.
-- PR reviews: pull comments from GH remote, but check code diff and explore locally.
-- Review inline comments: show a concrete fix as a GitHub `suggestion` block anchored to a changed line, not prose. Keep the conventional label (`suggestion:`/`nit:`/`question:`), no blaming or pointing at the author (no "did you...").
+- PR reviews: see `pr-review-conventions` skill.
 - Never force commit or use no verify unless explicitly asked

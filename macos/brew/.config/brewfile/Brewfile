@@ -15,6 +15,7 @@ brew bash
 brew bottom
 brew ccusage
 brew duti
+brew fd
 brew fish
 brew fzf
 brew gh
@@ -26,6 +27,7 @@ brew make
 brew mas
 brew mergiraf
 brew mise
+brew ripgrep
 brew ruff
 brew stow
 brew stylua

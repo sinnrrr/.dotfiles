@@ -45,7 +45,6 @@ cask linearmouse
 cask monitorcontrol
 cask spotify
 cask wezterm@nightly
-cask zed
 
 # Main file
 main ./Brewfile.$HOSTNAME

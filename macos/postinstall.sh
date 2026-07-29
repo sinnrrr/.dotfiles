@@ -29,6 +29,10 @@ defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 65 '<dic
 defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 160 '<dict><key>enabled</key><true/><key>value</key><dict><key>parameters</key><array><integer>100</integer><integer>2</integer><integer>1835008</integer></array><key>type</key><string>standard</string></dict></dict>'
 /System/Library/PrivateFrameworks/SystemAdministration.framework/Resources/activateSettings -u
 
+log "Setting Lock Screen shortcut to Option+Escape..."
+# Karabiner swaps left_command/left_option, so physical Cmd sends Option
+defaults write -g NSUserKeyEquivalents -dict-add "Lock Screen" "$(printf '~\033')"
+
 log "Setting display sleep to 30 minutes..."
 sudo pmset -b displaysleep 30
 sudo pmset -c displaysleep 30
@@ -94,7 +98,7 @@ fi
 
 log "Installing Yazi packages..."
 if command -v ya >/dev/null 2>&1; then
-  ya pkg install
+  ya pkg install --discard
 fi
 
 mkdir -p ~/Work

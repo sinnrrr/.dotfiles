@@ -22,6 +22,7 @@
 	rebase = true
 [delta]
 	syntax-theme = "Catppuccin Mocha"
+	tabs = 2
 [merge]
 	conflictStyle = diff3
 [merge "mergiraf"]

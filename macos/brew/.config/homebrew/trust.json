@@ -1,21 +1,12 @@
 {
   "trustedformulae": [
-    "datadog-labs/pack/pup",
-    "dlvhdr/formulae/diffnav",
     "raine/claude-history/claude-history"
   ],
   "trustedtaps": [
-    "docker/tap",
-    "f/mcptools",
-    "https://github.twdcgrid.net/cost/homebrew-tap",
-    "https://github.twdcgrid.net/devproductivity/homebrew-devx-cli",
-    "librespeed/tap",
     "mhaeuser/mhaeuser",
-    "multica-ai/tap",
     "nikitabobko/tap",
-    "raine/claude-history",
     "rcmdnk/file",
-    "rcmdnk/rcmdnkpac"
+    "walavave/tap"
   ],
   "trustedcasks": [
     "https://github.com/yazinsai/openoats/openoats"

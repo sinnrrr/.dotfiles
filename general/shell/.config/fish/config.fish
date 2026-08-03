@@ -12,6 +12,7 @@ set -gx PATH $PATH "$HOME/.bun/bin"
 set -gx EDITOR hx
 set -gx SHELL $(which fish)
 set -gx HOMEBREW_BREWFILE_LEAVES 1
+set -gx HOMEBREW_BREWFILE_FORM file
 
 function envsource
     for line in (cat $argv | grep -v '^#' |  grep -v '^\s*$' | sed -e 's/=/ /' -e "s/'//g" -e 's/"//g' )
@@ -58,13 +59,6 @@ alias k kubectl
 alias tf terraform
 alias lg lazygit
 alias cs claude-squad
-# brew-file-fixup strips the homebrew/core and homebrew/cask tap lines
-# dump always re-adds, and restores the main include if dump dropped it.
-function bfi
-    brew file install -F file $argv
-    brew-file-fixup
-end
-
 # bfc <nothing>  - clean per Brewfile diff (old behaviour, interactive).
 # bfc pkg...     - HOMEBREW_BREWFILE_LEAVES=1 means plain clean derives
 #   "wanted" from currently installed leaves, not Brewfile text, so it can
@@ -73,11 +67,10 @@ end
 function bfc
     if test (count $argv) -gt 0; and not string match -q -- '-*' $argv[1]
         brew uninstall $argv
-        and brew file dump -F file -y
+        and brew file dump -y
     else
-        brew file clean -F file $argv
+        brew file clean $argv
     end
-    brew-file-fixup
 end
 
 # Added by LM Studio CLI (lms)

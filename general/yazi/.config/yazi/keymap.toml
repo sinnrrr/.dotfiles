@@ -63,6 +63,20 @@ run = "plugin chmod"
 desc = "chmod"
 
 [[mgr.prepend_keymap]]
+on = ["c", "c"]
+run = """
+	shell --block 'claude'
+"""
+desc = "Launch claude"
+
+[[mgr.prepend_keymap]]
+on = ["c", "r"]
+run = """
+	shell --block 'claude-history'
+"""
+desc = "Resume claude conversation via claude-history"
+
+[[mgr.prepend_keymap]]
 on = "l"
 run = "plugin smart-enter"
 desc = "Enter the child directory, or open the file"

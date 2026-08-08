@@ -63,11 +63,11 @@ run = "plugin chmod"
 desc = "chmod"
 
 [[mgr.prepend_keymap]]
-on = ["c", "c"]
+on = ["c", "l"]
 run = """
-	shell --block 'claude'
+	shell --block '$CODING_AGENT'
 """
-desc = "Launch claude"
+desc = "Launch coding agent"
 
 [[mgr.prepend_keymap]]
 on = ["c", "r"]
@@ -75,6 +75,13 @@ run = """
 	shell --block 'claude-history'
 """
 desc = "Resume claude conversation via claude-history"
+
+[[mgr.prepend_keymap]]
+on = ["c", "x"]
+run = """
+	shell --block 'run'
+"""
+desc = "Fuzzy-run an npm script or Makefile target"
 
 [[mgr.prepend_keymap]]
 on = "l"

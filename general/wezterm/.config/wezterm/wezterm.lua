@@ -30,7 +30,7 @@ config.keys = {
 		mods = "CTRL",
 		action = wezterm.action.SplitPane({
 			direction = "Right",
-			command = { args = { shell, "-lc", "claude" } },
+			command = { args = { shell, "-lc", "$CODING_AGENT" } },
 			size = { Percent = 50 },
 			cwd = wezterm.GLOBAL.current_working_dir,
 		}),

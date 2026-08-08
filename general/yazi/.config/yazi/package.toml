@@ -14,11 +14,6 @@ rev = "88990a6"
 hash = "8a7c58225816a163a6e8730c0adafbc8"
 
 [[plugin.deps]]
-use = "yazi-rs/plugins:git"
-rev = "88990a6"
-hash = "270915fa8282a19908449530ff66f7e2"
-
-[[plugin.deps]]
 use = "yazi-rs/plugins:chmod"
 rev = "88990a6"
 hash = "8da0b15a97b5dfd13941d1ecc617ac7c"
@@ -47,6 +42,16 @@ hash = "b4e378df653fa211d22ed04d3c8c1c0a"
 use = "walavave/macos-trash"
 rev = "130e6dd"
 hash = "e480ef57299a14ae1414bc010a02551d"
+
+[[plugin.deps]]
+use = "ShikherVerma/yazi-plugins:vscode-git-colors"
+rev = "88bccaf"
+hash = "ce2a98d65c9fd094d5c8c69481f6fac0"
+
+[[plugin.deps]]
+use = "ShikherVerma/yazi-plugins:vscode-git-gutter"
+rev = "88bccaf"
+hash = "195d56ba13a1f9ffa681db92a857c1cf"
 
 [[flavor.deps]]
 use = "BennyOe/tokyo-night"

@@ -5,3 +5,17 @@
 [mgr]
 show_hidden = true
 ratio = [1, 2, 3]
+
+[[plugin.prepend_fetchers]]
+group = "vscode-git-colors"
+url = "*"
+run = "vscode-git-colors"
+
+[[plugin.prepend_fetchers]]
+group = "vscode-git-colors"
+url = "*/"
+run = "vscode-git-colors"
+
+[[plugin.prepend_previewers]]
+mime = "text/*"
+run  = "vscode-git-gutter"

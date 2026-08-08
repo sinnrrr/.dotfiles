@@ -14,6 +14,8 @@ set -gx PATH ~/.local/bin $PATH
 set -gx PATH $PATH "$HOME/.bun/bin"
 
 set -gx EDITOR hx
+set -gx CODING_AGENT claude
+set -gx BAT_THEME "Catppuccin Mocha"
 set -gx SHELL $(which fish)
 set -gx HOMEBREW_BREWFILE_LEAVES 1
 set -gx HOMEBREW_BREWFILE_FORM file
@@ -40,13 +42,13 @@ function work
     if test -n "$selected"
         builtin cd ~/Work/$selected
         commandline -f repaint
-        ai
+        $CODING_AGENT
     end
 end
 
 function fish_user_key_bindings
     bind \ce 'yazi; commandline -f repaint'
-    bind \co 'ai; commandline -f repaint'
+    bind \co '$CODING_AGENT; commandline -f repaint'
     bind \cw 'work; commandline -f repaint'
     bind \ee edit_command_buffer
 end

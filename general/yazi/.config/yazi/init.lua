@@ -3,7 +3,7 @@
 -- 	sync_yanked = true,
 -- }
 
-require("git"):setup()
+require("vscode-git-colors"):setup()
 -- require("no-status"):setup()
 
 local pref_by_location = require("pref-by-location")

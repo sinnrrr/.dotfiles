@@ -1,0 +1,34 @@
+#!/usr/bin/env bash
+# run - fuzzy-pick and run an npm script or Makefile target from anywhere in the git repo.
+set -euo pipefail
+
+root=$(git rev-parse --show-toplevel 2>/dev/null || pwd)
+cd "$root"
+
+entries=$(
+    while IFS= read -r -d '' f; do
+        dir=$(dirname "$f")
+        case "$f" in
+        *package.json)
+            while IFS= read -r name; do
+                printf '%s\t[%s] npm run %s\tnpm run %s\n' "$dir" "$dir" "$name" "$name"
+            done < <(jq -r '.scripts // {} | keys[]' "$f")
+            ;;
+        *)
+            while IFS= read -r target; do
+                printf '%s\t[%s] make %s\tmake %s\n' "$dir" "$dir" "$target" "$target"
+            done < <(awk -F: '/^[a-zA-Z0-9_.-]+:[^=]*$/ && !/^\./ {print $1}' "$f")
+            ;;
+        esac
+    done < <(fd -t f -0 '^(package\.json|Makefile)$' .)
+)
+
+[ -n "$entries" ] || { echo "no npm scripts or Makefile targets found in $root"; exit 1; }
+
+selection=$(fzf --prompt="run> " --delimiter='\t' --with-nth=2 <<<"$entries")
+[ -n "$selection" ] || exit 0
+
+IFS=$'\t' read -r dir _ cmd <<<"$selection"
+echo "+ ($dir) $cmd"
+cd "$dir"
+exec $cmd

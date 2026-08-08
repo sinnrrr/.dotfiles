@@ -2,6 +2,11 @@ local wezterm = require("wezterm")
 local config = wezterm.config_builder()
 local act = wezterm.action
 
+local shell = os.getenv("SHELL") or "/bin/sh"
+
+config.default_cwd = wezterm.home_dir .. "/Work"
+config.default_prog = { shell, "-lc", "yazi; exec " .. shell .. " -l" }
+
 config.font = wezterm.font("JetBrainsMono Nerd Font", { weight = "DemiBold" })
 config.color_scheme = "Catppuccin Mocha"
 config.window_decorations = "RESIZE"
@@ -25,7 +30,7 @@ config.keys = {
 		mods = "CTRL",
 		action = wezterm.action.SplitPane({
 			direction = "Right",
-			command = { args = { "/opt/homebrew/bin/fish", "-lc", "ai" } },
+			command = { args = { shell, "-lc", "claude" } },
 			size = { Percent = 50 },
 			cwd = wezterm.GLOBAL.current_working_dir,
 		}),
@@ -35,7 +40,7 @@ config.keys = {
 		mods = "CTRL",
 		action = wezterm.action.SplitPane({
 			direction = "Down",
-			command = { args = { "/opt/homebrew/bin/fish", "-l" } },
+			command = { args = { shell, "-l" } },
 			size = { Percent = 50 },
 			cwd = wezterm.GLOBAL.current_working_dir,
 		}),

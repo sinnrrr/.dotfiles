@@ -4,22 +4,28 @@
 tap homebrew/core
 brew biome
 brew exiftool
+brew fd
 brew ffmpeg
 brew git-delta
 brew jq
 brew libarchive
+brew llmfit
 brew lua
 brew luajit
 brew ollama
+brew opencode
 brew poppler
 brew rust
 brew speedtest-cli
+brew tree
+brew zoxide
 
 tap homebrew/cask
 cask claude-code
 cask gimp
 cask google-drive
 cask insta360-studio
+cask karabiner-elements
 cask meetily
 cask orbstack
 cask quarto
@@ -39,3 +45,14 @@ tap walavave/tap
 
 tap yazinsai/openoats
 cask openoats
+
+# App Store applications
+appstore 1352778147 Bitwarden (2026.7.0)
+appstore 682658836 GarageBand (10.4.13)
+appstore 408981434 iMovie (10.4.4)
+appstore 361285480 Keynote Creator Studio (15.1.1)
+appstore 409203825 Numbers (14.5)
+appstore 361304891 Numbers Creator Studio (15.1)
+appstore 409201541 Pages (14.5)
+appstore 361309726 Pages Creator Studio (15.1.1)
+appstore 1444636541 Photomator (3.4.14)

@@ -4,6 +4,10 @@ if test -x /opt/homebrew/bin/brew
     eval (/opt/homebrew/bin/brew shellenv)
 end
 
+if type -q zoxide
+    zoxide init fish | source
+end
+
 set -gx XDG_CONFIG_HOME "$HOME/.config" # for lazygit
 set -gx PATH $PATH ~/.cargo/bin
 set -gx PATH ~/.local/bin $PATH

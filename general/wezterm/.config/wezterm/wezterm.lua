@@ -5,7 +5,6 @@ local act = wezterm.action
 local shell = os.getenv("SHELL") or "/bin/sh"
 
 config.default_cwd = wezterm.home_dir .. "/Work"
-config.default_prog = { shell, "-lc", "yazi; exec " .. shell .. " -l" }
 
 config.font = wezterm.font("JetBrainsMono Nerd Font", { weight = "DemiBold" })
 config.color_scheme = "Catppuccin Mocha"

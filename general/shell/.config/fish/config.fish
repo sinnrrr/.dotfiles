@@ -19,6 +19,7 @@ set -gx BAT_THEME "Catppuccin Mocha"
 set -gx SHELL $(which fish)
 set -gx HOMEBREW_BREWFILE_LEAVES 1
 set -gx HOMEBREW_BREWFILE_FORM file
+set -gx HOMEBREW_BREWFILE_APPSTORE 1
 
 function envsource
     for line in (cat $argv | grep -v '^#' |  grep -v '^\s*$' | sed -e 's/=/ /' -e "s/'//g" -e 's/"//g' )

@@ -22,7 +22,6 @@ brew fzf
 brew gh
 brew helix
 brew imagemagick
-brew jq
 brew lazygit
 brew lua-language-server
 brew make
@@ -41,7 +40,6 @@ brew zoxide
 # Other Cask applications
 cask firefox
 cask font-jetbrains-mono-nerd-font
-cask google-chrome
 cask hiddenbar
 cask kitlangton-hex
 cask linearmouse

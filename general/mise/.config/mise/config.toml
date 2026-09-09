@@ -19,6 +19,7 @@ dprint = "latest"
 "npm:firecrawl-cli" = "latest"
 "cargo:https://github.com/euclio/mdpls" = "HEAD"
 "pipx:ty" = "latest"
+"npm:@anthropic-ai/claude-code" = { version = "latest", allow_builds = true }
 
 [hooks]
 postinstall = 'corepack enable pnpm'

@@ -5,7 +5,7 @@
     {
       "context": "Chat",
       "bindings": {
-        "ctrl+x ctrl+i": "chat:imagePaste",
+        "ctrl+x ctrl+p": "chat:imagePaste",
         "ctrl+v": null
       }
     }

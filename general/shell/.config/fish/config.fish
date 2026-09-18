@@ -38,6 +38,16 @@ function yazi
     rm -f -- "$tmp"
 end
 
+function lg
+    set -l out (mktemp -t "lazygit-cd-out.XXXXXX")
+    LAZYGIT_CD_FILE=$out command lazygit-cd $argv
+    set -l dir (cat -- $out 2>/dev/null)
+    rm -f -- $out
+    if test -n "$dir"
+        builtin cd -- "$dir"
+    end
+end
+
 function work
     set -l selected (find ~/Work -mindepth 1 -maxdepth 1 -type d | sort | sed "s|$HOME/Work/||" | fzf --prompt="work> " --height=40% --reverse)
     if test -n "$selected"
@@ -64,8 +74,6 @@ end
 
 alias k kubectl
 alias tf terraform
-alias lg lazygit
-alias cs claude-squad
 # bfc <nothing>  - clean per Brewfile diff (old behaviour, interactive).
 # bfc pkg...     - HOMEBREW_BREWFILE_LEAVES=1 means plain clean derives
 #   "wanted" from currently installed leaves, not Brewfile text, so it can

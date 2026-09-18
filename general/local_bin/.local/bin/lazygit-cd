@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+
+tmp=$(mktemp -t lazygit-cd.XXXXXX) || exit 1
+trap 'rm -f -- "$tmp"' EXIT HUP INT TERM
+
+LAZYGIT_NEW_DIR_FILE="$tmp" command lazygit "$@"
+code=$?
+
+dir=$(cat -- "$tmp" 2>/dev/null)
+[ -d "$dir" ] && [ "$dir" != "$PWD" ] || exit $code
+
+if [ -n "$YAZI_ID" ]; then
+    ya emit cd "$dir"
+elif [ -n "$LAZYGIT_CD_FILE" ]; then
+    printf '%s\n' "$dir" >"$LAZYGIT_CD_FILE"
+else
+    printf '%s\n' "$dir"
+fi
+exit $code

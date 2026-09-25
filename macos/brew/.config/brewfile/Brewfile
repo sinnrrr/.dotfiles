@@ -15,6 +15,7 @@ brew bash
 brew bat
 brew bottom
 brew ccusage
+brew coreutils
 brew duti
 brew fd
 brew fish

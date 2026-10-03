@@ -5,9 +5,7 @@ desc = "Open macOS Trash"
 
 [[mgr.prepend_keymap]]
 on = "o"
-run = """
-	shell 'qlmanage -p "$1"'
-"""
+run = "shell -- qlmanage -p %s"
 desc = "QuickLook"
 
 [[mgr.prepend_keymap]]

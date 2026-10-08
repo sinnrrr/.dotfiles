@@ -61,18 +61,34 @@ run = "plugin chmod"
 desc = "chmod"
 
 [[mgr.prepend_keymap]]
-on = ["c", "l"]
-run = """
-	shell --block '$CODING_AGENT'
-"""
-desc = "Launch coding agent"
+on = ["c", "l", "s"]
+run = "shell --block -- claude --model haiku --effort high"
+desc = "Claude: Haiku, high"
+
+[[mgr.prepend_keymap]]
+on = ["c", "l", "m"]
+run = "shell --block -- claude --model sonnet --effort high"
+desc = "Claude: Sonnet, high"
+
+[[mgr.prepend_keymap]]
+on = ["c", "l", "l"]
+run = """shell --block -- claude --model opus --effort xhigh --settings '{"fastMode":true}'"""
+desc = "Claude: Opus, xhigh, fast"
+
+[[mgr.prepend_keymap]]
+on = ["c", "l", "x"]
+run = """shell --block -- claude --model fable --effort xhigh --settings '{"fastMode":true}'"""
+desc = "Claude: Fable, xhigh, fast"
 
 [[mgr.prepend_keymap]]
 on = ["c", "r"]
-run = """
-	shell --block 'claude-history'
-"""
-desc = "Resume claude conversation via claude-history"
+run = "shell --block -- claude --resume"
+desc = "Resume claude conversation"
+
+[[mgr.prepend_keymap]]
+on = ["c", "h"]
+run = "shell --block -- claude-history"
+desc = "Browse claude history via claude-history"
 
 [[mgr.prepend_keymap]]
 on = ["c", "x"]

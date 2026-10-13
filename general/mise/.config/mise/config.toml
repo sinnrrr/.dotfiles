@@ -7,7 +7,7 @@ uv = "latest"
 bun = "latest"
 deno = "latest"
 rust = "latest"
-dotnet = "9"
+dotnet = "10"
 lua = "latest"
 
 terraform = "latest"

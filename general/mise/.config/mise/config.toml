@@ -1,20 +1,22 @@
 [tools]
 # Languages & runtimes
-node = "22"
+node = "lts"
 python = "3.14"
 dotnet = "10"
+pnpm = "latest"
 
 "npm:@astrojs/language-server" = "latest"
 "npm:firecrawl-cli" = "latest"
+"npm:ccstatusline" = "latest"
 "cargo:https://github.com/euclio/mdpls" = "HEAD"
 "npm:@anthropic-ai/claude-code" = { version = "latest", allow_builds = true }
-
-[hooks]
-postinstall = 'corepack enable pnpm'
 
 [settings]
 experimental = true
 idiomatic_version_file_enable_tools = ["node", "python", "go"]
+
+[settings.github]
+credential_command = 'gh auth token --hostname "$MISE_CREDENTIAL_HOST"'
 
 [settings.python]
 uv_venv_auto = "create|source"

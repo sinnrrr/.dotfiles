@@ -1,2 +1,12 @@
 [misc]
-disable = ["system", "claude_code", "node", "pnpm", "containers"]
+disable = [
+    "system",
+    "claude_code",
+    "node",
+    "pnpm",
+    "pip3",
+    "containers",
+    "git_repos",
+    "helix",
+    "ollama",
+]

@@ -7,6 +7,9 @@ brew terraform
 tap nikitabobko/tap
 cask aerospace
 
+tap felixkratz/formulae
+brew borders
+
 tap raine/claude-history
 brew claude-history
 
@@ -20,28 +23,32 @@ brew bottom
 brew bun
 brew ccusage
 brew coreutils
+brew difftastic
 brew dprint
 brew duti
 brew fd
 brew fish
 brew fzf
 brew gh
+brew git-delta
 brew git-spice
 brew go
 brew helix
 brew imagemagick
+brew jq
 brew lazygit
 brew lua-language-server
 brew make
 brew mas
 brew mergiraf
 brew mise
-brew prettier
+brew ollama
 brew ruff
 brew rustup
 brew stow
 brew stylua
 brew taplo
+brew topgrade
 brew ty
 brew typescript-language-server
 brew uv
@@ -55,8 +62,10 @@ brew zoxide
 cask firefox
 cask font-jetbrains-mono-nerd-font
 cask hiddenbar
+cask karabiner-elements
 cask linearmouse
 cask monitorcontrol
+cask orbstack
 cask spotify
 cask wezterm@nightly
 

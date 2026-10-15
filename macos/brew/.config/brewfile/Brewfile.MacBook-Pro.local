@@ -1,47 +1,11 @@
+file ./Brewfile.personal
 
 # tap repositories and their packages
 
 tap homebrew/core
-brew biome
-brew exiftool
-brew fd
-brew ffmpeg
-brew git-delta
-brew jq
-brew libarchive
 brew llmfit
-brew luajit
-brew ollama
 brew opencode
-brew poppler
-brew speedtest-cli
 brew tree
-brew zoxide
-
-tap homebrew/cask
-cask gimp
-cask google-drive
-cask insta360-studio
-cask karabiner-elements
-cask meetily
-cask orbstack
-cask quarto
-cask rawtherapee
-cask readdle-spark
-cask steam
-
-tap mhaeuser/mhaeuser
-
-tap nikitabobko/tap
-
-tap raine/claude-history
-
-tap rcmdnk/file
-
-tap walavave/tap
-
-tap yazinsai/openoats
-cask openoats
 
 # App Store applications
 appstore 1352778147 Bitwarden (2026.7.0)

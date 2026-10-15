@@ -1,0 +1,9 @@
+export XDG_CONFIG_HOME="$HOME/.config"
+export XDG_DATA_HOME="$HOME/.local/share"
+export XDG_STATE_HOME="$HOME/.local/state"
+export XDG_CACHE_HOME="$HOME/.cache"
+export NPM_CONFIG_CACHE="$XDG_CACHE_HOME/npm"
+export GOPATH="$XDG_DATA_HOME/go"
+export GRADLE_USER_HOME="$XDG_DATA_HOME/gradle"
+export ANDROID_USER_HOME="$XDG_DATA_HOME/android"
+export HOMEBREW_CLEANUP_MAX_AGE_DAYS=14

@@ -13,6 +13,14 @@ if type -q wt
 end
 
 set -gx XDG_CONFIG_HOME "$HOME/.config" # for lazygit
+set -gx XDG_DATA_HOME "$HOME/.local/share"
+set -gx XDG_STATE_HOME "$HOME/.local/state"
+set -gx XDG_CACHE_HOME "$HOME/.cache"
+set -gx NPM_CONFIG_CACHE "$XDG_CACHE_HOME/npm"
+set -gx GOPATH "$XDG_DATA_HOME/go"
+set -gx GRADLE_USER_HOME "$XDG_DATA_HOME/gradle"
+set -gx ANDROID_USER_HOME "$XDG_DATA_HOME/android"
+set -gx HOMEBREW_CLEANUP_MAX_AGE_DAYS 14
 set -gx PATH $PATH ~/.cargo/bin
 set -gx PATH ~/.local/bin $PATH
 set -gx PATH $PATH "$HOME/.bun/bin"

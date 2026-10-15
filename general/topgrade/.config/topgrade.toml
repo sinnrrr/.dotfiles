@@ -6,7 +6,6 @@ disable = [
     "pnpm",
     "pip3",
     "containers",
-    "git_repos",
     "helix",
     "ollama",
 ]

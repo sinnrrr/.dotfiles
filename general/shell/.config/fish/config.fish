@@ -29,6 +29,7 @@ set -gx BUN_INSTALL_CACHE_DIR "$XDG_CACHE_HOME/bun"
 set -gx PYTHONSTARTUP "$XDG_CONFIG_HOME/python/pythonrc"
 set -gx PYTHON_HISTORY "$XDG_STATE_HOME/python_history"
 set -gx HOMEBREW_CLEANUP_MAX_AGE_DAYS 14
+set -gx PATH "$HOMEBREW_PREFIX/opt/rustup/bin" $PATH
 set -gx PATH $PATH "$CARGO_HOME/bin"
 set -gx PATH ~/.local/bin $PATH
 set -gx PATH $PATH "$BUN_INSTALL/bin"

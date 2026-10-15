@@ -1,6 +1,9 @@
 
 # tap repositories and their packages
 
+tap hashicorp/tap
+brew terraform
+
 tap nikitabobko/tap
 cask aerospace
 
@@ -14,14 +17,17 @@ brew brew-file
 brew bash
 brew bat
 brew bottom
+brew bun
 brew ccusage
 brew coreutils
+brew dprint
 brew duti
 brew fd
 brew fish
 brew fzf
 brew gh
 brew git-spice
+brew go
 brew helix
 brew imagemagick
 brew lazygit
@@ -30,10 +36,15 @@ brew make
 brew mas
 brew mergiraf
 brew mise
+brew prettier
 brew ruff
+brew rustup
 brew stow
 brew stylua
 brew taplo
+brew ty
+brew typescript-language-server
+brew uv
 brew vscode-langservers-extracted
 brew worktrunk
 brew yaml-language-server
@@ -44,7 +55,6 @@ brew zoxide
 cask firefox
 cask font-jetbrains-mono-nerd-font
 cask hiddenbar
-cask kitlangton-hex
 cask linearmouse
 cask monitorcontrol
 cask spotify

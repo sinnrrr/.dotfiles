@@ -83,6 +83,8 @@ if command -v brew >/dev/null 2>&1; then
     brew install rcmdnk/file/brew-file
   fi
   brew file install -F file
+  export PATH="$(brew --prefix rustup)/bin:$PATH"
+  rustup default stable
 fi
 
 log "Installing mise tools..."

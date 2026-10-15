@@ -8,15 +8,12 @@ brew ffmpeg
 brew git-delta
 brew jq
 brew libarchive
-brew lua
 brew luajit
 brew ollama
 brew poppler
-brew rust
 brew speedtest-cli
 
 tap homebrew/cask
-cask claude-code
 cask gimp
 cask google-drive
 cask insta360-studio

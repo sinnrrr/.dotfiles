@@ -10,18 +10,15 @@ brew git-delta
 brew jq
 brew libarchive
 brew llmfit
-brew lua
 brew luajit
 brew ollama
 brew opencode
 brew poppler
-brew rust
 brew speedtest-cli
 brew tree
 brew zoxide
 
 tap homebrew/cask
-cask claude-code
 cask gimp
 cask google-drive
 cask insta360-studio

@@ -7,5 +7,11 @@ disable = [
     "pip3",
     "containers",
     "helix",
+    "helm",
     "ollama",
+    "git_repos",
+    "github_cli_extensions",
 ]
+
+[pre_commands]
+"Dotfiles" = "git-pull-quiet ~/.dotfiles; ~/.dotfiles/my.sh >/dev/null"

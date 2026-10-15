@@ -1,0 +1,26 @@
+#!/usr/bin/env bash
+
+rc=0
+
+for dir in "$@"; do
+    dir=${dir%/}
+    [ -e "$dir/.git" ] || continue
+    [ -n "$(git -C "$dir" remote)" ] || continue
+
+    default=$(git -C "$dir" symbolic-ref --short -q refs/remotes/origin/HEAD)
+    default=${default#origin/}
+    current=$(git -C "$dir" symbolic-ref --short -q HEAD)
+
+    if [ -n "$default" ] && [ "$current" != "$default" ]; then
+        cmd=(fetch -q --recurse-submodules origin "$default:$default")
+    else
+        cmd=(pull -q --ff-only --recurse-submodules)
+    fi
+
+    if ! out=$(git -C "$dir" "${cmd[@]}" 2>&1); then
+        printf 'Failed %s\n%s\n' "$dir" "$out"
+        rc=1
+    fi
+done
+
+exit $rc

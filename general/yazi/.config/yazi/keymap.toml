@@ -111,7 +111,7 @@ desc = "Go to git root"
 
 [[mgr.prepend_keymap]]
 on = ["g", "g"]
-run = "plugin lazygit"
+run = "shell --block lazygit-cd"
 desc = "run lazygit"
 
 [[mgr.prepend_keymap]]

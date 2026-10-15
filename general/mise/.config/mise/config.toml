@@ -1,7 +1,7 @@
 [tools]
 # Languages & runtimes
 node = "lts"
-python = "3.14"
+python = "3.15"
 dotnet = "10"
 pnpm = "latest"
 

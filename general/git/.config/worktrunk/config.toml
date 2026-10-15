@@ -1,4 +1,4 @@
-worktree-path = "~/Work/wt/{{ repo }}/{{ branch | sanitize }}"
+worktree-path = "~/Work/wk/{{ owner }}/{{ repo }}/{{ branch | sanitize }}"
 
 [[pre-start]]
 fresh = "{% if base == default_branch %}git fetch -q {{ remote }} {{ default_branch }} && git merge -q --ff-only {{ remote }}/{{ default_branch }} || true{% endif %}"

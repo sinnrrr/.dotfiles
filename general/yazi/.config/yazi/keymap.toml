@@ -116,7 +116,7 @@ desc = "run lazygit"
 
 [[mgr.prepend_keymap]]
 on = ["g", "l"]
-run = "plugin follow-link"
+run = "follow"
 desc = "Go to the symlink original directory"
 
 [[mgr.prepend_keymap]]

@@ -4,16 +4,6 @@ rev = "e73fd74"
 hash = "6ea5f37c7f219671ec504cb8311f889d"
 
 [[plugin.deps]]
-use = "yazi-rs/plugins:full-border"
-rev = "4dc7f1b"
-hash = "f281261ff04ad7ec867c3f802a50835f"
-
-[[plugin.deps]]
-use = "yazi-rs/plugins:toggle-pane"
-rev = "4dc7f1b"
-hash = "5b2fbef7d1513ce38ff72623a071a5e"
-
-[[plugin.deps]]
 use = "yazi-rs/plugins:chmod"
 rev = "4dc7f1b"
 hash = "87472b05a8c420100f6a2b9cde1e7746"
@@ -22,11 +12,6 @@ hash = "87472b05a8c420100f6a2b9cde1e7746"
 use = "KKV9/compress"
 rev = "80e5268"
 hash = "868db729374b97871bc30b96d0e9061f"
-
-[[plugin.deps]]
-use = "atareao/convert"
-rev = "ce060d9"
-hash = "1c0465351f2a344e842f065ab316f265"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:smart-enter"
@@ -52,11 +37,6 @@ hash = "ce2a98d65c9fd094d5c8c69481f6fac0"
 use = "ShikherVerma/yazi-plugins:vscode-git-gutter"
 rev = "88bccaf"
 hash = "195d56ba13a1f9ffa681db92a857c1cf"
-
-[[flavor.deps]]
-use = "BennyOe/tokyo-night"
-rev = "8e6296f"
-hash = "d9da921c3bd37ba32ee27a8a7a40461f"
 
 [[flavor.deps]]
 use = "yazi-rs/flavors:catppuccin-mocha"

@@ -33,7 +33,6 @@ config.keys = {
 			direction = "Right",
 			command = { args = { shell, "-lc", "$CODING_AGENT" } },
 			size = { Percent = 50 },
-			cwd = wezterm.GLOBAL.current_working_dir,
 		}),
 	},
 	{
@@ -43,7 +42,6 @@ config.keys = {
 			direction = "Down",
 			command = { args = { shell, "-l" } },
 			size = { Percent = 50 },
-			cwd = wezterm.GLOBAL.current_working_dir,
 		}),
 	},
 	{

@@ -22,7 +22,7 @@ file-types = [{ glob = "*gitconfig*" }, { glob = ".config/git/*config*" }]
 name = "json"
 auto-format = true
 file-types = ["json", "pp"]
-formatter = { command = "prettier", args = ["--parser", "json"] }
+formatter = { command = "dprint", args = ["fmt", "--stdin", "json"] }
 
 [[language]]
 name = "markdown"

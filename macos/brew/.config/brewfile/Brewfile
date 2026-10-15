@@ -7,9 +7,6 @@ brew terraform
 tap nikitabobko/tap
 cask aerospace
 
-tap felixkratz/formulae
-brew borders
-
 tap raine/claude-history
 brew claude-history
 

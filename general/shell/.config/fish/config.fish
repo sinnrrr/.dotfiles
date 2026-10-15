@@ -1,9 +1,5 @@
 set fish_greeting
 
-if test -x /opt/homebrew/bin/brew
-    eval (/opt/homebrew/bin/brew shellenv)
-end
-
 if type -q zoxide
     zoxide init fish | source
 end
@@ -12,27 +8,12 @@ if type -q wt
     wt config shell init fish | source
 end
 
-set -gx XDG_CONFIG_HOME "$HOME/.config" # for lazygit
-set -gx XDG_DATA_HOME "$HOME/.local/share"
-set -gx XDG_STATE_HOME "$HOME/.local/state"
-set -gx XDG_CACHE_HOME "$HOME/.cache"
-set -gx NPM_CONFIG_CACHE "$XDG_CACHE_HOME/npm"
-set -gx GOPATH "$XDG_DATA_HOME/go"
-set -gx GRADLE_USER_HOME "$XDG_DATA_HOME/gradle"
-set -gx ANDROID_USER_HOME "$XDG_DATA_HOME/android"
-set -gx CARGO_HOME "$XDG_DATA_HOME/cargo"
-set -gx RUSTUP_HOME "$XDG_DATA_HOME/rustup"
-set -gx DOTNET_CLI_HOME "$XDG_DATA_HOME/dotnet"
-set -gx AZURE_CONFIG_DIR "$XDG_DATA_HOME/azure"
-set -gx BUN_INSTALL "$XDG_DATA_HOME/bun"
-set -gx BUN_INSTALL_CACHE_DIR "$XDG_CACHE_HOME/bun"
-set -gx PYTHONSTARTUP "$XDG_CONFIG_HOME/python/pythonrc"
-set -gx PYTHON_HISTORY "$XDG_STATE_HOME/python_history"
-set -gx HOMEBREW_CLEANUP_MAX_AGE_DAYS 14
-set -gx PATH "$HOMEBREW_PREFIX/opt/rustup/bin" $PATH
-set -gx PATH $PATH "$CARGO_HOME/bin"
-set -gx PATH ~/.local/bin $PATH
-set -gx PATH $PATH "$BUN_INSTALL/bin"
+if type -q fzf
+    fzf --fish | source
+end
+
+fish_config theme choose catppuccin-mocha
+set -g fish_prompt_pwd_dir_length 0
 
 set -gx EDITOR hx
 set -gx CODING_AGENT claude
@@ -85,8 +66,8 @@ function fish_user_key_bindings
     bind \ee edit_command_buffer
 end
 
-if test -f (brew --prefix)/etc/brew-wrap.fish
-    source (brew --prefix)/etc/brew-wrap.fish
+if test -f "$HOMEBREW_PREFIX/etc/brew-wrap.fish"
+    source "$HOMEBREW_PREFIX/etc/brew-wrap.fish"
 end
 
 if test -f ~/.local/.env.fish
@@ -111,10 +92,8 @@ function bfc
 end
 
 # Added by LM Studio CLI (lms)
-set -gx PATH $PATH /Users/sinnrrr/.lmstudio/bin
+fish_add_path -gaP ~/.lmstudio/bin
 # End of LM Studio CLI section
-
-mise activate fish | source
 
 # Added by OrbStack: command-line tools and integration
 # This won't be added again if you remove it.

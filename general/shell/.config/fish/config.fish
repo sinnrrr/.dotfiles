@@ -8,6 +8,10 @@ if type -q zoxide
     zoxide init fish | source
 end
 
+if type -q wt
+    wt config shell init fish | source
+end
+
 set -gx XDG_CONFIG_HOME "$HOME/.config" # for lazygit
 set -gx PATH $PATH ~/.cargo/bin
 set -gx PATH ~/.local/bin $PATH

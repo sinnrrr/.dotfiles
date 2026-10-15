@@ -21,6 +21,7 @@ brew fd
 brew fish
 brew fzf
 brew gh
+brew git-spice
 brew helix
 brew imagemagick
 brew lazygit
@@ -34,6 +35,7 @@ brew stow
 brew stylua
 brew taplo
 brew vscode-langservers-extracted
+brew worktrunk
 brew yaml-language-server
 brew yazi
 brew zoxide

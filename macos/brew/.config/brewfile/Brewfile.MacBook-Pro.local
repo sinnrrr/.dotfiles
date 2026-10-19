@@ -1,19 +1,40 @@
-file ./Brewfile.personal
 
 # tap repositories and their packages
 
 tap homebrew/core
 brew llmfit
+brew lua
 brew opencode
+brew rust
 brew tree
 
+tap homebrew/cask
+cask codex
+cask google-chrome
+cask kitlangton-hex
+
+tap mhaeuser/mhaeuser
+
+tap nikitabobko/tap
+
+tap raine/claude-history
+
+tap rcmdnk/file
+
+tap walavave/tap
+
+tap yazinsai/openoats
+
 # App Store applications
-appstore 1352778147 Bitwarden (2026.7.0)
+appstore 1352778147 Bitwarden (2026.9.1)
 appstore 682658836 GarageBand (10.4.13)
 appstore 408981434 iMovie (10.4.4)
 appstore 361285480 Keynote Creator Studio (15.1.1)
-appstore 409203825 Numbers (14.5)
 appstore 361304891 Numbers Creator Studio (15.1)
-appstore 409201541 Pages (14.5)
+appstore 409203825 Numbers (14.5)
 appstore 361309726 Pages Creator Studio (15.1.1)
-appstore 1444636541 Photomator (3.4.14)
+appstore 409201541 Pages (14.5)
+appstore 1444636541 Photomator (3.4.15)
+
+# Additional files
+file ./Brewfile.personal

@@ -13,8 +13,6 @@ brew speedtest-cli
 tap homebrew/cask
 cask gimp
 cask google-drive
-cask insta360-studio
-cask meetily
 cask quarto
 cask rawtherapee
 cask readdle-spark

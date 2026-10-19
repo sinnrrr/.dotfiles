@@ -2,3 +2,4 @@
 work/
 general/shell/.config/fish/completions/
 general/shell/.config/fish/fish_variables
+/macos/brew/.config/homebrew/trust.json.lock

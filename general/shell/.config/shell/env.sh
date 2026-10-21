@@ -15,3 +15,5 @@ export BUN_INSTALL_CACHE_DIR="$XDG_CACHE_HOME/bun"
 export PYTHONSTARTUP="$XDG_CONFIG_HOME/python/pythonrc"
 export PYTHON_HISTORY="$XDG_STATE_HOME/python_history"
 export HOMEBREW_CLEANUP_MAX_AGE_DAYS=14
+export MCAT_THEME=catppuccin
+export MCAT_MD_IMAGE=all

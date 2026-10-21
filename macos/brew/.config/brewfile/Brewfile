@@ -26,6 +26,7 @@ brew lazygit
 brew lua-language-server
 brew make
 brew mas
+brew mcat
 brew mergiraf
 brew mise
 brew ollama

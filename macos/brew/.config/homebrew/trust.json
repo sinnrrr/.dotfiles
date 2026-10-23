@@ -1,13 +1,10 @@
 {
   "trustedformulae": [
-    "dlvhdr/formulae/diffnav",
     "raine/claude-history/claude-history"
   ],
   "trustedtaps": [
-    "mhaeuser/mhaeuser",
     "nikitabobko/tap",
-    "rcmdnk/file",
-    "walavave/tap"
+    "rcmdnk/file"
   ],
   "trustedcasks": [
     "https://github.com/yazinsai/openoats/openoats"

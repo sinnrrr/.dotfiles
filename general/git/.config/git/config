@@ -2,7 +2,7 @@
 	path = ~/.config/git/.gitconfig.personal
 
 [include]
-	path = ~/.config/git/.gitconfig.work
+	path = ~/.config/git/.gitconfig.default
 
 [includeIf "gitdir:~/.dotfiles/"]
 	path = ~/.config/git/.gitconfig.personal
@@ -11,7 +11,6 @@
 	path = ~/.config/git/.gitconfig.work
 
 [core]
-	ignorecase = false
 	pager = delta
 [push]
 	autoSetupRemote = true

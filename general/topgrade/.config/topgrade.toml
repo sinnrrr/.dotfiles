@@ -9,12 +9,20 @@ disable = [
     "helix",
     "helm",
     "ollama",
-    "git_repos",
     "github_cli_extensions",
+    "github_cli_skills",
+    "bun",
+    "bun_packages",
+    "uv",
 ]
 
-[pre_commands]
-"Dotfiles" = "git-pull-quiet ~/.dotfiles; ~/.dotfiles/my.sh >/dev/null"
+[git]
+repos = [
+    "~/.dotfiles",
+    "~/Work/*/",
+]
+pull_predefined = false
+fallback_to_fetch_default = true
 
-[commands]
-"Work repos" = "git-pull-quiet ~/Work/*/"
+[post_commands]
+"Dotfiles" = "~/.dotfiles/my.sh"

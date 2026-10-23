@@ -15,21 +15,9 @@ end
 fish_config theme choose catppuccin-mocha
 set -g fish_prompt_pwd_dir_length 0
 
-set -gx EDITOR hx
-set -gx CODING_AGENT claude
-set -gx BAT_THEME "Catppuccin Mocha"
-set -gx SHELL $(which fish)
 set -gx HOMEBREW_BREWFILE_LEAVES 1
 set -gx HOMEBREW_BREWFILE_FORM file
 set -gx HOMEBREW_BREWFILE_APPSTORE 1
-
-function envsource
-    for line in (cat $argv | grep -v '^#' |  grep -v '^\s*$' | sed -e 's/=/ /' -e "s/'//g" -e 's/"//g' )
-        set export (string split ' ' $line)
-        set -gx $export[1] $export[2]
-        echo "Exported key $export[1]"
-    end
-end
 
 function yazi
     set tmp (mktemp -t "yazi-cwd.XXXXXX")
@@ -63,7 +51,6 @@ function fish_user_key_bindings
     bind \ce 'yazi; commandline -f repaint'
     bind \co '$CODING_AGENT; commandline -f repaint'
     bind \cw 'work; commandline -f repaint'
-    bind \ee edit_command_buffer
 end
 
 if test -f "$HOMEBREW_PREFIX/etc/brew-wrap.fish"
@@ -90,10 +77,6 @@ function bfc
         brew file clean $argv
     end
 end
-
-# Added by LM Studio CLI (lms)
-fish_add_path -gaP ~/.lmstudio/bin
-# End of LM Studio CLI section
 
 # Added by OrbStack: command-line tools and integration
 # This won't be added again if you remove it.

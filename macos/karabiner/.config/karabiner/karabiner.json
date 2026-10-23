@@ -686,6 +686,14 @@
                         "description": "Control + F to Command + F for finding text",
                         "manipulators": [
                             {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "^com\\.github\\.wez\\.wezterm$"
+                                        ],
+                                        "type": "frontmost_application_unless"
+                                    }
+                                ],
                                 "from": {
                                     "key_code": "f",
                                     "modifiers": {
@@ -710,6 +718,14 @@
                         "description": "Control + Backspace deletes a block of text",
                         "manipulators": [
                             {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "^com\\.github\\.wez\\.wezterm$"
+                                        ],
+                                        "type": "frontmost_application_unless"
+                                    }
+                                ],
                                 "from": {
                                     "key_code": "delete_or_backspace",
                                     "modifiers": {
@@ -923,15 +939,6 @@
             ],
             "virtual_hid_keyboard": {
                 "keyboard_type_v2": "ansi"
-            }
-        },
-        {
-            "name": "New profile",
-            "virtual_hid_keyboard": {
-                "keyboard_type_v2": "ansi"
-            },
-            "complex_modifications": {
-                "rules": []
             }
         }
     ]

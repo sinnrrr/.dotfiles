@@ -16,7 +16,7 @@ auto-format = true
 
 [[language]]
 name = "git-config"
-file-types = [{ glob = "*gitconfig*" }, { glob = ".config/git/*config*" }]
+file-types = [{ glob = "*gitconfig*" }, { glob = ".config/git/*config*" }, { glob = ".git/config" }, { glob = ".gitmodules" }]
 
 [[language]]
 name = "json"

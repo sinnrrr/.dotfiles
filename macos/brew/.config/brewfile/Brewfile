@@ -1,28 +1,35 @@
 
 # tap repositories and their packages
 
-tap dlvhdr/formulae
-brew diffnav
-
 tap nikitabobko/tap
 cask aerospace
 
 tap raine/claude-history
+brew claude-history
 
 tap rcmdnk/file
+brew brew-file
 
 # Other Homebrew packages
 brew ast-grep
 brew bash
 brew bat
 brew bottom
+brew bun
 brew ccusage
+brew coreutils
+brew difftastic
+brew dprint
 brew duti
 brew fd
 brew fish
 brew fzf
 brew gh
+brew git
 brew git-delta
+brew git-spice
+brew go
+brew handbrake
 brew helix
 brew imagemagick
 brew jq
@@ -34,15 +41,22 @@ brew mcat
 brew mergiraf
 brew mise
 brew ollama
+brew poppler
 brew ripgrep
 brew ruff
+brew rustup
 brew stow
 brew stylua
 brew taplo
 brew topgrade
+brew ty
+brew typescript-language-server
+brew uv
 brew vscode-langservers-extracted
+brew worktrunk
 brew yaml-language-server
 brew yazi
+brew yq
 brew zoxide
 
 # Other Cask applications

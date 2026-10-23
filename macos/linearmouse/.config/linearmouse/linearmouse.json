@@ -23,21 +23,6 @@
         },
         "acceleration" : 1
       }
-    },
-    {
-      "if" : {
-        "device" : {
-          "vendorID" : "0x5ac",
-          "category" : "trackpad",
-          "productID" : "0x281",
-          "productName" : "Apple Internal Keyboard \/ Trackpad"
-        }
-      },
-      "scrolling" : {
-        "reverse" : {
-          "vertical" : false
-        }
-      }
     }
   ]
 }

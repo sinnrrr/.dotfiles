@@ -101,9 +101,9 @@ structured output via `schema` so results compose reliably round to round,
 and is resumable (edit the script, resume from the same `runId`, only the
 changed step and everything after it reruns).
 
-This skill's own instruction to use Workflow satisfies its opt-in gate. No
-separate user confirmation is needed once `/orchestrate` (or an equivalent
-goal-driven ask) is already in play.
+This skill's instruction to use Workflow counts as opt-in only when the user
+typed `/orchestrate` themselves. If they did, use Workflow. If the skill was
+picked up from its triggers, ask before running one.
 
 Pattern that works well: N independent reviewers/builders with schema-
 constrained output, feeding one evaluator/fixer agent that verifies each

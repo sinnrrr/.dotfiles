@@ -16,12 +16,11 @@ The fresh agent solves the problem on its own terms. You give it the facts and t
 
 - Stop editing.
 - Save what you already changed: `git format-patch` for commits, `git diff > <scratchpad>/attempt.patch` for uncommitted edits.
-- Undo only your own edits, with Edit, or park them on a WIP commit. Never discard changes you did not make. The git guard hook blocks restore, `checkout --` and bare stash anyway.
+- Undo only your own edits, with Edit, or park them on a WIP commit.
 
 ## 2. Give it a clean tree
 
 - A new branch from freshly fetched `origin/main`, in its own worktree.
-- One worktree per editing agent. Never point two agents at one checkout.
 
 ## 3. Write the brief
 
@@ -50,8 +49,7 @@ Leave out:
 
 - Diff against the agent's real parent commit.
 - Rerun every gate yourself and read the exit codes.
-- Prove each new test fails on the pre-fix source and passes after it. Run the old source in a separate worktree, never by resetting a shared one.
-- Check the one fact the agent's conclusion rests on before you relay it.
+- Prove each new test fails on the pre-fix source and passes after it. Run the old source in a separate worktree.
 
 ## 6. Route findings back
 

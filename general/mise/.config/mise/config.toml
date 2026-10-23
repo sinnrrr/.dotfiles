@@ -2,7 +2,6 @@
 # Languages & runtimes
 node = "lts"
 python = "3.15"
-dotnet = "10"
 pnpm = "latest"
 
 "npm:@astrojs/language-server" = "latest"

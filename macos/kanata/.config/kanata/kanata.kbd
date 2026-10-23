@@ -1,0 +1,67 @@
+(defcfg
+  process-unmapped-keys yes
+  concurrent-tap-hold yes
+  tap-hold-require-prior-idle 150
+)
+
+(definputdevices
+  1 ((name "Apple Internal Keyboard"))
+  2 ((vendor_id 1133) (product_id 45925))
+)
+
+(defhands
+  (left  grv 1 2 3 4 5 q w e r t a s d f g z x c v b)
+  (right 6 7 8 9 0 - = y u i o p [ ] \ h j k l ; ' n m , . /))
+
+(deftemplate hrm (tap hold)
+  (tap-hold-opposite-hand-release 250 $tap $hold (timeout hold) (tap-repress-timeout 200)))
+
+(defalias
+  a (t! hrm a lctl)  s (t! hrm s lalt)  d (t! hrm d lmet)  f (t! hrm f lsft)
+  j (t! hrm j rsft)  k (t! hrm k rmet)  l (t! hrm l ralt)  ; (t! hrm ; rctl)
+
+  hyp (tap-hold-release 0 200 esc (multi lctl lalt lmet (layer-while-held hyper)) (require-prior-idle 0))
+  nav (tap-hold-release 0 200 spc (layer-while-held nav))
+
+  fn  (switch ((device-history 1 1)) lctl break () fn break)
+  ctl (switch ((device-history 1 1)) fn break () lctl break)
+  opt (switch ((device-history 2 1)) lmet break () lalt break)
+  met (switch ((device-history 2 1)) lalt break () lmet break)
+
+  mode (switch ((base-layer plain)) (layer-switch base) break () (layer-switch plain) break)
+)
+
+(defsrc
+  caps a    s    d    f    j    k    l    ;
+  h    y    u    i    o    n    m    ,
+  grv  tab  bspc w
+  spc  fn   lctl lalt lmet ralt
+)
+
+(deflayer base
+  @hyp @a   @s   @d   @f   @j   @k   @l   @;
+  h    y    u    i    o    n    m    ,
+  grv  tab  bspc w
+  @nav @fn  @ctl @opt @met \
+)
+
+(deflayer plain
+  @hyp a    s    d    f    j    k    l    ;
+  h    y    u    i    o    n    m    ,
+  grv  tab  bspc w
+  spc  @fn  @ctl @opt @met \
+)
+
+(deflayer hyper
+  _    a    s    d    lsft j    k    l    ;
+  _    _    _    _    _    _    _    _
+  @mode (unmod (lctl lalt) tab) (unmod (lctl lalt) q) (unmod (lctl lalt) w)
+  spc  _    _    _    _    _
+)
+
+(deflayer nav
+  _    lctl lalt lmet lsft down up   rght _
+  left M-left A-left A-right M-right A-bspc bspc del
+  _    _    _    _
+  _    _    _    _    _    _
+)

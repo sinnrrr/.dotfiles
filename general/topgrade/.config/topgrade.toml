@@ -15,3 +15,6 @@ disable = [
 
 [pre_commands]
 "Dotfiles" = "git-pull-quiet ~/.dotfiles; ~/.dotfiles/my.sh >/dev/null"
+
+[commands]
+"Work repos" = "git-pull-quiet ~/Work/*/"

@@ -1,16 +1,13 @@
-[includeIf "gitdir:/Users/sinnrrr/"]
+[include]
 	path = ~/.config/git/.gitconfig.personal
 
-[includeIf "gitdir:/Users/dmytro.soltysiuk.-nd/"]
+[include]
 	path = ~/.config/git/.gitconfig.work
 
 [includeIf "gitdir:~/.dotfiles/"]
 	path = ~/.config/git/.gitconfig.personal
 
 [includeIf "gitdir:~/.dotfiles/work/"]
-	path = ~/.config/git/.gitconfig.work
-
-[includeIf "gitdir:/opt/homebrew/"]
 	path = ~/.config/git/.gitconfig.work
 
 [core]

@@ -1,5 +1,6 @@
 {
   "trustedformulae": [
+    "dlvhdr/formulae/diffnav",
     "raine/claude-history/claude-history"
   ],
   "trustedtaps": [

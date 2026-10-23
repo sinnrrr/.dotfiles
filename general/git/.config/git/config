@@ -1,8 +1,8 @@
-[includeIf "gitdir:/Users/sinnrrr/"]
+[include]
 	path = ~/.config/git/.gitconfig.personal
 
-[includeIf "gitdir:/Users/dmytro.soltysiuk.-nd/"]
-	path = ~/.config/git/.gitconfig.work
+[include]
+	path = ~/.config/git/.gitconfig.default
 
 [includeIf "gitdir:~/.dotfiles/"]
 	path = ~/.config/git/.gitconfig.personal

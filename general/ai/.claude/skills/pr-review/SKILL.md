@@ -16,7 +16,7 @@ description: >
 
 - Name the host on every call: a full PR URL or `-R <host>/<owner>/<repo>` for `gh pr`, and `gh api --hostname <host>` for the API.
 - Fetch the PR, its ticket, the existing threads (`repos/<owner>/<repo>/pulls/<n>/comments` and `/reviews`) and any PRs stacked on or under it.
-- Put the head in its own worktree (`git fetch origin pull/<n>/head:pr-<n>`, then `git worktree add`). Never `gh pr checkout` in a checkout another session may use.
+- Put the head in its own worktree with `wt switch pr:<n>` (or the PR URL). Never `gh pr checkout` in a checkout another session may use.
 - Read the code there, not only the diff.
 
 ## 2. Find candidates

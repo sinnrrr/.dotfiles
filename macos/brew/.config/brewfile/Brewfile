@@ -1,6 +1,9 @@
 
 # tap repositories and their packages
 
+tap dlvhdr/formulae
+brew diffnav
+
 tap nikitabobko/tap
 cask aerospace
 
@@ -9,6 +12,7 @@ tap raine/claude-history
 tap rcmdnk/file
 
 # Other Homebrew packages
+brew ast-grep
 brew bash
 brew bat
 brew bottom
@@ -30,6 +34,7 @@ brew mcat
 brew mergiraf
 brew mise
 brew ollama
+brew ripgrep
 brew ruff
 brew stow
 brew stylua

@@ -4,8 +4,8 @@ description: >
   Review a GitHub PR and draft self-answered conventional comments (suggestion, nit, question)
   with suggestion blocks and a verdict, or draft replies to review threads on the engineer's own
   PR. Drafts only, nothing is posted until the engineer says to post. Wraps /code-review with the
-  engineer's review conventions. Use for "/code-review this pr", "review this pr", "create sem pr
-  review comments", "what do i reply", or a pasted PR or review URL.
+  engineer's review conventions. Use for "review this pr", "create sem pr review
+  comments", "what do i reply", or a pasted PR or review URL.
 ---
 
 # PR review
@@ -22,7 +22,7 @@ description: >
 ## 2. Find candidates
 
 - Run `/code-review` on the PR, without `--comment`.
-- Add your own pass: correctness, scope against the ticket ACs, and a library pass (a hand-rolled parser, poller, retry loop, validator or test fake that a built-in, framework feature or maintained library already covers).
+- Add your own pass: correctness, scope against the ticket ACs, and a library pass against the OSS-first rule.
 
 ## 3. Self-answer every candidate
 
@@ -38,7 +38,6 @@ This order is a gate.
 - Label each one `suggestion:`, `nit:` or `question:`.
 - 1 to 2 sentences each. Simple words, nice tone, no blame, no pointing at the author, no "did you...".
 - Show a fix as a GitHub `suggestion` block anchored to a changed line, not as prose.
-- Run the humanizer skill, then check the drafts for em dashes and semicolons.
 
 ## 5. Verdict
 
@@ -47,7 +46,6 @@ One line: approve, approve with nits, or request changes, plus the main reason.
 ## 6. Hand over
 
 - Write the drafts to the scratchpad and show them as file, line and comment.
-- Post only when the engineer says to post. "Do everything" is not a post instruction.
 - When told to post, send one review through the reviews API with `commit_id` set to the reviewed head SHA, so each comment anchors to the right line.
 
 ## Replies on the engineer's own PR

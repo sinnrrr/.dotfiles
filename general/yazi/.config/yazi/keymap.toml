@@ -11,42 +11,42 @@ desc = "QuickLook"
 [[mgr.prepend_keymap]]
 on = ["c", "i"]
 run = """
-	shell 'compress-image "$1"'
+	shell 'compress-image %h'
 """
 desc = "Compress image"
 
 [[mgr.prepend_keymap]]
 on = ["c", "v"]
 run = """
-	shell --block 'compress-video "$1"'
+	shell --block 'compress-video %h'
 """
 desc = "Compress video"
 
 [[mgr.prepend_keymap]]
 on = ["c", "o"]
 run = """
-	shell --block 'magick $(ls -1 | sort) -compress jpeg -quality 85 output.pdf && echo "PDF created: output.pdf"' --confirm
+	shell --block 'magick %s -compress jpeg -quality 85 output.pdf && echo "PDF created: output.pdf"' --confirm
 """
-desc = "Convert sorted images to PDF"
+desc = "Convert selected images to PDF"
 
 [[mgr.prepend_keymap]]
 on = ["c", "p"]
 run = """
-	shell 'pdfunite "$@" merged.pdf'
+	shell 'pdfunite %s merged.pdf'
 """
 desc = "Merge selected PDFs"
 
 [[mgr.prepend_keymap]]
 on = ["c", "j"]
 run = """
-	shell 'pdftoppm -jpeg -jpegopt quality=92 -r 300 "$1" "${1%.pdf}"'
+	shell 'f=%h; pdftoppm -jpeg -jpegopt quality=92 -r 300 "$f" "${f%.pdf}"'
 """
 desc = "PDF to JPEG"
 
 [[mgr.prepend_keymap]]
 on = ["c", "s"]
 run = '''
-  shell 'curl -F"file=@$1" https://0x0.st | pbcopy' --confirm
+  shell 'f=%h; curl -F"file=@$f" https://0x0.st | pbcopy' --confirm
 '''
 desc = "Share file"
 
@@ -138,10 +138,6 @@ run = "cd ~/.config"
 [[mgr.prepend_keymap]]
 on = ["C", "C"]
 run = "cd ~/.dotfiles"
-
-[[mgr.prepend_keymap]]
-on = ["C", "P"]
-run = "cd ~/Personal"
 
 [[mgr.prepend_keymap]]
 on = ["C", "w"]

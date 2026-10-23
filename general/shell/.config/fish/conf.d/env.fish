@@ -14,4 +14,4 @@ if test -x /opt/homebrew/bin/brew
 end
 
 fish_add_path -gP ~/.local/bin "$HOMEBREW_PREFIX/opt/rustup/bin"
-fish_add_path -gaP "$CARGO_HOME/bin" "$BUN_INSTALL/bin" ~/.bun/bin
+fish_add_path -gaP "$CARGO_HOME/bin" "$BUN_INSTALL/bin"

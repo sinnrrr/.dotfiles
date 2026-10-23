@@ -13,15 +13,11 @@ cask codex
 cask google-chrome
 cask kitlangton-hex
 
-tap mhaeuser/mhaeuser
-
 tap nikitabobko/tap
 
 tap raine/claude-history
 
 tap rcmdnk/file
-
-tap walavave/tap
 
 tap yazinsai/openoats
 

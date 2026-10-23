@@ -1,9 +1,6 @@
 
 # tap repositories and their packages
 
-tap dlvhdr/formulae
-brew diffnav
-
 tap nikitabobko/tap
 cask aerospace
 
@@ -28,9 +25,11 @@ brew fd
 brew fish
 brew fzf
 brew gh
+brew git
 brew git-delta
 brew git-spice
 brew go
+brew handbrake
 brew helix
 brew imagemagick
 brew jq
@@ -42,6 +41,7 @@ brew mcat
 brew mergiraf
 brew mise
 brew ollama
+brew poppler
 brew ripgrep
 brew ruff
 brew rustup

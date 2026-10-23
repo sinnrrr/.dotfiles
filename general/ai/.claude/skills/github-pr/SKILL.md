@@ -7,17 +7,14 @@ description: >
 
 ## Before writing
 
-Reread your own diff for bugs and for anything outside the ticket. Run a full PR review only when
-the engineer asks.
-
 Follow the PR template in local `.github` if one exists. It wins over everything below.
 
 ## Size gate
 
 Trivial change (config bump, offboard, one-liner, revert): one sentence, no newlines, readable by
-a PM. Nothing else. Open it without a validation round.
+a PM. Nothing else.
 
-Substantial change: two-layer body. Open the PR right away and show the body afterward.
+Substantial change: two-layer body.
 
 ## Two-layer body
 
@@ -35,8 +32,3 @@ only re-layered. Reviewers query it with their own agents.
 
 UI-visible change gets a screenshot in the body. gh has no CLI path to upload images into a PR
 body, so push the PNGs to an orphan branch `assets/<TICKET>` and reference the raw URLs.
-
-## Never
-
-Post comments, reviews, or review replies on the PR. Compose and show them to the user instead,
-unless the user explicitly asked for them to be posted.

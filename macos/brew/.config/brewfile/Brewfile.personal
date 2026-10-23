@@ -7,8 +7,6 @@ brew exiftool
 brew ffmpeg
 brew libarchive
 brew luajit
-brew poppler
-brew speedtest-cli
 
 tap homebrew/cask
 cask gimp
@@ -17,10 +15,6 @@ cask quarto
 cask rawtherapee
 cask readdle-spark
 cask steam
-
-tap mhaeuser/mhaeuser
-
-tap walavave/tap
 
 tap yazinsai/openoats
 cask openoats

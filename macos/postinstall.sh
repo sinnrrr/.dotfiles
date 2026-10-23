@@ -63,20 +63,6 @@ defaults write com.apple.WindowManager GloballyEnabled -bool false
 log "Disabling click wallpaper to reveal desktop..."
 defaults write com.apple.WindowManager EnableStandardClickToShowDesktop -bool false
 
-log "Disabling Optimized Battery Charging..."
-defaults write com.apple.PowerChime.plist ChimeOnAllHardware -bool true
-defaults write com.apple.powerAdapter.modern BatteryUpdateInterval -int 3600
-defaults write com.apple.powerAdapter.modern OptimizedBatteryCharging -int 0
-
-log "Setting Fish as default shell..."
-if command -v fish >/dev/null 2>&1; then
-  FISH_PATH=$(which fish)
-  if ! grep -qx "$FISH_PATH" /etc/shells; then
-    echo "$FISH_PATH" | sudo tee -a /etc/shells
-  fi
-  sudo chsh -s "$FISH_PATH" "$USER"
-fi
-
 log "Making sure all Brew packages are installed and up to date..."
 if command -v brew >/dev/null 2>&1; then
   if ! brew list brew-file >/dev/null 2>&1; then
@@ -85,6 +71,15 @@ if command -v brew >/dev/null 2>&1; then
   brew file install -F file
   export PATH="$(brew --prefix rustup)/bin:$PATH"
   rustup default stable
+fi
+
+log "Setting Fish as default shell..."
+if command -v fish >/dev/null 2>&1; then
+  FISH_PATH=$(which fish)
+  if ! grep -qx "$FISH_PATH" /etc/shells; then
+    echo "$FISH_PATH" | sudo tee -a /etc/shells
+  fi
+  sudo chsh -s "$FISH_PATH" "$USER"
 fi
 
 log "Installing mise tools..."

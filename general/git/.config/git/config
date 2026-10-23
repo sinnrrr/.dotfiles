@@ -10,11 +10,7 @@
 [includeIf "gitdir:~/.dotfiles/work/"]
 	path = ~/.config/git/.gitconfig.work
 
-[includeIf "gitdir:/opt/homebrew/"]
-	path = ~/.config/git/.gitconfig.work
-
 [core]
-	ignorecase = false
 	pager = delta
 [push]
 	autoSetupRemote = true

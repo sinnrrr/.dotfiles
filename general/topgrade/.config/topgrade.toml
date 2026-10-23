@@ -10,6 +10,10 @@ disable = [
     "helm",
     "ollama",
     "github_cli_extensions",
+    "github_cli_skills",
+    "bun",
+    "bun_packages",
+    "uv",
 ]
 
 [git]

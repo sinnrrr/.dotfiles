@@ -29,6 +29,7 @@
 - Before writing a parser, poller, retry loop, validator, test fake or wrapper, check built-ins, framework features and maintained libraries (Context7). Hand-roll only when nothing fits, and say why in the PR.
 - Run the repo's full pre-push gates (AGENTS.md or README) before every push, not only before merge, and never tell a subagent to skip one. New warnings count as failures.
 - A fix is done when the original failure is reproduced before and shown gone after on a real path (UI: seen rendered in a browser, runner or deploy: a real run). Unit tests alone are not proof.
+- When developing user scripts in shell check-in with user first. User doens't like shell and would prefer to avoid it for simpler alternatives like Python. `uv` scripts could be used instead with libraries - it would make scripts much more readable and less handrolled.
 
 ## GitHub
 

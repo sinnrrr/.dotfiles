@@ -7,7 +7,6 @@ pnpm = "latest"
 "npm:@astrojs/language-server" = "latest"
 "npm:ccstatusline" = "latest"
 "cargo:https://github.com/euclio/mdpls" = "HEAD"
-"github:dlvhdr/gh-dash" = "latest"
 "npm:@anthropic-ai/claude-code" = { version = "latest", allow_builds = true }
 
 [settings]

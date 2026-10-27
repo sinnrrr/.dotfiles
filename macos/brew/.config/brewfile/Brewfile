@@ -14,7 +14,7 @@ brew brew-file
 brew ast-grep
 brew bash
 brew bat
-brew bottom
+brew btop
 brew bun
 brew ccusage
 brew coreutils
@@ -29,7 +29,6 @@ brew git
 brew git-delta
 brew git-spice
 brew go
-brew handbrake
 brew helix
 brew imagemagick
 brew jq
@@ -40,7 +39,6 @@ brew mas
 brew mcat
 brew mergiraf
 brew mise
-brew ollama
 brew poppler
 brew ripgrep
 brew ruff

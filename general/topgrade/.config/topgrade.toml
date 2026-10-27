@@ -8,7 +8,6 @@ disable = [
     "containers",
     "helix",
     "helm",
-    "ollama",
     "github_cli_extensions",
     "github_cli_skills",
     "bun",

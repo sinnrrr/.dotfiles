@@ -5,9 +5,6 @@ set -e
 input="$1"
 output="${input%.*}_min.mp4"
 
-HandBrakeCLI \
-  -i "$input" \
-  -o "$output" \
-  --preset="General/Very Fast 2160p60 4K AV1"
+ffmpeg -i "$input" -c:v libsvtav1 -c:a aac "$output"
 
 echo "Created: $output"

@@ -2,7 +2,6 @@
 # tap repositories and their packages
 
 tap homebrew/core
-brew llmfit
 brew lua
 brew opencode
 brew rust

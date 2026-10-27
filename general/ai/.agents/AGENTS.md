@@ -37,6 +37,9 @@
 - Before reporting done: reread your own diff for bugs and for anything outside the ticket. Run a full PR review only when I ask.
 - Commits: title max 4 words, plain high-level words, follow the repo's commit format. No commit body.
 - Branch names: include ticket name if available.
+- Landing work: when the task is done, verified and gates pass, commit and push without asking. This counts as me asking. Only the main session lands. Subagents commit in their worktree and report back. Skip it when I said to hold or not push. On a rejected push, rebase and push again, never force.
+  - Personal repos (github.com/sinnrrr plus any the machine rules name, they define `wt land`): run `wt land` from the task worktree. It syncs main, merges the branch into it, removes the worktree and pushes main. Add `--no-remove` when this session started inside that worktree. Work already on main just gets committed and pushed.
+  - Every other repo: push the working branch with `git push -u origin HEAD`. Never push the default branch there, stop and report instead. Opening or merging a PR still waits for me.
 - PRs: load the `github-pr` skill before writing a title or body. When I say open or create a PR, open it right away and show the body afterward, no approval round. When editing an existing PR body, keep the size I chose.
 - Never post or edit comments, reviews, replies or issues on GitHub, comments on tickets, or chat messages unless I explicitly say to post. "Do everything" is not a post instruction. Write drafts to the scratchpad.
 - PR reviews: use the `pr-review` skill. Drafts only.

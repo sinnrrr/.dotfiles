@@ -6,3 +6,6 @@ fresh = "{% if base == default_branch %}git fetch -q {{ remote }} {{ default_bra
 [aliases]
 new = "git fetch {{ remote }} {{ default_branch }} && wt switch --create {{ args }} --base {{ remote }}/{{ default_branch }} -x sh -- -c 'git-spice --no-prompt branch track --base {{ default_branch }} || true'"
 stack = "git fetch {{ remote }} {{ default_branch }} && wt switch --create {{ args }} --base {{ remote }}/{{ default_branch }} -x sh -- -c 'git-spice --no-prompt branch track --base {{ default_branch }}; exec claude'"
+
+[projects."github.com/sinnrrr/*".aliases]
+land = "git fetch -q {{ remote }} {{ default_branch }} && git -C {{ primary_worktree_path }} merge -q --ff-only {{ remote }}/{{ default_branch }} && wt merge --no-commit {{ args }} && git -C {{ primary_worktree_path }} push -q {{ remote }} {{ default_branch }}"

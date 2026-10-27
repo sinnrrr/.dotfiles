@@ -17,7 +17,6 @@ brew bat
 brew btop
 brew bun
 brew ccusage
-brew coreutils
 brew difftastic
 brew dprint
 brew duti
@@ -34,7 +33,6 @@ brew imagemagick
 brew jq
 brew lazygit
 brew lua-language-server
-brew make
 brew mas
 brew mcat
 brew mergiraf

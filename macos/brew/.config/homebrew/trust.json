@@ -3,8 +3,10 @@
     "raine/claude-history/claude-history"
   ],
   "trustedtaps": [
+    "mhaeuser/mhaeuser",
     "nikitabobko/tap",
-    "rcmdnk/file"
+    "rcmdnk/file",
+    "walavave/tap"
   ],
   "trustedcasks": [
     "https://github.com/yazinsai/openoats/openoats"

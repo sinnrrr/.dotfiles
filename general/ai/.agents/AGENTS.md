@@ -24,7 +24,7 @@
 - No code comments unless I ask. A reviewer's explicit request for a comment counts as asking.
 - Start each task on a new branch from freshly fetched `origin/main` in its own worktree. One worktree per session and per editing subagent. Never switch, reset, stash or clean a checkout another session may be using.
 - Never discard, reset, stash, clean or `checkout --` changes you did not make. Report them instead. Use a WIP commit, not `git stash`.
-- Code search: anything that depends on syntax (calls, definitions, imports, args, multi-file rewrites) goes through ast-grep via the `ast-grep:ast-grep` skill, not grep or rg. Use `ast-grep:outline` to map a file or dir before reading it in full. Plain text like strings, logs and config values stays on rg.
+- Code search: anything that depends on syntax (calls, definitions, imports, args, multi-file rewrites) goes through the `ast-grep` CLI, not grep or rg. Run `ast-grep outline` to map a file or dir before reading it in full. Plain text like strings, logs and config values stays on rg.
 - Instead of handrolling code, consider OSS frameworks first
 - Before writing a parser, poller, retry loop, validator, test fake or wrapper, check built-ins, framework features and maintained libraries (Context7). Hand-roll only when nothing fits, and say why in the PR.
 - Run the repo's full pre-push gates (AGENTS.md or README) before every push, not only before merge, and never tell a subagent to skip one. New warnings count as failures.

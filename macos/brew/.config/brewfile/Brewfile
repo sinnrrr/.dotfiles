@@ -42,7 +42,6 @@ brew mergiraf
 brew mise
 brew ollama
 brew poppler
-brew ripgrep
 brew ruff
 brew rustup
 brew stow

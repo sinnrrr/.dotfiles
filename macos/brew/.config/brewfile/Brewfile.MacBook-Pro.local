@@ -2,22 +2,35 @@
 # tap repositories and their packages
 
 tap homebrew/core
+brew bottom
+brew coreutils
+brew handbrake
+brew himalaya
+brew llmfit
 brew lua
-brew opencode
+brew make
+brew ollama
 brew python@3.14
+brew ripgrep
 brew rust
 brew scc
 brew speedtest-cli
 brew tree
 
 tap homebrew/cask
+cask claude
 cask codex
 cask google-chrome
 cask kitlangton-hex
+cask obsidian
+cask vercel
+cask zoom
 
 tap mhaeuser/mhaeuser
 
 tap nikitabobko/tap
+
+tap oionus/tap
 
 tap raine/claude-history
 
@@ -28,7 +41,7 @@ tap walavave/tap
 tap yazinsai/openoats
 
 # App Store applications
-appstore 1352778147 Bitwarden (2026.10.0)
+appstore 1352778147 Bitwarden (2026.10.4)
 appstore 682658836 GarageBand (10.4.14)
 appstore 408981434 iMovie (10.4.5)
 appstore 361285480 Keynote Creator Studio (15.4)

@@ -18,8 +18,6 @@ brew speedtest-cli
 brew tree
 
 tap homebrew/cask
-cask claude
-cask codex
 cask google-chrome
 cask kitlangton-hex
 cask obsidian

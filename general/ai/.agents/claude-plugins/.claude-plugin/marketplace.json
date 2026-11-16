@@ -1,0 +1,12 @@
+{
+  "name": "dotfiles",
+  "owner": { "name": "sinnrrr" },
+  "description": "Local Claude Code plugins from dotfiles",
+  "plugins": [
+    {
+      "name": "lsp",
+      "source": "./plugins/lsp",
+      "description": "Language servers that push diagnostics to Claude after edits"
+    }
+  ]
+}

@@ -6,7 +6,16 @@
       "context": "Chat",
       "bindings": {
         "ctrl+x ctrl+p": "chat:imagePaste",
-        "ctrl+v": null
+        "ctrl+v": null,
+        "meta+d": "abovePrompt:focus"
+      }
+    },
+    {
+      "context": "Pane",
+      "bindings": {
+        "q": "pane:close",
+        "meta+left": "pane:grow",
+        "meta+right": "pane:shrink"
       }
     }
   ]

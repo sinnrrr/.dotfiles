@@ -1,0 +1,78 @@
+{
+  "ty": {
+    "command": "ty",
+    "args": [
+      "server"
+    ],
+    "extensionToLanguage": {
+      ".py": "python",
+      ".pyi": "python"
+    }
+  },
+  "lua": {
+    "command": "lua-language-server",
+    "extensionToLanguage": {
+      ".lua": "lua"
+    }
+  },
+  "taplo": {
+    "command": "taplo",
+    "args": [
+      "lsp",
+      "stdio"
+    ],
+    "extensionToLanguage": {
+      ".toml": "toml"
+    }
+  },
+  "yaml": {
+    "command": "yaml-language-server",
+    "args": [
+      "--stdio"
+    ],
+    "extensionToLanguage": {
+      ".yaml": "yaml",
+      ".yml": "yaml"
+    }
+  },
+  "json": {
+    "command": "vscode-json-language-server",
+    "args": [
+      "--stdio"
+    ],
+    "extensionToLanguage": {
+      ".json": "json",
+      ".jsonc": "jsonc"
+    }
+  },
+  "bash": {
+    "command": "bash-language-server",
+    "args": [
+      "start"
+    ],
+    "extensionToLanguage": {
+      ".sh": "shellscript",
+      ".bash": "shellscript"
+    }
+  },
+  "css": {
+    "command": "vscode-css-language-server",
+    "args": [
+      "--stdio"
+    ],
+    "extensionToLanguage": {
+      ".css": "css",
+      ".scss": "scss",
+      ".less": "less"
+    }
+  },
+  "fish": {
+    "command": "fish-lsp",
+    "args": [
+      "start"
+    ],
+    "extensionToLanguage": {
+      ".fish": "fish"
+    }
+  }
+}

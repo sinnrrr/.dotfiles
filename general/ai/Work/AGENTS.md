@@ -5,7 +5,7 @@ These rules apply in every session under ~/Work, repos and worktrees included. I
 Layout:
 - Daily repos in the root: `~/Work/<name>`
 - Every other repo: `~/Work/repos/<name>`. Third-party OSS clones: `~/Work/research/<name>`
-- Worktrees: `~/Work/wk/<owner>/<repo>/<branch>`. Notes worth keeping: `~/Work/notes/`. Old stuff: `~/Work/archive/`
+- Notes worth keeping: `~/Work/notes/`. Old stuff: `~/Work/archive/`
 - Machine-specific rules can name extra folders for some repo groups.
 
 Repos:
@@ -13,8 +13,8 @@ Repos:
 - Folder name = repo name. New clones go to `~/Work/repos/` unless another rule names a folder for them.
 
 Files and worktrees:
-- Never write files or folders in the ~/Work root. Throwaway output goes to the session scratchpad. Anything worth keeping goes to `~/Work/notes/` as `YYYY-MM-DD-<slug>.<ext>`.
-- Main clones stay on main. Branch work lives in worktrees under `~/Work/wk/<owner>/<repo>/<branch>`, created with `wt switch --create`. Never `git worktree add` or a second clone.
+- The ~/Work root does not accept new entries (`chmod -N ~/Work` lifts it for a new daily repo). Anything worth keeping goes to `~/Work/notes/` as `YYYY-MM-DD-<slug>.<ext>`.
+- Main clones stay on main. Branch work lives in worktrees created with `wt new <branch>` or `wt switch --create`. Never a second clone.
 
 Working in one of these repos:
 - Best: start the session inside the repo or a worktree of it. A `cd` from here loads nothing.

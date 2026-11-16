@@ -69,7 +69,8 @@ if command -v brew >/dev/null 2>&1; then
     brew install rcmdnk/file/brew-file
   fi
   brew file install -F file
-  export PATH="$(brew --prefix rustup)/bin:$PATH"
+  PATH="$(brew --prefix rustup)/bin:$PATH"
+  export PATH
   rustup default stable
 fi
 
@@ -98,7 +99,14 @@ if command -v ya >/dev/null 2>&1; then
   ya pkg install --discard
 fi
 
-mkdir -p ~/Work
+log "Installing Claude Code plugins..."
+if command -v claude >/dev/null 2>&1; then
+  claude plugin marketplace add "$SCRIPT_PATH/general/ai/.agents/claude-plugins"
+  claude plugin install lsp@dotfiles
+fi
+
+mkdir -p ~/Work/{repos,research,notes,wk,archive}
+chmod +a "everyone deny add_file,add_subdirectory" ~/Work
 
 log "Launching Karabiner, AeroSpace, Hidden Bar, LinearMouse, MonitorControl, and WezTerm..."
 pgrep -q "Karabiner" || open -a "Karabiner-Elements"

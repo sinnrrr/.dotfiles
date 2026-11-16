@@ -1,0 +1,3 @@
+[hook "commit-title"]
+	event = commit-msg
+	command = commitlint --config ~/.agents/commitlint/commitlint.config.mjs --edit

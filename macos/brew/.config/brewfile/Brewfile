@@ -13,20 +13,24 @@ brew brew-file
 # Other Homebrew packages
 brew ast-grep
 brew bash
+brew bash-language-server
 brew bat
 brew btop
 brew bun
 brew ccusage
+brew commitlint
 brew difftastic
 brew dprint
 brew duti
 brew fd
 brew fish
+brew fish-lsp
 brew fzf
 brew gh
 brew git
 brew git-delta
 brew git-spice
+brew gitleaks
 brew go
 brew helix
 brew imagemagick
@@ -40,6 +44,7 @@ brew mise
 brew poppler
 brew ruff
 brew rustup
+brew shellcheck
 brew stow
 brew stylua
 brew taplo
@@ -47,6 +52,7 @@ brew topgrade
 brew ty
 brew typescript-language-server
 brew uv
+brew vale
 brew vscode-langservers-extracted
 brew worktrunk
 brew yaml-language-server

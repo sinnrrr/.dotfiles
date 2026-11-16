@@ -10,6 +10,12 @@
 [includeIf "gitdir:~/.dotfiles/work/"]
 	path = ~/.config/git/.gitconfig.work
 
+[includeIf "gitdir:~/.dotfiles/.git"]
+	path = ~/.config/git/dotfiles-guard.gitconfig
+
+[includeIf "gitdir:~/.dotfiles/.git/worktrees/"]
+	path = ~/.config/git/dotfiles-guard.gitconfig
+
 [core]
 	pager = delta
 [push]
@@ -38,3 +44,7 @@
 [credential "https://gist.github.com"]
 	helper =
 	helper = !/opt/homebrew/bin/gh auth git-credential
+
+[hook "secrets"]
+	event = pre-commit
+	command = gitleaks git --pre-commit --staged --no-banner --redact --log-level warn

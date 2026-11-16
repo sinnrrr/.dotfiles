@@ -1,4 +1,5 @@
 #!/bin/bash
+# shellcheck source-path=SCRIPTDIR
 
 # Detect operating system
 case "$(uname -s)" in
@@ -13,27 +14,38 @@ CYGWIN* | MINGW32* | MSYS* | MINGW*)
   ;;
 esac
 
-mkdir -p $HOME/.local/bin
+mkdir -p "$HOME/.local/bin"
 
 SCRIPT_PATH=$(dirname "$(realpath "$0")")
 
+stow_all() {
+  cd "$1" || exit 1
+  local pkgs=(*/)
+  stow --no-folding --adopt -t "$HOME" "${pkgs[@]%/}"
+}
+
 if [[ "$1" = "init" ]]; then
   sudo -v
-  . "$SCRIPT_PATH/$OS_DIR/preinstall.sh"
+  case "$OS_DIR" in
+  macos) . "$SCRIPT_PATH/macos/preinstall.sh" ;;
+  esac
 fi
 
 # --adopt: if a target got delinked (some tool rewrote a stowed file in
 # place, replacing the symlink with a plain file), pull it back into the
 # repo instead of aborting. No-op for targets already correctly symlinked.
-cd "$SCRIPT_PATH/general" && stow --no-folding --adopt -t "$HOME" */
-cd "$SCRIPT_PATH/$OS_DIR" && stow --no-folding --adopt -t "$HOME" */
+stow_all "$SCRIPT_PATH/general"
+stow_all "$SCRIPT_PATH/$OS_DIR"
 if [ -d "$SCRIPT_PATH/work" ]; then
-  cd "$SCRIPT_PATH/work" && stow --no-folding --adopt -t "$HOME" */
+  stow_all "$SCRIPT_PATH/work"
 fi
 
 if [[ "$1" = "init" ]]; then
-  . "$SCRIPT_PATH/$OS_DIR/postinstall.sh"
+  case "$OS_DIR" in
+  macos) . "$SCRIPT_PATH/macos/postinstall.sh" ;;
+  esac
   if [ -f "$SCRIPT_PATH/work/postinstall.sh" ]; then
+    # shellcheck source=/dev/null
     . "$SCRIPT_PATH/work/postinstall.sh"
   fi
 fi

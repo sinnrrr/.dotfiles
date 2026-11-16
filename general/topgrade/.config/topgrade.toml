@@ -18,11 +18,16 @@ disable = [
 
 [git]
 repos = [
-    "~/.dotfiles",
     "~/Work/*/",
 ]
 pull_predefined = false
 fallback_to_fetch_default = true
 
-[post_commands]
-"Dotfiles" = "~/.dotfiles/my.sh"
+[pre_commands]
+"Dotfiles pull" = "git -C ~/.dotfiles pull --rebase --autostash"
+"Work dotfiles pull" = "test ! -d ~/.dotfiles/work || git -C ~/.dotfiles/work pull --rebase --autostash"
+"Dotfiles submodules" = "git -C ~/.dotfiles submodule update --remote --merge"
+"Dotfiles apply" = "~/.dotfiles/my.sh"
+
+[commands]
+"Vale styles" = "vale --config ~/.agents/vale/.vale.ini sync"

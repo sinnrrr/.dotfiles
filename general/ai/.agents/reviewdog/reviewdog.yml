@@ -1,0 +1,28 @@
+runner:
+  actionlint:
+    cmd: >-
+      git staged ':(glob).github/workflows/*.y*ml'
+      | xargs -0r actionlint -oneline -ignore 'label ".+" is unknown'
+    errorformat:
+      - "%f:%l:%c: %m"
+  zizmor:
+    cmd: >-
+      git staged ':(glob).github/workflows/*.y*ml' ':(glob)**/action.y*ml'
+      | xargs -0r zizmor --quiet --offline --no-progress --strict-collection
+      --config "$HOME/.agents/zizmor/zizmor.yml" --format github
+    errorformat:
+      - "::%*[a-z] file=%f,line=%l,title=%m"
+  typos:
+    cmd: typos --format brief
+    errorformat:
+      - "%f:%l:%c: %m"
+  semgrep:
+    cmd: >-
+      git staged
+      | xargs -0r semgrep scan --metrics=off --disable-nosem --disable-version-check
+      --quiet --emacs --config "$HOME/.agents/semgrep/rules.yml"
+    errorformat:
+      - "%f:%l:%c:error(%*[^)]):%m"
+  eslint:
+    cmd: HK_FILE="$HOME/.agents/hk/hk.pkl" hk check --staged --quiet
+    format: eslint

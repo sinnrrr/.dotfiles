@@ -1,20 +1,4 @@
 {
-  "ty": {
-    "command": "ty",
-    "args": [
-      "server"
-    ],
-    "extensionToLanguage": {
-      ".py": "python",
-      ".pyi": "python"
-    }
-  },
-  "lua": {
-    "command": "lua-language-server",
-    "extensionToLanguage": {
-      ".lua": "lua"
-    }
-  },
   "taplo": {
     "command": "taplo",
     "args": [
@@ -73,6 +57,15 @@
     ],
     "extensionToLanguage": {
       ".fish": "fish"
+    }
+  },
+  "vale": {
+    "command": "vale-ls",
+    "env": {
+      "VALE_CONFIG_PATH": "${HOME}/.agents/vale/.vale.ini"
+    },
+    "extensionToLanguage": {
+      ".md": "markdown"
     }
   }
 }

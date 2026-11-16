@@ -1,0 +1,81 @@
+rules:
+  - id: new-lint-or-type-suppression
+    languages: [generic]
+    severity: ERROR
+    message: >-
+      This commit adds a suppression comment. Fix the underlying finding instead of silencing the tool.
+    pattern-regex: >-
+      (?i)(eslint-disable|@ts-(ignore|expect-error|nocheck)|tslint:disable|biome-ignore|stylelint-disable|(istanbul|c8|v8)\s+ignore|nosemgrep|nosec\b|noqa\b|NOSONAR|#\s*type:\s*ignore|#\s*(pyright|mypy):\s*ignore|pylint:\s*disable|pragma:\s*no\s+cover|shellcheck\s+disable|zizmor:\s*ignore|yamllint\s+disable|spellchecker:\s*(off|disable|ignore)|(?<![\w])\/\/\s*nolint|@SuppressWarnings|rubocop:disable|@phpstan-ignore|(lgtm|codeql)\[|checkov:skip|tfsec:ignore|trivy:ignore|gitleaks:allow)
+    paths:
+      exclude:
+        - "*.md"
+        - "*.mdx"
+        - "*.txt"
+        - "**/semgrep/rules.yml"
+
+  - id: new-focused-or-skipped-js-test
+    languages: [generic]
+    severity: ERROR
+    message: >-
+      This commit adds a focused or skipped test. Remove the modifier so the whole suite runs, or delete the test.
+    pattern-regex: >-
+      (\b(describe|it|test|context|suite|specify|bench)(\.\w+)*\.(only|skip|fixme)\b|(?<![\w.$])(fdescribe|fit|xdescribe|xit|xtest|xcontext|xspecify)\s*\()
+    paths:
+      include:
+        - "*.js"
+        - "*.jsx"
+        - "*.mjs"
+        - "*.cjs"
+        - "*.ts"
+        - "*.tsx"
+        - "*.mts"
+        - "*.cts"
+
+  - id: new-skipped-python-test
+    languages: [generic]
+    severity: ERROR
+    message: >-
+      This commit adds an unconditional skip or expected failure. Fix the test or delete it.
+    pattern-regex: >-
+      (pytest\.(mark\.)?(skip|xfail)\b|unittest\.(skip|expectedFailure)\b)
+    paths:
+      include:
+        - "*.py"
+
+  - id: new-skipped-go-test
+    languages: [generic]
+    severity: ERROR
+    message: >-
+      This commit adds a test skip. Fix the test or delete it.
+    pattern-regex: >-
+      \b(t|b|tb|s)\.Skip(f|Now)?\(
+    paths:
+      include:
+        - "*_test.go"
+
+  - id: new-ignored-rust-test
+    languages: [generic]
+    severity: ERROR
+    message: >-
+      This commit adds an ignored test. Fix the test or delete it.
+    pattern-regex: >-
+      #\[ignore\b
+    paths:
+      include:
+        - "*.rs"
+
+  - id: new-disabled-jvm-or-dotnet-test
+    languages: [generic]
+    severity: ERROR
+    message: >-
+      This commit adds a disabled test. Fix the test or delete it.
+    pattern-regex: >-
+      (@(Disabled|Ignore)\b|\[Ignore\b|\[(Fact|Theory)\([^\]]*Skip\s*=)
+    paths:
+      include:
+        - "*.java"
+        - "*.kt"
+        - "*.kts"
+        - "*.scala"
+        - "*.groovy"
+        - "*.cs"

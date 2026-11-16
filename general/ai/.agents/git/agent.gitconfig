@@ -1,3 +1,10 @@
+[alias]
+	staged = diff --cached --name-only -z --diff-filter=ACMR --
+
 [hook "commit-title"]
 	event = commit-msg
 	command = commitlint --config ~/.agents/commitlint/commitlint.config.mjs --edit
+
+[hook "review-new-lines"]
+	event = pre-commit
+	command = reviewdog -conf ~/.agents/reviewdog/reviewdog.yml -diff \"git diff --cached --no-color --no-ext-diff --src-prefix=a/ --dst-prefix=b/\" -filter-mode added -reporter local -fail-level any -log-level warning

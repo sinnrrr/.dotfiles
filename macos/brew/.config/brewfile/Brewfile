@@ -10,7 +10,11 @@ brew claude-history
 tap rcmdnk/file
 brew brew-file
 
+tap reviewdog/tap
+cask reviewdog
+
 # Other Homebrew packages
+brew actionlint
 brew ast-grep
 brew bash
 brew bash-language-server
@@ -33,6 +37,7 @@ brew git-spice
 brew gitleaks
 brew go
 brew helix
+brew hk
 brew imagemagick
 brew jq
 brew lazygit
@@ -42,6 +47,8 @@ brew mcat
 brew mergiraf
 brew mise
 brew poppler
+brew prettier
+brew pyright
 brew ruff
 brew rustup
 brew shellcheck
@@ -51,6 +58,7 @@ brew taplo
 brew topgrade
 brew ty
 brew typescript-language-server
+brew typos-cli
 brew uv
 brew vale
 brew vscode-langservers-extracted
@@ -58,6 +66,7 @@ brew worktrunk
 brew yaml-language-server
 brew yazi
 brew yq
+brew zizmor
 brew zoxide
 
 # Other Cask applications
@@ -66,6 +75,7 @@ cask font-jetbrains-mono-nerd-font
 cask hiddenbar
 cask karabiner-elements
 cask linearmouse
+cask lulu
 cask monitorcontrol
 cask orbstack
 cask spotify

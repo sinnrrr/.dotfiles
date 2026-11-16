@@ -1,0 +1,16 @@
+amends "package://github.com/jdx/hk/releases/download/v2.12.0/hk@2.12.0#/Config.pkl"
+
+hooks {
+  ["check"] {
+    steps {
+      ["eslint"] {
+        glob = "**/*.{js,jsx,mjs,cjs,ts,tsx,mts,cts}"
+        workspace_indicator = "package.json"
+        dir = "{{workspace}}"
+        check = "npx --no-install --offline eslint -f stylish {{files}}"
+        allow_failure = true
+        output_summary = "stdout"
+      }
+    }
+  }
+}

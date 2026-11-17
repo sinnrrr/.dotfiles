@@ -23,6 +23,7 @@ brew btop
 brew bun
 brew ccusage
 brew commitlint
+brew deno
 brew difftastic
 brew dprint
 brew duti
@@ -34,7 +35,6 @@ brew gh
 brew git
 brew git-delta
 brew gitleaks
-brew go
 brew helix
 brew hk
 brew imagemagick

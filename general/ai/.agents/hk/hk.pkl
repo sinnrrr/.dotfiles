@@ -1,15 +1,89 @@
-amends "package://github.com/jdx/hk/releases/download/v2.12.0/hk@2.12.0#/Config.pkl"
+amends "package://github.com/jdx/hk/releases/download/v2.13.0/hk@2.13.0#/Config.pkl"
+
+local home = read("env:HOME")
+local agents = home + "/.agents"
+local typescriptVersion = "5.9.3"
+local eslintVersion = "10.15.0"
+local deno = List("deno", "run", "--quiet", "--no-config", "--no-lock", "--node-modules-dir=none", "--no-prompt", "--allow-read", "--allow-env")
+local workflows = List(".github/workflows/*.yml", ".github/workflows/*.yaml")
+local typescript = List("**/*.ts", "**/*.tsx", "**/*.mts", "**/*.cts")
+local python = List("**/*.py", "**/*.pyi")
+local strict = List("!no-strict")
+local tscCacheDir = home + "/.cache/agent-tsc"
+local tscCache = tscCacheDir + "{{root}}/{{workspace}}/strict.tsbuildinfo"
+local tscFlags = List(
+  "--strict", "--noImplicitAny", "--strictNullChecks", "--strictFunctionTypes", "--strictBindCallApply",
+  "--strictPropertyInitialization", "--useUnknownInCatchVariables", "--noImplicitThis",
+  "--noUncheckedIndexedAccess", "--noImplicitOverride", "--noImplicitReturns", "--noFallthroughCasesInSwitch",
+)
 
 hooks {
-  ["check"] {
+  ["agent-checks"] {
     steps {
+      default { allow_failure = true }
+      ["actionlint"] {
+        glob = workflows
+        check = new Command { argv = List("actionlint", "-oneline", "-ignore", #"label ".+" is unknown"#, "{{files}}") }
+        diagnostic_format = "gcc"
+      }
+      ["zizmor"] {
+        glob = workflows + List("**/action.yml", "**/action.yaml")
+        check = new Command { argv = List("zizmor", "--quiet", "--offline", "--no-progress", "--color", "never", "--strict-collection", "--config", agents + "/zizmor/zizmor.yml", "{{files}}") }
+        diagnostic_format = "rustc"
+      }
+      ["typos"] {
+        glob = "**/*"
+        check = new Command { argv = List("typos", "--force-exclude", "--format", "brief", "{{files}}") }
+        diagnostic_format = "gcc"
+      }
+      ["semgrep"] {
+        glob = "**/*"
+        check = new Command { argv = List("semgrep", "scan", "--metrics=off", "--disable-nosem", "--disable-version-check", "--quiet", "--sarif", "--config", agents + "/semgrep/rules.yml", "{{files}}") }
+        diagnostic_format = "sarif"
+      }
       ["eslint"] {
-        glob = "**/*.{js,jsx,mjs,cjs,ts,tsx,mts,cts}"
-        workspace_indicator = "package.json"
+        glob = List("**/*.js", "**/*.jsx", "**/*.mjs", "**/*.cjs") + typescript
+        workspace_indicator = "node_modules/.bin/eslint"
+        dir = "{{ workspace_indicator | replace(from='node_modules/.bin/eslint', to='') }}"
+        check = new Command { argv = List("{{root}}/{{workspace_indicator}}", "-f", "json", "{{files}}") }
+        diagnostic_format = "eslint-json"
+      }
+      ["tsc-strict"] {
+        profiles = strict
+        glob = typescript
+        workspace_indicator = "tsconfig.json"
         dir = "{{workspace}}"
-        check = "npx --no-install --offline eslint -f stylish {{files}}"
-        allow_failure = true
-        output_summary = "stdout"
+        condition = "exec_ok('test -d node_modules')"
+        check = new Command { argv = deno + List("--allow-write=" + tscCacheDir, "npm:typescript@" + typescriptVersion + "/tsc", "-p", ".", "--noEmit", "--pretty", "false", "--composite", "false", "--incremental", "--tsBuildInfoFile", tscCache) + tscFlags }
+        diagnostic_format = "tsc"
+      }
+      ["eslint-strict"] {
+        profiles = strict
+        glob = typescript
+        workspace_indicator = "node_modules"
+        dir = "{{workspace}}"
+        check = new Command { argv = deno + List("npm:eslint@" + eslintVersion, "-c", agents + "/eslint/eslint.config.mjs", "-f", "json", "--no-warn-ignored", "{{files}}") }
+        diagnostic_format = "eslint-json"
+      }
+      ["ruff-strict"] {
+        profiles = strict
+        glob = python
+        check = new Command { argv = List("ruff", "check", "--no-fix", "--force-exclude", "--output-format", "full", "--extend-select", "ANN,B,BLE,ASYNC,PGH,RUF", "--extend-ignore", "B008,RUF005,RUF010,RUF021,RUF022,RUF023", "{{files}}") }
+        diagnostic_format = "rustc"
+      }
+      ["ty-strict"] {
+        profiles = strict
+        glob = python
+        workspace_indicator = "pyproject.toml"
+        dir = "{{workspace}}"
+        check = new Command { argv = List("ty", "check", "--output-format", "full", "--color", "never", "--force-exclude", "--ignore", "import-not-found", "--error", "missing-type-argument", "--error", "possibly-unresolved-reference", "--error", "possibly-missing-attribute", "--error", "possibly-missing-import", "--error", "unused-awaitable", "--error", "deprecated", "--error", "redundant-cast", "{{files}}") }
+        diagnostic_format = "rustc"
+      }
+      ["shellcheck-strict"] {
+        profiles = strict
+        match_any = List(new FileSelector { glob = List("**/*.sh", "**/*.bash") }, new FileSelector { types = List("sh", "bash") })
+        check = new Command { argv = List("shellcheck", "-f", "gcc", "-x", "-S", "info", "-o", "check-set-e-suppressed,check-extra-masked-returns,check-unassigned-uppercase", "{{files}}") }
+        diagnostic_format = "gcc"
       }
     }
   }

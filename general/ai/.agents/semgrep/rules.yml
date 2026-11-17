@@ -5,7 +5,7 @@ rules:
     message: >-
       This commit adds a suppression comment. Fix the underlying finding instead of silencing the tool.
     pattern-regex: >-
-      (?i)(eslint-disable|@ts-(ignore|expect-error|nocheck)|tslint:disable|biome-ignore|stylelint-disable|(istanbul|c8|v8)\s+ignore|nosemgrep|nosec\b|noqa\b|NOSONAR|#\s*type:\s*ignore|#\s*(pyright|mypy):\s*ignore|pylint:\s*disable|pragma:\s*no\s+cover|shellcheck\s+disable|zizmor:\s*ignore|yamllint\s+disable|spellchecker:\s*(off|disable|ignore)|(?<![\w])\/\/\s*nolint|@SuppressWarnings|rubocop:disable|@phpstan-ignore|(lgtm|codeql)\[|checkov:skip|tfsec:ignore|trivy:ignore|gitleaks:allow)
+      (?i)(eslint-disable|@ts-(ignore|expect-error|nocheck)|tslint:disable|biome-ignore|stylelint-disable|(istanbul|c8|v8)\s+ignore|nosemgrep|nosec\b|noqa\b|NOSONAR|#\s*type:\s*ignore|#\s*(pyright|mypy|ty):\s*ignore|pylint:\s*disable|pragma:\s*no\s+cover|shellcheck\s+disable|zizmor:\s*ignore|yamllint\s+disable|spellchecker:\s*(off|disable|ignore)|(?<![\w])\/\/\s*nolint|@SuppressWarnings|rubocop:disable|@phpstan-ignore|(lgtm|codeql)\[|checkov:skip|tfsec:ignore|trivy:ignore|gitleaks:allow)
     paths:
       exclude:
         - "*.md"
@@ -41,28 +41,6 @@ rules:
     paths:
       include:
         - "*.py"
-
-  - id: new-skipped-go-test
-    languages: [generic]
-    severity: ERROR
-    message: >-
-      This commit adds a test skip. Fix the test or delete it.
-    pattern-regex: >-
-      \b(t|b|tb|s)\.Skip(f|Now)?\(
-    paths:
-      include:
-        - "*_test.go"
-
-  - id: new-ignored-rust-test
-    languages: [generic]
-    severity: ERROR
-    message: >-
-      This commit adds an ignored test. Fix the test or delete it.
-    pattern-regex: >-
-      #\[ignore\b
-    paths:
-      include:
-        - "*.rs"
 
   - id: new-disabled-jvm-or-dotnet-test
     languages: [generic]

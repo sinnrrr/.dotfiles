@@ -1,10 +1,7 @@
-[alias]
-	staged = diff --cached --name-only -z --diff-filter=ACMR --
-
 [hook "commit-title"]
 	event = commit-msg
 	command = commitlint --config ~/.agents/commitlint/commitlint.config.mjs --edit
 
-[hook "review-new-lines"]
+[hook "agent-checks"]
 	event = pre-commit
-	command = reviewdog -conf ~/.agents/reviewdog/reviewdog.yml -diff \"git diff --cached --no-color --no-ext-diff --src-prefix=a/ --dst-prefix=b/\" -filter-mode added -reporter local -fail-level any -log-level warning
+	command = HK_FILE=~/.agents/hk/hk.pkl hk run agent-checks --staged --silent --no-fail-fast --sarif /dev/stdout | reviewdog -f sarif -diff \"git diff --cached\" -fail-level any || (echo 'agent-checks: fix the code above without adding suppression comments. If two rules contradict each other, stop and report both rule names to the user.' >&2 && false)

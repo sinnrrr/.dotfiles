@@ -61,7 +61,6 @@ if test -f ~/.local/.env.fish
     source ~/.local/.env.fish
 end
 
-alias gs git-spice
 # bfc <nothing>  - clean per Brewfile diff (old behaviour, interactive).
 # bfc pkg...     - HOMEBREW_BREWFILE_LEAVES=1 means plain clean derives
 #   "wanted" from currently installed leaves, not Brewfile text, so it can

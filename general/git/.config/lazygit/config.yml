@@ -37,7 +37,7 @@ customCommands:
           - type: input
             title: Branch name
             key: Name
-        command: wt new {{.Form.Name | quote}} --no-cd --yes
+        command: wt switch --create {{.Form.Name | quote}} --no-cd --yes
         output: logWithPty
         loadingText: Creating worktree
       - key: d
@@ -50,43 +50,3 @@ customCommands:
         description: Prune merged worktrees
         command: wt step prune --foreground
         output: terminal
-  - key: X
-    description: git-spice
-    commandMenu:
-      - key: c
-        context: global
-        description: Create stacked branch
-        prompts:
-          - type: input
-            title: Branch name
-            key: Name
-          - type: input
-            title: Commit message
-            key: Message
-        command: git-spice branch create {{.Form.Name | quote}} -m {{.Form.Message | quote}}
-        output: popup
-      - key: t
-        context: localBranches
-        description: Track selected branch
-        command: git-spice --no-prompt branch track {{.SelectedLocalBranch.Name | quote}}
-        output: popup
-      - key: r
-        context: global
-        description: Restack stack
-        command: git-spice --no-prompt stack restack
-        output: popup
-      - key: s
-        context: global
-        description: Sync with remote and restack
-        command: git-spice --no-prompt repo sync --restack
-        output: popup
-      - key: S
-        context: global
-        description: Submit stack
-        command: git-spice stack submit --fill --no-prompt --no-web
-        output: popup
-      - key: l
-        context: global
-        description: Show stack
-        command: git-spice log short
-        output: popup

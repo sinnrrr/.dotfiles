@@ -14,7 +14,7 @@ Repos:
 
 Files and worktrees:
 - The ~/Work root does not accept new entries (`chmod -N ~/Work` lifts it for a new daily repo). Anything worth keeping goes to `~/Work/notes/` as `YYYY-MM-DD-<slug>.<ext>`.
-- Main clones stay on main. Branch work lives in worktrees created with `wt new <branch>` or `wt switch --create`. Never a second clone.
+- Main clones stay on main. Do branch work in a worktree made by `wt switch --create <branch>`. Never a second clone.
 
 Working in one of these repos:
 - Best: start the session inside the repo or a worktree of it. A `cd` from here loads nothing.

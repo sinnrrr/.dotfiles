@@ -33,7 +33,6 @@ brew fzf
 brew gh
 brew git
 brew git-delta
-brew git-spice
 brew gitleaks
 brew go
 brew helix

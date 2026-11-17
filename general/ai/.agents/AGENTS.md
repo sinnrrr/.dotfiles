@@ -16,7 +16,7 @@
 ## Development (Code changes)
 
 - No code comments unless I ask. A reviewer's explicit request for a comment counts as asking.
-- New task: `wt new <branch>`, then work in the worktree path it prints. One worktree per session and per editing subagent.
+- New task: `wt switch --create <branch>`, then work in the worktree path it prints. One worktree per session and per editing subagent.
 - Code search: anything that depends on syntax (calls, definitions, imports, args, multi-file rewrites) goes through the `ast-grep` CLI, not grep or rg. Run `ast-grep outline` to map a file or dir before reading it in full. Plain text like strings, logs and config values stays on rg.
 - Before writing a parser, poller, retry loop, validator, test fake or wrapper, check built-ins, framework features and maintained libraries (Context7). Hand-roll only when nothing fits, and say why in the PR.
 - Run the repo's full pre-push gates (AGENTS.md or README) before every push, not only before merge. New warnings count as failures.

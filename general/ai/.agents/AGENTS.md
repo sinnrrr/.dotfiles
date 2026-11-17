@@ -12,6 +12,7 @@
 - Subagents: do heavy reading, searching and log digging in subagents, not the main thread. Set both model and effort on every Agent call
 - Prefer API calls over UI Playwright if possible.
 - If you're about to make a comment, write a doc or save a memory, consider how you can create a programmatic rule via linter, checker or other dev tool in dotfiles agent ai folder.
+- Never skip a diagnostic silently (vale, linter, LSP, hook). Fix it, or if it is outside the task, list it in your reply and ask.
 
 ## Development (Code changes)
 

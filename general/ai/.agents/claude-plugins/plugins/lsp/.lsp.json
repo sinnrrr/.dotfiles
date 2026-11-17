@@ -3,8 +3,18 @@
     "command": "taplo",
     "args": [
       "lsp",
+      "--no-auto-config",
       "stdio"
     ],
+    "settings": {
+      "evenBetterToml": {
+        "taplo": {
+          "configFile": {
+            "enabled": true
+          }
+        }
+      }
+    },
     "extensionToLanguage": {
       ".toml": "toml"
     }

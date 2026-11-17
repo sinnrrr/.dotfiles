@@ -7,7 +7,6 @@ pnpm = "latest"
 "npm:@astrojs/language-server" = "latest"
 "npm:ccstatusline" = "latest"
 "cargo:https://github.com/euclio/mdpls" = "HEAD"
-"github:errata-ai/vale-ls" = "latest"
 "pypi:semgrep" = "latest"
 "npm:@anthropic-ai/claude-code" = { version = "latest", allow_builds = true }
 

@@ -36,6 +36,11 @@ hooks {
         check = new Command { argv = List("typos", "--force-exclude", "--format", "brief", "{{files}}") }
         diagnostic_format = "gcc"
       }
+      ["vale"] {
+        glob = List("**/*.md", "**/*.mdx", "**/*.txt")
+        check = new Command { argv = List("vale", "--config", agents + "/vale/.vale.ini", "--output=line", "--no-exit", "{{files}}") }
+        diagnostic_format = "gcc"
+      }
       ["semgrep"] {
         glob = "**/*"
         check = new Command { argv = List("semgrep", "scan", "--metrics=off", "--disable-nosem", "--disable-version-check", "--quiet", "--sarif", "--config", agents + "/semgrep/rules.yml", "{{files}}") }

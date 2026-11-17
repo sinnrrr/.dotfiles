@@ -68,14 +68,5 @@
     "extensionToLanguage": {
       ".fish": "fish"
     }
-  },
-  "vale": {
-    "command": "vale-ls",
-    "env": {
-      "VALE_CONFIG_PATH": "${HOME}/.agents/vale/.vale.ini"
-    },
-    "extensionToLanguage": {
-      ".md": "markdown"
-    }
   }
 }

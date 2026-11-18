@@ -15,6 +15,7 @@ cask reviewdog
 
 # Other Homebrew packages
 brew actionlint
+brew agent-browser
 brew ast-grep
 brew bash
 brew bash-language-server

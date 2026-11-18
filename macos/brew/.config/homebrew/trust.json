@@ -8,6 +8,7 @@
     "rcmdnk/file"
   ],
   "trustedcasks": [
-    "https://github.com/yazinsai/openoats/openoats"
+    "https://github.com/yazinsai/openoats/openoats",
+    "reviewdog/tap/reviewdog"
   ]
 }

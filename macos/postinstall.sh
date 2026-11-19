@@ -92,6 +92,7 @@ log "Setting Firefox as default browser and PDF viewer..."
 if command -v duti >/dev/null 2>&1; then
   duti -s org.mozilla.firefox http
   duti -s org.mozilla.firefox pdf all
+  duti -s org.mozilla.firefox public.svg-image all
 fi
 
 log "Installing Yazi packages..."

@@ -17,6 +17,16 @@ config.window_padding = {
 	top = 0,
 	bottom = 0,
 }
+config.hyperlink_rules = require("file_links").add_to(wezterm.default_hyperlink_rules())
+config.bypass_mouse_reporting_modifiers = "SUPER"
+config.mouse_bindings = {
+	{
+		event = { Up = { streak = 1, button = "Left" } },
+		mods = "SUPER",
+		action = act.OpenLinkAtMouseCursor,
+	},
+}
+
 config.keys = {
 	{
 		key = "v",

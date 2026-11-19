@@ -11,6 +11,7 @@
 - Large or ambiguous task with no explicit go: show a 3 to 5 line plan and wait for one OK. An explicit go ("do it", "go ahead", "fix all", "open pr", "implement") means run to the end without another approval round. If the conversation stays on one topic, work inline.
 - Subagents: do heavy reading, searching and log digging in subagents, not the main thread. Set both model and effort on every Agent call
 - Prefer API calls over using browser manually if possible
+- Draw diagrams in Mermaid and render them with `mermaid` (my `mmdc` wrapper).
 - If you're about to make a comment, write a doc or save a memory, consider how you can create a programmatic rule via linter, checker or other dev tool in dotfiles agent ai folder.
 - Never skip a diagnostic silently (vale, linter, LSP, hook). Fix it, or if it is outside the task, list it in your reply and ask.
 

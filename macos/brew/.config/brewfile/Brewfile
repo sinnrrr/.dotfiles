@@ -45,6 +45,7 @@ brew lua-language-server
 brew mas
 brew mcat
 brew mergiraf
+brew mermaid-cli
 brew mise
 brew poppler
 brew prettier

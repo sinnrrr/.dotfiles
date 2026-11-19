@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+dir="$HOME/.config/mermaid"
+opts=(-c "$dir/config.json")
+[ -f "$dir/puppeteer.json" ] && opts+=(-p "$dir/puppeteer.json")
+exec mmdc "${opts[@]}" "$@"

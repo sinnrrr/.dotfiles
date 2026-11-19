@@ -51,6 +51,11 @@ run = '''
 desc = "Share file"
 
 [[mgr.prepend_keymap]]
+on = ["c", "y"]
+run = "shell -- osascript -l JavaScript ~/.config/yazi/scripts/copy-content.js %s"
+desc = "Copy file content (image, text or file) to clipboard"
+
+[[mgr.prepend_keymap]]
 on = ["c", "a"]
 run = "plugin compress"
 desc = "Archive selected files"

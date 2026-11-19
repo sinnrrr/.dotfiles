@@ -93,6 +93,7 @@ if command -v duti >/dev/null 2>&1; then
   duti -s org.mozilla.firefox http
   duti -s org.mozilla.firefox pdf all
   duti -s org.mozilla.firefox public.svg-image all
+  duti -s org.mozilla.firefox net.daringfireball.markdown all
 fi
 
 log "Installing Yazi packages..."

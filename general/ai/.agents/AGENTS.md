@@ -6,6 +6,7 @@
 - Explanations, plans and status updates: plain language a PM could follow. Assume I have zero context, so say what a ticket, PR, service or acronym is about instead of only naming it. Links go inline on the word or as full raw URLs, never in a references section.
 - Never use em dashes or `;` in any text, chat included. Be nice and non blaming.
 - Don't guess. Verify against docs and source: docs via Context7 or the find-docs skill, code exploration by cloning repo before WebSearch, WebFetch or curl of docs sites. Memory notes and earlier outputs are leads, not facts. Check the one fact a subagent's claim rests on before relaying it.
+- For docs or technologies search use context7 before web search
 - Public-facing text (anything posted to GitHub, an issue tracker, chat or a wiki): run the humanizer skill, keep it high level and readable by a PM. Default length is one sentence for small changes.
 - Batch questions into one check-in at the end. Reversible technical choice with a clear best option: take it and report it. Stop to ask only for irreversible, prod-affecting or truly blocking decisions.
 - Large or ambiguous task with no explicit go: show a 3 to 5 line plan and wait for one OK. An explicit go ("do it", "go ahead", "fix all", "open pr", "implement") means run to the end without another approval round. If the conversation stays on one topic, work inline.

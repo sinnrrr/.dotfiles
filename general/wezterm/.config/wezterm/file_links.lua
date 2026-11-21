@@ -7,22 +7,48 @@ local extension = [[\.\w+]]
 local no_more_folders = "(?![^" .. separators .. "]*/)"
 local file = path .. extension .. no_more_folders
 
+local shell = os.getenv("SHELL") or "/bin/sh"
+
 local M = {}
 
-function M.open_dir_in_yazi(window, pane, uri)
+function M.open_file_uri(window, pane, uri)
 	local url = wezterm.url.parse(uri)
-	if url.scheme ~= "file" or not pcall(wezterm.read_dir, url.file_path) then
+	if url.scheme ~= "file" then
 		return
 	end
-	window:perform_action(
-		wezterm.action.SpawnCommandInNewTab({
-			cwd = url.file_path,
-			args = { "/opt/homebrew/bin/yazi", url.file_path },
-		}),
-		pane
-	)
+	local target = url.file_path
+	local spawn
+	if pcall(wezterm.read_dir, target) then
+		spawn = { cwd = target, args = { "/opt/homebrew/bin/yazi", target } }
+	elseif wezterm.glob(target)[1] then
+		spawn = { args = { shell, "-lc", "$EDITOR " .. wezterm.shell_quote_arg(target) } }
+	else
+		window:toast_notification("wezterm", "Not found: " .. target, nil, 4000)
+		return false
+	end
+	window:perform_action(wezterm.action.SpawnCommandInNewTab(spawn), pane)
 	return false
 end
+
+local hint_patterns = { after_separator .. "~?/[^" .. separators .. ":]*[\\w/]" }
+for _, rule in ipairs(wezterm.default_hyperlink_rules()) do
+	if rule.format:find("^%$") then
+		table.insert(hint_patterns, rule.regex)
+	end
+end
+
+M.hint_mode = wezterm.action.QuickSelectArgs({
+	label = "open",
+	patterns = hint_patterns,
+	skip_action_on_paste = true,
+	action = wezterm.action_callback(function(window, pane)
+		local text = window:get_selection_text_for_pane(pane):gsub("^~/", wezterm.home_dir .. "/")
+		local uri = text:find("^/") and "file://" .. text or text
+		if wezterm.emit("open-uri", window, pane, uri) then
+			wezterm.open_with(uri)
+		end
+	end),
+})
 
 function M.add_to(rules)
 	table.insert(rules, {

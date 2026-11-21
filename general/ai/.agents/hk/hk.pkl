@@ -28,7 +28,7 @@ hooks {
       }
       ["zizmor"] {
         glob = workflows + List("**/action.yml", "**/action.yaml")
-        check = new Command { argv = List("zizmor", "--quiet", "--offline", "--no-progress", "--color", "never", "--strict-collection", "--config", agents + "/zizmor/zizmor.yml", "{{files}}") }
+        check = new Command { argv = List("zizmor", "--quiet", "--offline", "--no-ignores", "--no-progress", "--color", "never", "--strict-collection", "--config", agents + "/zizmor/zizmor.yml", "{{files}}") }
         diagnostic_format = "rustc"
       }
       ["typos"] {
@@ -73,7 +73,7 @@ hooks {
       ["ruff-strict"] {
         profiles = strict
         glob = python
-        check = new Command { argv = List("ruff", "check", "--no-fix", "--force-exclude", "--output-format", "full", "--extend-select", "ANN,B,BLE,ASYNC,PGH,RUF", "--extend-ignore", "B008,RUF005,RUF010,RUF021,RUF022,RUF023", "{{files}}") }
+        check = new Command { argv = List("ruff", "check", "--no-fix", "--ignore-noqa", "--force-exclude", "--output-format", "full", "--extend-select", "ANN,B,BLE,ASYNC,PGH,RUF", "--extend-ignore", "B008,RUF005,RUF010,RUF021,RUF022,RUF023", "{{files}}") }
         diagnostic_format = "rustc"
       }
       ["ty-strict"] {
@@ -81,7 +81,7 @@ hooks {
         glob = python
         workspace_indicator = "pyproject.toml"
         dir = "{{workspace}}"
-        check = new Command { argv = List("ty", "check", "--output-format", "full", "--color", "never", "--force-exclude", "--ignore", "import-not-found", "--error", "missing-type-argument", "--error", "possibly-unresolved-reference", "--error", "possibly-missing-attribute", "--error", "possibly-missing-import", "--error", "unused-awaitable", "--error", "deprecated", "--error", "redundant-cast", "{{files}}") }
+        check = new Command { argv = List("ty", "check", "--output-format", "full", "--color", "never", "--force-exclude", "-c", "analysis.respect-type-ignore-comments=false", "--ignore", "import-not-found", "--error", "missing-type-argument", "--error", "possibly-unresolved-reference", "--error", "possibly-missing-attribute", "--error", "possibly-missing-import", "--error", "unused-awaitable", "--error", "deprecated", "--error", "redundant-cast", "{{files}}") }
         diagnostic_format = "rustc"
       }
       ["shellcheck-strict"] {

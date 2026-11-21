@@ -1,0 +1,41 @@
+#!/usr/bin/env -S uv run --script
+# /// script
+# requires-python = ">=3.12"
+# ///
+import json
+import os
+import re
+import subprocess
+import sys
+
+pane = os.environ.get("WEZTERM_PANE")
+if not pane:
+    sys.exit(0)
+
+data = json.load(sys.stdin)
+event = data.get("hook_event_name")
+
+if event == "SubagentStart":
+    busy = True
+elif event == "SessionEnd":
+    busy = False
+else:
+    busy = any(
+        t.get("type") == "subagent"
+        and t.get("status") == "running"
+        and t.get("id") != data.get("agent_id")
+        for t in data.get("background_tasks") or []
+    )
+
+
+def wezterm(*args):
+    return subprocess.run(["wezterm", "cli", *args], capture_output=True, text=True)
+
+
+if busy:
+    panes = json.loads(wezterm("list", "--format", "json").stdout or "[]")
+    title = next((p["title"] for p in panes if str(p["pane_id"]) == pane), "")
+    title = re.sub(r"^[^\w]+\s*", "", title)
+    wezterm("set-tab-title", "--pane-id", pane, f"✳ {title}".strip())
+else:
+    wezterm("set-tab-title", "--pane-id", pane, "")

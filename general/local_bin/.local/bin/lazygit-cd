@@ -3,6 +3,11 @@
 tmp=$(mktemp -t lazygit-cd.XXXXXX) || exit 1
 trap 'rm -f -- "$tmp"' EXIT HUP INT TERM
 
+root=$(git rev-parse --show-toplevel 2>/dev/null || pwd)
+title="lazygit: ${root##*/}"
+[ -n "$YAZI_ID" ] && title="Yazi → $title"
+printf '\033]2;%s\007' "$title" >/dev/tty 2>/dev/null
+
 LAZYGIT_NEW_DIR_FILE="$tmp" command lazygit "$@"
 code=$?
 

@@ -9,6 +9,10 @@ config.default_cwd = wezterm.home_dir .. "/Work"
 config.font = wezterm.font("JetBrainsMono Nerd Font", { weight = "DemiBold" })
 config.color_scheme = "Catppuccin Mocha"
 config.window_decorations = "RESIZE"
+config.window_frame = {
+	font = wezterm.font("JetBrainsMono Nerd Font", { weight = "Bold" }),
+	font_size = 13,
+}
 config.font_size = 15
 config.window_close_confirmation = "NeverPrompt"
 config.window_padding = {
@@ -17,6 +21,25 @@ config.window_padding = {
 	top = 0,
 	bottom = 0,
 }
+local title_icons = {
+	{ "^Yazi → lazygit: ", "\u{f024b} → \u{e727} " },
+	{ "^lazygit: ", "\u{e727} " },
+	{ "^lg ", "\u{e727} " },
+	{ "^Yazi: ", "\u{f024b} " },
+}
+
+wezterm.on("format-tab-title", function(tab)
+	local title = tab.tab_title ~= "" and tab.tab_title or tab.active_pane.title
+	for _, rule in ipairs(title_icons) do
+		local replaced, count = title:gsub(rule[1], rule[2])
+		if count > 0 then
+			title = replaced
+			break
+		end
+	end
+	return " " .. (tab.tab_index + 1) .. ": " .. title .. " "
+end)
+
 local file_links = require("file_links")
 config.hyperlink_rules = file_links.add_to(wezterm.default_hyperlink_rules())
 wezterm.on("open-uri", file_links.open_file_uri)

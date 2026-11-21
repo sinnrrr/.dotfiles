@@ -61,24 +61,9 @@ run = "plugin chmod"
 desc = "chmod"
 
 [[mgr.prepend_keymap]]
-on = ["c", "l", "s"]
-run = "shell --block -- claude --model haiku --effort high"
-desc = "Claude: Haiku, high"
-
-[[mgr.prepend_keymap]]
-on = ["c", "l", "m"]
-run = "shell --block -- claude --model sonnet --effort high"
-desc = "Claude: Sonnet, high"
-
-[[mgr.prepend_keymap]]
-on = ["c", "l", "l"]
-run = """shell --block -- claude --model opus --effort xhigh --settings '{"fastMode":true}'"""
-desc = "Claude: Opus, xhigh, fast"
-
-[[mgr.prepend_keymap]]
-on = ["c", "l", "x"]
-run = """shell --block -- claude --model fable --effort xhigh --settings '{"fastMode":true}'"""
-desc = "Claude: Fable, xhigh, fast"
+on = ["c", "l"]
+run = "shell --block -- claude"
+desc = "Claude"
 
 [[mgr.prepend_keymap]]
 on = ["c", "r"]

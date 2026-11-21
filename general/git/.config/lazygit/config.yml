@@ -27,26 +27,8 @@ gui:
     searchingActiveBorderColor:
       - '#f9e2af'
 customCommands:
-  - key: W
-    description: worktrunk
-    commandMenu:
-      - key: n
-        context: global
-        description: New worktree from fresh default branch
-        prompts:
-          - type: input
-            title: Branch name
-            key: Name
-        command: wt switch --create {{.Form.Name | quote}} --no-cd --yes
-        output: logWithPty
-        loadingText: Creating worktree
-      - key: d
-        context: worktrees
-        description: Remove selected worktree
-        command: wt remove --foreground {{.SelectedWorktree.Path | quote}}
-        output: terminal
-      - key: p
-        context: global
-        description: Prune merged worktrees
-        command: wt step prune --foreground
-        output: terminal
+  - key: M
+    context: localBranches
+    description: Merge into checked out branch, then remove its worktree and branch
+    command: git merge {{.SelectedLocalBranch.Name | quote}} && wt remove {{.SelectedLocalBranch.Name | quote}} --foreground --yes
+    output: terminal

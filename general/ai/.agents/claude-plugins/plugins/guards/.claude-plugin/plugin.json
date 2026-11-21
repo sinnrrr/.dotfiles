@@ -1,0 +1,8 @@
+{
+  "name": "guards",
+  "version": "1.0.0",
+  "description": "Hooks that harden agent output before a turn ends",
+  "author": {
+    "name": "sinnrrr"
+  }
+}

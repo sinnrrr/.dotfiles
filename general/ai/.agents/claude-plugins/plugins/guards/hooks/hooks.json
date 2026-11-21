@@ -1,0 +1,36 @@
+{
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Agent|Task",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "jq -e '.tool_input.model and .tool_input.effort' >/dev/null || printf '%s' '{\"hookSpecificOutput\":{\"hookEventName\":\"PreToolUse\",\"permissionDecision\":\"deny\",\"permissionDecisionReason\":\"Set both model and effort on every Agent call. Pick what fits the task.\"}}'"
+          }
+        ]
+      }
+    ],
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "jq -r '.session_id' | { read -r id; d=\"${TMPDIR:-/tmp}/claude-guards\"; mkdir -p \"$d\"; [ -e \"$d/$id\" ] || touch \"$d/$id\"; }"
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "\"${CLAUDE_PLUGIN_ROOT}/scripts/stop-checks\"",
+            "timeout": 180
+          }
+        ]
+      }
+    ]
+  }
+}

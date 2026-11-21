@@ -30,6 +30,9 @@ local title_icons = {
 
 wezterm.on("format-tab-title", function(tab)
 	local title = tab.tab_title ~= "" and tab.tab_title or tab.active_pane.title
+	if tab.tab_title == "claude-busy" then
+		return " " .. (tab.tab_index + 1) .. ": ✳ " .. tab.active_pane.title:gsub("^[^%w]+", "") .. " "
+	end
 	for _, rule in ipairs(title_icons) do
 		local replaced, count = title:gsub(rule[1], rule[2])
 		if count > 0 then

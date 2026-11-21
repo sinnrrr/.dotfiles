@@ -5,6 +5,8 @@ local act = wezterm.action
 local shell = os.getenv("SHELL") or "/bin/sh"
 
 config.default_cwd = wezterm.home_dir .. "/Work"
+config.unix_domains = { { name = "unix" } }
+config.default_gui_startup_args = { "connect", "unix" }
 
 config.font = wezterm.font("JetBrainsMono Nerd Font", { weight = "DemiBold" })
 config.color_scheme = "Catppuccin Mocha"

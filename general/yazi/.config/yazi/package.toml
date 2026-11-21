@@ -28,6 +28,11 @@ use = "ShikherVerma/yazi-plugins:vscode-git-gutter"
 rev = "88bccaf"
 hash = "195d56ba13a1f9ffa681db92a857c1cf"
 
+[[plugin.deps]]
+use = "yazi-rs/plugins:types"
+rev = "1ef5fe0"
+hash = "d368d5a6a72657e1c0e7ee7340dcea8c"
+
 [[flavor.deps]]
 use = "yazi-rs/flavors:catppuccin-mocha"
 rev = "38c08d8"

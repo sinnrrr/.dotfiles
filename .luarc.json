@@ -1,0 +1,11 @@
+{
+  "$schema": "https://raw.githubusercontent.com/LuaLS/vscode-lua/master/setting/schema.json",
+  "runtime.version": "Lua 5.5",
+  "workspace.library": [
+    "~/.config/yazi/plugins/types.yazi/"
+  ],
+  "workspace.ignoreDir": [
+    "general/yazi/.config/yazi/plugins",
+    "general/yazi/.config/yazi/flavors"
+  ]
+}

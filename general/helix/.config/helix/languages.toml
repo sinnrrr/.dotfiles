@@ -2,6 +2,11 @@
 command = "mdpls"
 config = { markdown.preview.auto = true }
 
+[language-server.vtsls]
+command = "vtsls"
+args = ["--stdio"]
+config.vtsls.autoUseWorkspaceTsdk = true
+
 [language-server.taplo.config]
 root_dir = [".git", "*.toml"]
 
@@ -13,6 +18,19 @@ formatter = { command = "stylua", args = ["-"] }
 [[language]]
 name = "typescript"
 auto-format = true
+language-servers = ["vtsls"]
+
+[[language]]
+name = "tsx"
+language-servers = ["vtsls"]
+
+[[language]]
+name = "javascript"
+language-servers = ["vtsls"]
+
+[[language]]
+name = "jsx"
+language-servers = ["vtsls"]
 
 [[language]]
 name = "git-config"

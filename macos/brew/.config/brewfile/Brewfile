@@ -49,7 +49,6 @@ brew mermaid-cli
 brew mise
 brew poppler
 brew prettier
-brew pyright
 brew ruff
 brew rustup
 brew shellcheck
@@ -58,11 +57,11 @@ brew stylua
 brew taplo
 brew topgrade
 brew ty
-brew typescript-language-server
 brew typos-cli
 brew uv
 brew vale
 brew vscode-langservers-extracted
+brew vtsls
 brew worktrunk
 brew yaml-language-server
 brew yazi

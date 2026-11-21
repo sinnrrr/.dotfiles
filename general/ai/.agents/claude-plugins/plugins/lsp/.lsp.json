@@ -68,5 +68,44 @@
     "extensionToLanguage": {
       ".fish": "fish"
     }
+  },
+  "typescript": {
+    "command": "vtsls",
+    "args": [
+      "--stdio"
+    ],
+    "settings": {
+      "vtsls": {
+        "autoUseWorkspaceTsdk": true
+      }
+    },
+    "extensionToLanguage": {
+      ".ts": "typescript",
+      ".tsx": "typescriptreact",
+      ".mts": "typescript",
+      ".cts": "typescript",
+      ".js": "javascript",
+      ".jsx": "javascriptreact",
+      ".mjs": "javascript",
+      ".cjs": "javascript"
+    }
+  },
+  "python": {
+    "command": "ruff",
+    "args": [
+      "server"
+    ],
+    "initializationOptions": {
+      "settings": {
+        "lint": {
+          "extendSelect": ["ANN", "B", "BLE", "ASYNC", "PGH", "RUF"],
+          "ignore": ["B008", "RUF005", "RUF010", "RUF021", "RUF022", "RUF023"]
+        }
+      }
+    },
+    "extensionToLanguage": {
+      ".py": "python",
+      ".pyi": "python"
+    }
   }
 }

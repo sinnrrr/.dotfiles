@@ -62,6 +62,9 @@
         "color": "cyan",
         "metadata": {
           "hide": "no-data"
+        },
+        "numberFormat": {
+          "style": "whole"
         }
       }
     ],

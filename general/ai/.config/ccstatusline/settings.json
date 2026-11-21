@@ -4,8 +4,13 @@
     [
       {
         "id": "1",
-        "type": "model",
-        "color": "brightGreen"
+        "type": "current-working-dir",
+        "color": "white",
+        "rawValue": true,
+        "metadata": {
+          "abbreviateHome": "true",
+          "linkTo": "file"
+        }
       },
       {
         "id": "2",
@@ -13,8 +18,9 @@
       },
       {
         "id": "3",
-        "type": "context-length",
-        "color": "brightBlue"
+        "type": "model",
+        "color": "brightGreen",
+        "rawValue": true
       },
       {
         "id": "4",
@@ -22,8 +28,9 @@
       },
       {
         "id": "5",
-        "type": "git-branch",
-        "color": "white"
+        "type": "thinking-effort",
+        "color": "magenta",
+        "rawValue": true
       },
       {
         "id": "6",
@@ -31,8 +38,31 @@
       },
       {
         "id": "7",
-        "type": "git-changes",
-        "color": "yellow"
+        "type": "context-length",
+        "color": "brightBlue",
+        "rawValue": true
+      },
+      {
+        "id": "8",
+        "type": "separator"
+      },
+      {
+        "id": "9",
+        "type": "session-cost",
+        "color": "green",
+        "rawValue": true
+      },
+      {
+        "id": "10",
+        "type": "separator"
+      },
+      {
+        "id": "11",
+        "type": "session-usage",
+        "color": "cyan",
+        "metadata": {
+          "hide": "no-data"
+        }
       }
     ],
     [],
@@ -40,7 +70,7 @@
   ],
   "flexMode": "full-minus-40",
   "compactThreshold": 60,
-  "colorLevel": 2,
+  "colorLevel": 1,
   "inheritSeparatorColors": false,
   "globalBold": false,
   "gitCacheTtlSeconds": 5,
@@ -59,7 +89,6 @@
     "continueThemeAcrossLines": false
   },
   "installation": {
-    "method": "auto-update",
-    "packageManager": "npm"
+    "method": "self-managed"
   }
 }

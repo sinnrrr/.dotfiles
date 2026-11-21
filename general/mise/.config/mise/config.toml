@@ -12,6 +12,7 @@ pnpm = "latest"
 
 [settings]
 experimental = true
+minimum_release_age_excludes = ["npm:@anthropic-ai/claude-code"]
 idiomatic_version_file_enable_tools = ["node", "python"]
 
 [settings.github]

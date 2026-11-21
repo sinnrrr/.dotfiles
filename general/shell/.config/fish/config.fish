@@ -15,7 +15,7 @@ end
 fish_config theme choose catppuccin-mocha
 set -g fish_prompt_pwd_dir_length 0
 
-set -gx HOMEBREW_BREWFILE_LEAVES 1
+set -gx HOMEBREW_BREWFILE_ON_REQUEST 1
 set -gx HOMEBREW_BREWFILE_FORM file
 set -gx HOMEBREW_BREWFILE_APPSTORE 1
 
@@ -29,11 +29,11 @@ function yazi
 end
 
 function lg
-    set -l out (mktemp -t "lazygit-cd-out.XXXXXX")
-    LAZYGIT_CD_FILE=$out command lazygit-cd $argv
+    set -l out (mktemp -t "lazygit-newdir.XXXXXX")
+    LAZYGIT_NEW_DIR_FILE=$out command lazygit $argv
     set -l dir (cat -- $out 2>/dev/null)
     rm -f -- $out
-    if test -n "$dir"
+    if test -n "$dir"; and test "$dir" != "$PWD"
         builtin cd -- "$dir"
     end
 end
@@ -55,24 +55,6 @@ end
 
 if test -f "$HOMEBREW_PREFIX/etc/brew-wrap.fish"
     source "$HOMEBREW_PREFIX/etc/brew-wrap.fish"
-end
-
-if test -f ~/.local/.env.fish
-    source ~/.local/.env.fish
-end
-
-# bfc <nothing>  - clean per Brewfile diff (old behaviour, interactive).
-# bfc pkg...     - HOMEBREW_BREWFILE_LEAVES=1 means plain clean derives
-#   "wanted" from currently installed leaves, not Brewfile text, so it can
-#   never remove a dependency-only formula no matter what the file says.
-#   Naming packages here uninstalls them directly instead, then dumps.
-function bfc
-    if test (count $argv) -gt 0; and not string match -q -- '-*' $argv[1]
-        brew uninstall $argv
-        and brew file dump -y
-    else
-        brew file clean $argv
-    end
 end
 
 # Added by OrbStack: command-line tools and integration

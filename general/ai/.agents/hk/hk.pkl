@@ -38,7 +38,7 @@ hooks {
       }
       ["vale"] {
         glob = List("**/*.md", "**/*.mdx", "**/*.txt")
-        check = new Command { argv = List("vale", "--config", agents + "/vale/.vale.ini", "--output=line", "--no-exit", "{{files}}") }
+        check = new Command { argv = List("vale", "--output=line", "--no-exit", "{{files}}") }
         diagnostic_format = "gcc"
       }
       ["semgrep"] {
@@ -87,7 +87,7 @@ hooks {
       ["shellcheck-strict"] {
         profiles = strict
         match_any = List(new FileSelector { glob = List("**/*.sh", "**/*.bash") }, new FileSelector { types = List("sh", "bash") })
-        check = new Command { argv = List("shellcheck", "-f", "gcc", "-x", "-S", "info", "-o", "check-set-e-suppressed,check-extra-masked-returns,check-unassigned-uppercase", "{{files}}") }
+        check = new Command { argv = List("shellcheck", "-f", "gcc", "-S", "info", "-o", "check-set-e-suppressed,check-extra-masked-returns,check-unassigned-uppercase", "{{files}}") }
         diagnostic_format = "gcc"
       }
     }

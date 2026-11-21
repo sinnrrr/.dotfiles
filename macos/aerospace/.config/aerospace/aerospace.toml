@@ -18,7 +18,7 @@ automatically-unhide-macos-hidden-apps = true
 
 [exec.env-vars]
 # ${PATH} at login can be just ~/.local/bin, so list system+brew dirs explicitly
-# or exec'd scripts (terminal, browser) can't find /usr/bin/open.
+# or exec'd commands can't find /usr/bin/open.
 PATH = '${HOME}/.local/bin:/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:${PATH}'
 
 # See: https://nikitabobko.github.io/AeroSpace/guide#assign-workspaces-to-monitors
@@ -38,15 +38,14 @@ ctrl-alt-cmd-q = 'close'
 ctrl-alt-cmd-f = 'fullscreen'
 ctrl-alt-cmd-r = 'reload-config'
 ctrl-alt-cmd-t = 'layout tiles accordion'
-ctrl-alt-cmd-b = 'exec-and-forget browser'
+ctrl-alt-cmd-b = 'exec-and-forget open -na Firefox'
 ctrl-alt-cmd-o = 'exec-and-forget open -n /System/Applications/System\ Settings.app'
 ctrl-alt-cmd-e = 'exec-and-forget open ~/Downloads'
 ctrl-alt-cmd-p = 'exec-and-forget screencapture -cix /dev/null'
-ctrl-alt-cmd-enter = 'exec-and-forget terminal'
+ctrl-alt-cmd-enter = 'exec-and-forget open -na WezTerm'
 ctrl-alt-cmd-equal = 'exec-and-forget open -a "Mission Control"'
 ctrl-alt-cmd-minus = 'exec-and-forget open -a "Apps"'
 ctrl-alt-cmd-shift-p = 'exec-and-forget screencapture -Pix /dev/null'
-ctrl-alt-cmd-x = 'exec-and-forget dismiss'
 ctrl-alt-cmd-shift-r = 'exec-and-forget screencapture -iU /dev/null'
 
 ctrl-alt-cmd-h = 'focus left'
@@ -104,18 +103,6 @@ run = ['move-node-to-workspace Social']
 [[on-window-detected]]
 if.app-id = 'com.apple.iWork.Pages'
 run = ['move-node-to-workspace Social']
-
-[[on-window-detected]]
-if.app-id = 'com.jamf.connect'
-run = ['move-node-to-workspace Data']
-
-[[on-window-detected]]
-if.app-id = 'com.jamfsoftware.selfservice.mac'
-run = ['move-node-to-workspace Data']
-
-[[on-window-detected]]
-if.app-id = 'md.obsidian'
-run = ['move-node-to-workspace Data']
 
 # Catch-all — must stay last. First match wins, so specific rules above run
 # first; anything unmatched falls through to Data (ws 3).

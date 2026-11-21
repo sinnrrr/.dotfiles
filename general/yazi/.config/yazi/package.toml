@@ -19,11 +19,6 @@ rev = "919b2d0"
 hash = "80468b4806ba5218236f0d95c10f98f5"
 
 [[plugin.deps]]
-use = "walavave/macos-trash"
-rev = "130e6dd"
-hash = "e480ef57299a14ae1414bc010a02551d"
-
-[[plugin.deps]]
 use = "ShikherVerma/yazi-plugins:vscode-git-colors"
 rev = "88bccaf"
 hash = "ce2a98d65c9fd094d5c8c69481f6fac0"

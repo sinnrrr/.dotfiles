@@ -10,12 +10,6 @@
 [includeIf "gitdir:~/.dotfiles/work/"]
 	path = ~/.config/git/.gitconfig.work
 
-[includeIf "gitdir:~/.dotfiles/.git"]
-	path = ~/.config/git/dotfiles-guard.gitconfig
-
-[includeIf "gitdir:~/.dotfiles/.git/worktrees/"]
-	path = ~/.config/git/dotfiles-guard.gitconfig
-
 [core]
 	pager = delta
 [push]

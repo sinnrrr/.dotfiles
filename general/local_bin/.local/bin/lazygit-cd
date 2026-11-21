@@ -11,8 +11,6 @@ dir=$(cat -- "$tmp" 2>/dev/null)
 
 if [ -n "$YAZI_ID" ]; then
     ya emit cd "$dir"
-elif [ -n "$LAZYGIT_CD_FILE" ]; then
-    printf '%s\n' "$dir" >"$LAZYGIT_CD_FILE"
 else
     printf '%s\n' "$dir"
 fi

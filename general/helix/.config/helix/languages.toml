@@ -20,8 +20,6 @@ file-types = [{ glob = "*gitconfig*" }, { glob = ".config/git/*config*" }, { glo
 
 [[language]]
 name = "json"
-auto-format = true
-file-types = ["json", "pp"]
 formatter = { command = "dprint", args = ["fmt", "--stdin", "json"] }
 
 [[language]]
@@ -34,9 +32,7 @@ formatter = { command = "dprint", args = ["fmt", "--stdin", "md"] }
 [[language]]
 name = "toml"
 auto-format = true
-formatter = { command = "taplo", args = ["fmt", "-"] }
 
 [[language]]
 name = "python"
 auto-format = true
-formatter = { command = "ruff", args = ["format", "-"] }

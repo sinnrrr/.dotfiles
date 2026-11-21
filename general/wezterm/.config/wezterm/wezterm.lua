@@ -17,7 +17,9 @@ config.window_padding = {
 	top = 0,
 	bottom = 0,
 }
-config.hyperlink_rules = require("file_links").add_to(wezterm.default_hyperlink_rules())
+local file_links = require("file_links")
+config.hyperlink_rules = file_links.add_to(wezterm.default_hyperlink_rules())
+wezterm.on("open-uri", file_links.open_dir_in_yazi)
 config.mouse_bindings = {
 	{
 		event = { Up = { streak = 1, button = "Left" } },
@@ -32,7 +34,6 @@ config.keys = {
 		mods = "CTRL",
 		action = wezterm.action.PasteFrom("Clipboard"),
 	},
-	{ key = "Enter", mods = "SHIFT", action = wezterm.action({ SendString = "\x1b\r" }) },
 	{ key = "Enter", mods = "ALT", action = act.DisableDefaultAssignment },
 	{
 		key = "\\",
@@ -71,16 +72,6 @@ config.keys = {
 		key = "l",
 		mods = "CTRL",
 		action = act.ActivateTabRelative(1),
-	},
-	{
-		key = "LeftArrow",
-		mods = "CMD|SHIFT",
-		action = act.MoveTabRelative(-1),
-	},
-	{
-		key = "RightArrow",
-		mods = "CMD|SHIFT",
-		action = act.MoveTabRelative(1),
 	},
 	{
 		key = "h",

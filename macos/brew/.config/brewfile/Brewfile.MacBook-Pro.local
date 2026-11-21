@@ -4,12 +4,15 @@
 tap homebrew/core
 brew bottom
 brew coreutils
+brew git-spice
+brew go
 brew handbrake
 brew himalaya
 brew llmfit
 brew lua
 brew make
 brew ollama
+brew pkl
 brew python@3.14
 brew ripgrep
 brew rust
@@ -34,19 +37,20 @@ tap raine/claude-history
 
 tap rcmdnk/file
 
-tap walavave/tap
+tap reviewdog/tap
+
 
 tap yazinsai/openoats
 
 # App Store applications
-appstore 1352778147 Bitwarden (2026.10.4)
-appstore 682658836 GarageBand (10.4.14)
-appstore 408981434 iMovie (10.4.5)
-appstore 361285480 Keynote Creator Studio (15.4)
+appstore 1352778147 Bitwarden (2026.11.0)
+appstore 682658836 GarageBand (10.4.15)
+appstore 408981434 iMovie (10.4.6)
+appstore 361285480 Keynote Creator Studio (16.0)
 appstore 409203825 Numbers (14.5)
-appstore 361304891 Numbers Creator Studio (15.4)
+appstore 361304891 Numbers Creator Studio (16.0)
 appstore 409201541 Pages (14.5)
-appstore 361309726 Pages Creator Studio (15.4)
+appstore 361309726 Pages Creator Studio (16.0)
 appstore 1444636541 Photomator (3.4.15)
 
 # Additional files

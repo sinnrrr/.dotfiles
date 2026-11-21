@@ -9,6 +9,15 @@
             "command": "jq -e '.tool_input.model and .tool_input.effort' >/dev/null || printf '%s' '{\"hookSpecificOutput\":{\"hookEventName\":\"PreToolUse\",\"permissionDecision\":\"deny\",\"permissionDecisionReason\":\"Set both model and effort on every Agent call. Pick what fits the task.\"}}'"
           }
         ]
+      },
+      {
+        "matcher": "WebFetch|WebSearch",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "printf '%s' '{\"hookSpecificOutput\":{\"hookEventName\":\"PreToolUse\",\"additionalContext\":\"Library, framework and API documentation in this environment comes from Context7 via the find-docs skill (npx ctx7@latest library/docs). Web search and fetch are for everything else.\"}}'"
+          }
+        ]
       }
     ],
     "SessionStart": [

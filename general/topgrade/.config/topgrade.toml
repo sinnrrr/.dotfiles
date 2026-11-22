@@ -28,6 +28,3 @@ fallback_to_fetch_default = true
 "Work dotfiles pull" = "test ! -d ~/.dotfiles/work || git -C ~/.dotfiles/work pull --rebase --autostash"
 "Dotfiles submodules" = "git -C ~/.dotfiles submodule update --remote --merge"
 "Dotfiles apply" = "~/.dotfiles/my.sh"
-
-[commands]
-"Vale styles" = "vale --config ~/.agents/vale/.vale.ini sync"

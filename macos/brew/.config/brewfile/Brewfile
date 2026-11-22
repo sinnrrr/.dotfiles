@@ -4,6 +4,9 @@
 tap nikitabobko/tap
 cask aerospace
 
+tap coleam00/archon
+brew archon
+
 tap raine/claude-history
 brew claude-history
 

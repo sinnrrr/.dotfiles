@@ -21,5 +21,6 @@ export MCAT_THEME=catppuccin
 export MCAT_MD_IMAGE=all
 export EDITOR=hx
 export CODING_AGENT=claude
+export CLAUDE_BIN_PATH="$XDG_DATA_HOME/mise/shims/claude"
 export CLAUDE_CODE_EXPERIMENTAL_CODE_MODE=1
 export BAT_THEME="Catppuccin Mocha"

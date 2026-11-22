@@ -10,9 +10,6 @@ brew claude-history
 tap rcmdnk/file
 brew brew-file
 
-tap reviewdog/tap
-cask reviewdog
-
 # Other Homebrew packages
 brew actionlint
 brew agent-browser
@@ -37,7 +34,6 @@ brew git
 brew git-delta
 brew gitleaks
 brew helix
-brew hk
 brew imagemagick
 brew jq
 brew lazygit

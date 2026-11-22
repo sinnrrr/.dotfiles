@@ -2,6 +2,6 @@
 	event = commit-msg
 	command = commitlint --config ~/.agents/commitlint/commitlint.config.mjs --edit
 
-[hook "agent-checks"]
+[hook "tighten"]
 	event = pre-commit
-	command = HK_FILE=~/.agents/hk/hk.pkl hk run agent-checks --staged --silent --no-fail-fast --sarif /dev/stdout | reviewdog -f sarif -diff \"git diff --cached\" -fail-level any || (echo 'agent-checks: fix the code above without adding suppression comments. If a rule does not fit this repo, change it in the repo lint config and say why. If two rules contradict each other, stop and report both rule names to the user.' >&2 && false)
+	command = tighten staged

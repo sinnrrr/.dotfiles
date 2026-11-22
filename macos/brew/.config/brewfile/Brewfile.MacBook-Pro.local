@@ -23,6 +23,7 @@ brew tree
 tap homebrew/cask
 cask google-chrome
 cask kitlangton-hex
+cask libreoffice
 cask obsidian
 cask vercel
 cask zoom
@@ -37,15 +38,12 @@ tap raine/claude-history
 
 tap rcmdnk/file
 
-
+tap walavave/tap
 
 tap yazinsai/openoats
 
 # App Store applications
 appstore 1352778147 Bitwarden (2026.11.0)
-appstore 682658836 GarageBand (10.4.15)
-appstore 408981434 iMovie (10.4.6)
-appstore 361285480 Keynote Creator Studio (16.0)
 appstore 409203825 Numbers (14.5)
 appstore 361304891 Numbers Creator Studio (16.0)
 appstore 409201541 Pages (14.5)

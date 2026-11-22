@@ -12,7 +12,7 @@ config.font = wezterm.font("JetBrainsMono Nerd Font", { weight = "DemiBold" })
 config.color_scheme = "Catppuccin Mocha"
 config.window_decorations = "RESIZE"
 config.window_frame = {
-	font = wezterm.font("JetBrainsMono Nerd Font", { weight = "Bold" }),
+	font = wezterm.font("JetBrainsMono Nerd Font", { weight = "ExtraBold" }),
 	font_size = 13,
 }
 config.font_size = 15
@@ -32,6 +32,10 @@ local title_icons = {
 
 wezterm.on("format-tab-title", function(tab)
 	local title = tab.tab_title ~= "" and tab.tab_title or tab.active_pane.title
+	if title == "" then
+		local cwd = tab.active_pane.current_working_dir
+		title = "\u{f0169} " .. (cwd and cwd.file_path:match("([^/]+)/?$") or "")
+	end
 	if tab.tab_title == "claude-busy" then
 		title = tab.active_pane.title:gsub("^[\128-\255]*%s*", "%0\u{f06a9} ", 1)
 	end

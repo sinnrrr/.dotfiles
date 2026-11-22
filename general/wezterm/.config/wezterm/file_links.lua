@@ -11,6 +11,11 @@ local shell = os.getenv("SHELL") or "/bin/sh"
 
 local M = {}
 
+local function is_binary(target)
+	local ok, mime = wezterm.run_child_process({ "/usr/bin/file", "-b", "--mime", target })
+	return ok and mime:find("charset=binary") and not mime:find("^inode/x%-empty")
+end
+
 function M.open_file_uri(window, pane, uri)
 	local url = wezterm.url.parse(uri)
 	if url.scheme ~= "file" then
@@ -20,6 +25,9 @@ function M.open_file_uri(window, pane, uri)
 	local spawn
 	if pcall(wezterm.read_dir, target) then
 		spawn = { cwd = target, args = { "/opt/homebrew/bin/yazi", target } }
+	elseif is_binary(target) then
+		wezterm.open_with(target)
+		return false
 	elseif wezterm.glob(target)[1] then
 		spawn = { args = { shell, "-lc", "$EDITOR " .. wezterm.shell_quote_arg(target) } }
 	else

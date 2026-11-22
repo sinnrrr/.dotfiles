@@ -9,7 +9,6 @@ brew libarchive
 brew luajit
 
 tap homebrew/cask
-cask gimp
 cask google-drive
 cask quarto
 cask rawtherapee

@@ -1,6 +1,6 @@
 [[mgr.prepend_keymap]]
 on = "o"
-run = "shell -- qlmanage -p %s"
+run = '''shell -- qlmanage -p %s >/dev/null 2>&1 & osascript -e 'tell application "System Events" to set frontmost of (first process whose unix id is '$!') to true' '''
 desc = "QuickLook"
 
 [[mgr.prepend_keymap]]

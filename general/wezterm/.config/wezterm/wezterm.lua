@@ -8,11 +8,11 @@ config.default_cwd = wezterm.home_dir .. "/Work"
 config.unix_domains = { { name = "unix" } }
 config.default_gui_startup_args = { "connect", "unix" }
 
-config.font = wezterm.font("JetBrainsMono Nerd Font", { weight = "DemiBold" })
+config.font = wezterm.font_with_fallback({ { family = "JetBrainsMono Nerd Font", weight = "DemiBold" }, "Menlo" })
 config.color_scheme = "Catppuccin Mocha"
 config.window_decorations = "RESIZE"
 config.window_frame = {
-	font = wezterm.font("JetBrainsMono Nerd Font", { weight = "ExtraBold" }),
+	font = wezterm.font_with_fallback({ { family = "JetBrainsMono Nerd Font", weight = "ExtraBold" }, { family = "Menlo", weight = "Bold", scale = 1.3 } }),
 	font_size = 13,
 }
 config.font_size = 15
@@ -47,6 +47,15 @@ wezterm.on("format-tab-title", function(tab)
 		end
 	end
 	return " " .. (tab.tab_index + 1) .. ": " .. title .. " "
+end)
+
+wezterm.on("gui-attached", function()
+	wezterm.time.call_after(0.5, function()
+		for _, window in ipairs(wezterm.gui.gui_windows()) do
+			local dims = window:get_dimensions()
+			window:set_inner_size(dims.pixel_width, dims.pixel_height - 1)
+		end
+	end)
 end)
 
 local file_links = require("file_links")

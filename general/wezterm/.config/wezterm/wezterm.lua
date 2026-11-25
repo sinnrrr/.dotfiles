@@ -24,6 +24,7 @@ config.window_padding = {
 	bottom = 0,
 }
 local title_icons = {
+	{ "^Claude → lazygit: ", "\u{f06a9} → \u{e727} " },
 	{ "^Yazi → lazygit: ", "\u{f024b} → \u{e727} " },
 	{ "^lazygit: ", "\u{e727} " },
 	{ "^lg ", "\u{e727} " },
@@ -37,7 +38,10 @@ wezterm.on("format-tab-title", function(tab)
 		title = "\u{f0169} " .. (cwd and cwd.file_path:match("([^/]+)/?$") or "")
 	end
 	if tab.tab_title == "claude-busy" then
-		title = tab.active_pane.title:gsub("^[\128-\255]*%s*", "%0\u{f06a9} ", 1)
+		title = tab.active_pane.title
+		if not title:find("^Claude → lazygit: ") then
+			title = title:gsub("^[\128-\255]*%s*", "%0\u{f06a9} ", 1)
+		end
 	end
 	for _, rule in ipairs(title_icons) do
 		local replaced, count = title:gsub(rule[1], rule[2])

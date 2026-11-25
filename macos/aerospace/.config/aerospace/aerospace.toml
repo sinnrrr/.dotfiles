@@ -2,7 +2,6 @@ config-version = 2
 
 start-at-login = true
 
-after-startup-command = ['exec-and-forget /Applications/WezTerm.app/Contents/MacOS/wezterm-mux-server --daemonize']
 
 # v2 no longer infers these from key bindings, so list them explicitly.
 persistent-workspaces = ['Code', 'Social', 'Data', 'Music', 'Mail']

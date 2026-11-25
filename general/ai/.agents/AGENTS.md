@@ -10,7 +10,7 @@
 - Public-facing text (anything posted to GitHub, an issue tracker, chat or a wiki): run the humanizer skill, keep it high level and readable by a PM. Default length is one sentence for small changes.
 - Batch questions into one check-in at the end. Reversible technical choice with a clear best option: take it and report it. Stop to ask only for irreversible, prod-affecting or truly blocking decisions.
 - Large or ambiguous task with no explicit go: show a 3 to 5 line plan and wait for one OK. An explicit go ("do it", "go ahead", "fix all", "open pr", "implement") means run to the end without another approval round. If the conversation stays on one topic, work inline.
-- Subagents: do heavy reading, searching and log digging in subagents, not the main thread. Set both model and effort on every Agent call
+- Subagents: heavy reading and searching (log digging included) happens in subagents, not the main thread. Set both model and effort on every Agent call, with sonnet as the default and opus reserved for work where a wrong answer is costly.
 - Prefer API calls over using browser manually if possible
 - Draw diagrams in Mermaid and render them with `mermaid` (my `mmdc` wrapper).
 - If you're about to make a comment, write a doc or save a memory, consider how you can create a programmatic rule via linter, checker or other dev tool in dotfiles agent ai folder.

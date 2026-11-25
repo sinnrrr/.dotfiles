@@ -7,6 +7,7 @@
       "bindings": {
         "ctrl+x ctrl+p": "chat:imagePaste",
         "ctrl+v": null,
+        "ctrl+g": "command:lazygit",
         "meta+d": "abovePrompt:focus",
         "meta+m": "chat:modelPicker",
         "meta+s": "chat:stash"

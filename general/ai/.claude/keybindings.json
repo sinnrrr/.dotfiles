@@ -7,7 +7,23 @@
       "bindings": {
         "ctrl+x ctrl+p": "chat:imagePaste",
         "ctrl+v": null,
-        "meta+d": "abovePrompt:focus"
+        "meta+d": "abovePrompt:focus",
+        "meta+m": "chat:modelPicker",
+        "meta+s": "chat:stash"
+      }
+    },
+    {
+      "context": "ModelPicker",
+      "bindings": {
+        "h": "modelPicker:decreaseEffort",
+        "l": "modelPicker:increaseEffort"
+      }
+    },
+    {
+      "context": "EffortSlider",
+      "bindings": {
+        "h": "effortSlider:decreaseEffort",
+        "l": "effortSlider:increaseEffort"
       }
     },
     {

@@ -111,12 +111,12 @@ fi
 mkdir -p ~/Work/{repos,research,notes,wk,archive}
 chmod +a "everyone deny add_file,add_subdirectory" ~/Work
 
-log "Launching Karabiner, AeroSpace, Hidden Bar, LinearMouse, MonitorControl, and WezTerm..."
+log "Launching Karabiner, AeroSpace, Hidden Bar, LinearMouse, BetterDisplay, and WezTerm..."
 pgrep -q "Karabiner" || open -a "Karabiner-Elements"
 open -a "AeroSpace"
 open -a "Hidden Bar"
 pgrep -q "LinearMouse" || open -a "LinearMouse"
-pgrep -q "MonitorControl" || open -a "MonitorControl"
+pgrep -q "BetterDisplay" || open -a "BetterDisplay"
 pgrep -q "wezterm-gui" || open -a "WezTerm"
 
 log "Changes applied. Some changes may require a restart to take effect."

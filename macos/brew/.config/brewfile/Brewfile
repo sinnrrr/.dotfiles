@@ -1,11 +1,11 @@
 
 # tap repositories and their packages
 
-tap nikitabobko/tap
-cask aerospace
-
 tap coleam00/archon
 brew archon
+
+tap nikitabobko/tap
+cask aerospace
 
 tap raine/claude-history
 brew claude-history
@@ -69,13 +69,13 @@ brew zizmor
 brew zoxide
 
 # Other Cask applications
+cask betterdisplay
 cask firefox
 cask font-jetbrains-mono-nerd-font
 cask hiddenbar
 cask karabiner-elements
 cask linearmouse
 cask lulu
-cask monitorcontrol
 cask orbstack
 cask spotify
 cask wezterm@nightly

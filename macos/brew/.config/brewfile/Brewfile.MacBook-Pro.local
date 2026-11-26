@@ -4,6 +4,7 @@
 tap homebrew/core
 brew bottom
 brew coreutils
+brew duckdb
 brew git-spice
 brew go
 brew handbrake
@@ -27,6 +28,8 @@ cask libreoffice
 cask obsidian
 cask vercel
 cask zoom
+
+tap coleam00/archon
 
 tap mhaeuser/mhaeuser
 

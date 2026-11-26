@@ -16,6 +16,8 @@ brew brew-file
 # Other Homebrew packages
 brew actionlint
 brew agent-browser
+brew agg
+brew asciinema
 brew ast-grep
 brew bash
 brew bash-language-server

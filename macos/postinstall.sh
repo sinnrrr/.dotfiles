@@ -102,17 +102,6 @@ if command -v ya >/dev/null 2>&1; then
   ya pkg install --discard
 fi
 
-log "Installing Claude Code plugins..."
-if command -v claude >/dev/null 2>&1; then
-  claude plugin marketplace add "$SCRIPT_PATH/general/ai/.agents/claude-plugins"
-  claude plugin install lsp@dotfiles
-  if [ -d ~/Work/repos/tighten ]; then
-    uv tool install -e ~/Work/repos/tighten
-    claude plugin marketplace add ~/Work/repos/tighten
-    claude plugin install tighten@tighten
-  fi
-fi
-
 mkdir -p ~/Work/{repos,research,notes,wk,archive}
 chmod +a "everyone deny add_file,add_subdirectory" ~/Work
 

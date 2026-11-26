@@ -1,7 +1,7 @@
 {
   "name": "guards",
   "version": "1.0.0",
-  "description": "Hooks that steer tool use and harden agent output before a turn ends",
+  "description": "Hooks that steer tool use",
   "author": {
     "name": "sinnrrr"
   }

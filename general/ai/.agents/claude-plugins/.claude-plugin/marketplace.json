@@ -11,7 +11,7 @@
     {
       "name": "guards",
       "source": "./plugins/guards",
-      "description": "Hooks that harden agent output before a turn ends"
+      "description": "Hooks that steer tool use"
     }
   ]
 }

@@ -12,6 +12,7 @@ brew himalaya
 brew llmfit
 brew lua
 brew make
+brew ocrmypdf
 brew ollama
 brew pkl
 brew python@3.14
@@ -19,6 +20,7 @@ brew ripgrep
 brew rust
 brew scc
 brew speedtest-cli
+brew tesseract-lang
 brew tree
 
 tap homebrew/cask

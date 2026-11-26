@@ -18,6 +18,16 @@
             "command": "printf '%s' '{\"hookSpecificOutput\":{\"hookEventName\":\"PreToolUse\",\"additionalContext\":\"Library, framework and API documentation in this environment comes from Context7 via the find-docs skill (npx ctx7@latest library/docs). Web search and fetch are for everything else.\"}}'"
           }
         ]
+      },
+      {
+        "matcher": "SubagentHandback",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "tighten stop",
+            "timeout": 180
+          }
+        ]
       }
     ],
     "PostToolUse": [
@@ -26,7 +36,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "jq -r '.session_id, (.tool_input.file_path // .tool_input.notebook_path // \"\")' | { read -r id; read -r p; [ -z \"$p\" ] || { d=\"${TMPDIR:-/tmp}/claude-guards\"; mkdir -p \"$d\"; printf '%s\\n' \"$p\" >> \"$d/$id\"; }; }"
+            "command": "jq -r '.session_id, (.agent_id // \"\"), (.tool_input.file_path // .tool_input.notebook_path // \"\")' | { read -r id; read -r agent; read -r p; [ -z \"$p\" ] || { d=\"${TMPDIR:-/tmp}/claude-guards\"; mkdir -p \"$d\"; printf '%s\\n' \"$p\" >> \"$d/$id${agent:+.$agent}\"; }; }"
           }
         ]
       }
@@ -42,6 +52,17 @@
       }
     ],
     "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "tighten stop",
+            "timeout": 180
+          }
+        ]
+      }
+    ],
+    "SubagentStop": [
       {
         "hooks": [
           {

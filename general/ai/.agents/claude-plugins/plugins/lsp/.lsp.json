@@ -47,7 +47,8 @@
     "extensionToLanguage": {
       ".sh": "shellscript",
       ".bash": "shellscript"
-    }
+    },
+    "diagnostics": false
   },
   "css": {
     "command": "vscode-css-language-server",
@@ -88,7 +89,8 @@
       ".jsx": "javascriptreact",
       ".mjs": "javascript",
       ".cjs": "javascript"
-    }
+    },
+    "diagnostics": false
   },
   "python": {
     "command": "ruff",
@@ -106,6 +108,7 @@
     "extensionToLanguage": {
       ".py": "python",
       ".pyi": "python"
-    }
+    },
+    "diagnostics": false
   }
 }

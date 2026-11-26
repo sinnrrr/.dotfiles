@@ -107,6 +107,7 @@ if command -v claude >/dev/null 2>&1; then
   claude plugin marketplace add "$SCRIPT_PATH/general/ai/.agents/claude-plugins"
   claude plugin install lsp@dotfiles
   if [ -d ~/Work/repos/tighten ]; then
+    uv tool install -e ~/Work/repos/tighten
     claude plugin marketplace add ~/Work/repos/tighten
     claude plugin install tighten@tighten
   fi
